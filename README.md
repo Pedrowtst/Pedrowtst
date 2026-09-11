@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.svg?v=6">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.png?v=6" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/hero-v7.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/hero-v7.png" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
   </picture>
 </div>
 
@@ -34,8 +34,8 @@ Engineering focus spans four core domains:
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.svg?v=6">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.png?v=6" width="100%" alt="Engineering Architecture" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/modules-v7.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/modules-v7.png" width="100%" alt="Engineering Architecture" />
   </picture>
 </div>
 
@@ -59,8 +59,8 @@ Engineering focus spans four core domains:
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.svg?v=6">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.png?v=6" width="100%" alt="Annual Contributions" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/activity-v7.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/activity-v7.png" width="100%" alt="Annual Contributions" />
   </picture>
 </div>
 
@@ -93,7 +93,7 @@ Engineering focus spans four core domains:
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.svg?v=6">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.png?v=6" width="100%" alt="Footer" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/footer-v7.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/footer-v7.png" width="100%" alt="Footer" />
   </picture>
 </div>
