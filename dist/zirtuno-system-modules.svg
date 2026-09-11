@@ -1,173 +1,234 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
   <defs>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060810"/>
-      <stop offset="100%" stop-color="#0a0e1a"/>
+    <linearGradient id="modCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060d"/>
+      <stop offset="50%" stop-color="#070a16"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </linearGradient>
 
-    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00E3FE" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#00E3FE" stop-opacity="0.6"/>
+    <linearGradient id="modCyanBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E3FE" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#1e293b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00E3FE" stop-opacity="0.4"/>
     </linearGradient>
 
-    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <pattern id="cardGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#101726" stroke-width="0.6"/>
+      <circle cx="0" cy="0" r="1" fill="#00E3FE" fill-opacity="0.15"/>
+    </pattern>
+
+    <filter id="pillGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <pattern id="moduleGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#131d31" stroke-width="0.5" stroke-opacity="0.5"/>
-    </pattern>
   </defs>
 
   <style>
-    @keyframes pulseLed {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.3; transform: scale(0.85); }
-    }
-    @keyframes borderScan {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 60; }
-    }
-    .led {
-      animation: pulseLed 2s infinite ease-in-out;
-      transform-origin: center;
-    }
-    .mod-title {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 14px;
-      font-weight: 800;
+    .core-code {
+      font-family: 'Fira Code', ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 2px;
+      fill: #00E3FE;
+    }
+    .core-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
       fill: #FFFFFF;
     }
-    .mod-code {
-      font-family: 'Fira Code', monospace;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      fill: #00E3FE;
-    }
-    .mod-desc {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 12px;
+    .core-desc {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12.5px;
       font-weight: 400;
-      line-height: 1.4;
       fill: #94A3B8;
     }
-    .mod-tag {
-      font-family: 'Fira Code', monospace;
-      font-size: 9.5px;
-      font-weight: 500;
-      fill: #38BDF8;
-    }
     .status-text {
-      font-family: 'Fira Code', monospace;
+      font-family: 'Fira Code', ui-monospace, monospace;
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       fill: #00E3FE;
+    }
+    .tech-tag-text {
+      font-family: 'Fira Code', ui-monospace, monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      fill: #38BDF8;
     }
   </style>
 
-  <!-- Background Base -->
-  <rect width="1200" height="340" rx="12" fill="#020306" stroke="#1e293b" stroke-width="1"/>
-  <rect width="1200" height="340" rx="12" fill="url(#moduleGrid)"/>
+  <!-- Base Canvas Frame -->
+  <rect width="1200" height="380" rx="12" fill="#020306" stroke="#1e293b" stroke-width="1.2"/>
+  <rect width="1200" height="380" rx="12" fill="url(#cardGrid)"/>
 
-  <!-- Module 1: Enterprise Automation & ERP/CRM -->
-  <g transform="translate(30, 20)">
-    <rect width="555" height="135" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
-    <rect width="555" height="135" rx="8" fill="none" stroke="url(#cardBorder)" stroke-width="1" stroke-dasharray="10 5"/>
-    <circle cx="28" cy="28" r="4.5" fill="#00E3FE" class="led"/>
-    <text x="44" y="32" class="mod-code">[ CORE 01 ]</text>
-    <text x="145" y="32" class="mod-title">ENTERPRISE AUTOMATION &amp; ERP/CRM</text>
-    <text x="525" y="32" text-anchor="end" class="status-text">PIPELINE ACTIVE</text>
+  <!-- ==================== MODULE 01 ==================== -->
+  <g transform="translate(35, 25)">
+    <!-- Card Frame -->
+    <rect width="550" height="155" rx="8" fill="url(#modCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect width="550" height="155" rx="8" fill="none" stroke="url(#modCyanBorder)" stroke-width="1"/>
     
-    <text x="28" y="65" class="mod-desc">Resilient business automation pipelines, custom ERP &amp; CRM data synchronizers,</text>
-    <text x="28" y="83" class="mod-desc">distributed job queues, webhook listeners, and mission-critical API orchestration.</text>
+    <!-- Header Row -->
+    <text x="24" y="28" class="core-code">[ CORE 01 ]</text>
+    <g transform="translate(415, 14)">
+      <rect width="112" height="20" rx="10" fill="#061224" stroke="#00E3FE" stroke-width="0.8"/>
+      <circle cx="12" cy="10" r="3.5" fill="#00E3FE">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="64" y="14" text-anchor="middle" class="status-text">SYS.ACTIVE</text>
+    </g>
     
-    <rect x="28" y="100" width="80" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="68" y="114" text-anchor="middle" class="mod-tag">POSTGRES</text>
-    <rect x="116" y="100" width="60" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="146" y="114" text-anchor="middle" class="mod-tag">REDIS</text>
-    <rect x="184" y="100" width="70" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="219" y="114" text-anchor="middle" class="mod-tag">DOCKER</text>
-    <rect x="262" y="100" width="80" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="302" y="114" text-anchor="middle" class="mod-tag">FASTAPI</text>
-    <rect x="350" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="382" y="114" text-anchor="middle" class="mod-tag">NGINX</text>
+    <!-- Title Row (Dedicated line, zero collision) -->
+    <text x="24" y="58" class="core-title">ENTERPRISE AUTOMATION &amp; ERP/CRM</text>
+    
+    <!-- Description Rows -->
+    <text x="24" y="82" class="core-desc">Resilient business automation pipelines, custom ERP &amp; CRM data sync,</text>
+    <text x="24" y="100" class="core-desc">distributed worker queues, webhook daemons, and API orchestration.</text>
+    
+    <!-- Tech Tags Row -->
+    <g transform="translate(24, 118)">
+      <rect x="0" y="0" width="88" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="44" y="15" text-anchor="middle" class="tech-tag-text">POSTGRES</text>
+
+      <rect x="96" y="0" width="60" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="126" y="15" text-anchor="middle" class="tech-tag-text">REDIS</text>
+
+      <rect x="164" y="0" width="68" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="198" y="15" text-anchor="middle" class="tech-tag-text">DOCKER</text>
+
+      <rect x="240" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="278" y="15" text-anchor="middle" class="tech-tag-text">FASTAPI</text>
+
+      <rect x="324" y="0" width="60" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="354" y="15" text-anchor="middle" class="tech-tag-text">NGINX</text>
+    </g>
   </g>
 
-  <!-- Module 2: Reverse Engineering & Protocol Dissection -->
-  <g transform="translate(615, 20)">
-    <rect width="555" height="135" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
-    <rect width="555" height="135" rx="8" fill="none" stroke="url(#cardBorder)" stroke-width="1" stroke-dasharray="10 5"/>
-    <circle cx="28" cy="28" r="4.5" fill="#38BDF8" class="led" style="animation-delay: 0.5s;"/>
-    <text x="44" y="32" class="mod-code">[ CORE 02 ]</text>
-    <text x="145" y="32" class="mod-title">REVERSE ENGINEERING &amp; SYSTEMS</text>
-    <text x="525" y="32" text-anchor="end" class="status-text">DECODING</text>
+  <!-- ==================== MODULE 02 ==================== -->
+  <g transform="translate(615, 25)">
+    <!-- Card Frame -->
+    <rect width="550" height="155" rx="8" fill="url(#modCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect width="550" height="155" rx="8" fill="none" stroke="url(#modCyanBorder)" stroke-width="1"/>
     
-    <text x="28" y="65" class="mod-desc">Binary disassembly, communication protocol reconstruction, memory mapping, and</text>
-    <text x="28" y="83" class="mod-desc">low-level interfacing with undocumented industrial hardware &amp; legacy ERP platforms.</text>
+    <!-- Header Row -->
+    <text x="24" y="28" class="core-code">[ CORE 02 ]</text>
+    <g transform="translate(415, 14)">
+      <rect width="112" height="20" rx="10" fill="#061224" stroke="#00E3FE" stroke-width="0.8"/>
+      <circle cx="12" cy="10" r="3.5" fill="#38BDF8">
+        <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="64" y="14" text-anchor="middle" class="status-text">DECODING</text>
+    </g>
     
-    <rect x="28" y="100" width="55" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="55" y="114" text-anchor="middle" class="mod-tag">C / C++</text>
-    <rect x="91" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="123" y="114" text-anchor="middle" class="mod-tag">GDB / IDA</text>
-    <rect x="164" y="100" width="70" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="199" y="114" text-anchor="middle" class="mod-tag">PROTOCOLS</text>
-    <rect x="242" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="274" y="114" text-anchor="middle" class="mod-tag">LINUX</text>
-    <rect x="315" y="100" width="70" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="350" y="114" text-anchor="middle" class="mod-tag">SOCKETS</text>
+    <!-- Title Row -->
+    <text x="24" y="58" class="core-title">REVERSE ENGINEERING &amp; SYSTEMS</text>
+    
+    <!-- Description Rows -->
+    <text x="24" y="82" class="core-desc">Binary disassembly, communication protocol dissection, memory mapping,</text>
+    <text x="24" y="100" class="core-desc">and low-level interfacing with undocumented hardware &amp; legacy ERPs.</text>
+    
+    <!-- Tech Tags Row -->
+    <g transform="translate(24, 118)">
+      <rect x="0" y="0" width="68" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="34" y="15" text-anchor="middle" class="tech-tag-text">C / C++</text>
+
+      <rect x="76" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="114" y="15" text-anchor="middle" class="tech-tag-text">GDB / IDA</text>
+
+      <rect x="160" y="0" width="88" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="204" y="15" text-anchor="middle" class="tech-tag-text">PROTOCOLS</text>
+
+      <rect x="256" y="0" width="60" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="286" y="15" text-anchor="middle" class="tech-tag-text">LINUX</text>
+
+      <rect x="324" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="362" y="15" text-anchor="middle" class="tech-tag-text">SOCKETS</text>
+    </g>
   </g>
 
-  <!-- Module 3: Real-Time Graphics & Fluid Physics -->
-  <g transform="translate(30, 180)">
-    <rect width="555" height="135" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
-    <rect width="555" height="135" rx="8" fill="none" stroke="url(#cardBorder)" stroke-width="1" stroke-dasharray="10 5"/>
-    <circle cx="28" cy="28" r="4.5" fill="#818CF8" class="led" style="animation-delay: 1s;"/>
-    <text x="44" y="32" class="mod-code">[ CORE 03 ]</text>
-    <text x="145" y="32" class="mod-title">REAL-TIME GRAPHICS &amp; FLUID SDF</text>
-    <text x="525" y="32" text-anchor="end" class="status-text">60 FPS // GPU</text>
+  <!-- ==================== MODULE 03 ==================== -->
+  <g transform="translate(35, 200)">
+    <!-- Card Frame -->
+    <rect width="550" height="155" rx="8" fill="url(#modCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect width="550" height="155" rx="8" fill="none" stroke="url(#modCyanBorder)" stroke-width="1"/>
     
-    <text x="28" y="65" class="mod-desc">Mathematical signed distance fields (SDF), GPU metaballs, raymarching, liquid</text>
-    <text x="28" y="83" class="mod-desc">surface dynamics, WebGL2 pipeline optimization, and cinematic spline orchestration.</text>
+    <!-- Header Row -->
+    <text x="24" y="28" class="core-code">[ CORE 03 ]</text>
+    <g transform="translate(415, 14)">
+      <rect width="112" height="20" rx="10" fill="#061224" stroke="#818CF8" stroke-width="0.8"/>
+      <circle cx="12" cy="10" r="3.5" fill="#818CF8">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="64" y="14" text-anchor="middle" class="status-text" fill="#818CF8">60 FPS // GPU</text>
+    </g>
     
-    <rect x="28" y="100" width="75" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="65" y="114" text-anchor="middle" class="mod-tag">WEBGL2</text>
-    <rect x="111" y="100" width="75" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="148" y="114" text-anchor="middle" class="mod-tag">THREE.JS</text>
-    <rect x="194" y="100" width="105" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="246" y="114" text-anchor="middle" class="mod-tag">GLSL SHADERS</text>
-    <rect x="307" y="100" width="70" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="342" y="114" text-anchor="middle" class="mod-tag">SDF MATH</text>
+    <!-- Title Row -->
+    <text x="24" y="58" class="core-title">REAL-TIME GRAPHICS &amp; FLUID SDF</text>
+    
+    <!-- Description Rows -->
+    <text x="24" y="82" class="core-desc">Mathematical signed distance fields (SDF), GPU metaballs, raymarching,</text>
+    <text x="24" y="100" class="core-desc">liquid surface physics, WebGL2 shaders, and cinematic spline flow.</text>
+    
+    <!-- Tech Tags Row -->
+    <g transform="translate(24, 118)">
+      <rect x="0" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="38" y="15" text-anchor="middle" class="tech-tag-text">WEBGL2</text>
+
+      <rect x="84" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="122" y="15" text-anchor="middle" class="tech-tag-text">THREE.JS</text>
+
+      <rect x="168" y="0" width="100" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="218" y="15" text-anchor="middle" class="tech-tag-text">GLSL SHADERS</text>
+
+      <rect x="276" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="314" y="15" text-anchor="middle" class="tech-tag-text">SDF MATH</text>
+    </g>
   </g>
 
-  <!-- Module 4: Computer Vision & Hardware Telemetry -->
-  <g transform="translate(615, 180)">
-    <rect width="555" height="135" rx="8" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
-    <rect width="555" height="135" rx="8" fill="none" stroke="url(#cardBorder)" stroke-width="1" stroke-dasharray="10 5"/>
-    <circle cx="28" cy="28" r="4.5" fill="#00E3FE" class="led" style="animation-delay: 1.5s;"/>
-    <text x="44" y="32" class="mod-code">[ CORE 04 ]</text>
-    <text x="145" y="32" class="mod-title">EDGE VISION &amp; EMBEDDED IoT</text>
-    <text x="525" y="32" text-anchor="end" class="status-text">INFERENCE LIVE</text>
+  <!-- ==================== MODULE 04 ==================== -->
+  <g transform="translate(615, 200)">
+    <!-- Card Frame -->
+    <rect width="550" height="155" rx="8" fill="url(#modCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect width="550" height="155" rx="8" fill="none" stroke="url(#modCyanBorder)" stroke-width="1"/>
     
-    <text x="28" y="65" class="mod-desc">Direction-aware edge inference, C++ embedded microcontroller firmware (ESP32-CAM),</text>
-    <text x="28" y="83" class="mod-desc">deep learning tracking models (YOLOv8 + BoT-SORT), and live telemetry streaming.</text>
+    <!-- Header Row -->
+    <text x="24" y="28" class="core-code">[ CORE 04 ]</text>
+    <g transform="translate(405, 14)">
+      <rect width="122" height="20" rx="10" fill="#061224" stroke="#00E3FE" stroke-width="0.8"/>
+      <circle cx="12" cy="10" r="3.5" fill="#00E3FE">
+        <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="68" y="14" text-anchor="middle" class="status-text">INFERENCE LIVE</text>
+    </g>
     
-    <rect x="28" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="60" y="114" text-anchor="middle" class="mod-tag">YOLOV8</text>
-    <rect x="101" y="100" width="75" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="138" y="114" text-anchor="middle" class="mod-tag">BOT-SORT</text>
-    <rect x="184" y="100" width="85" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="226" y="114" text-anchor="middle" class="mod-tag">ESP32-CAM</text>
-    <rect x="277" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="309" y="114" text-anchor="middle" class="mod-tag">OPENCV</text>
-    <rect x="350" y="100" width="65" height="20" rx="4" fill="#0b1329" stroke="#1e3a8a" stroke-width="1"/>
-    <text x="382" y="114" text-anchor="middle" class="mod-tag">FREERTOS</text>
+    <!-- Title Row -->
+    <text x="24" y="58" class="core-title">EDGE VISION &amp; EMBEDDED IoT</text>
+    
+    <!-- Description Rows -->
+    <text x="24" y="82" class="core-desc">Direction-aware edge inference, C++ embedded microcontroller firmware,</text>
+    <text x="24" y="100" class="core-desc">deep learning tracking models (YOLOv8 + BoT-SORT), and telemetry streams.</text>
+    
+    <!-- Tech Tags Row -->
+    <g transform="translate(24, 118)">
+      <rect x="0" y="0" width="68" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="34" y="15" text-anchor="middle" class="tech-tag-text">YOLOV8</text>
+
+      <rect x="76" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="114" y="15" text-anchor="middle" class="tech-tag-text">BOT-SORT</text>
+
+      <rect x="160" y="0" width="88" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="204" y="15" text-anchor="middle" class="tech-tag-text">ESP32-CAM</text>
+
+      <rect x="256" y="0" width="68" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="290" y="15" text-anchor="middle" class="tech-tag-text">OPENCV</text>
+
+      <rect x="332" y="0" width="76" height="22" rx="5" fill="#08142a" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="370" y="15" text-anchor="middle" class="tech-tag-text">FREERTOS</text>
+    </g>
   </g>
 </svg>

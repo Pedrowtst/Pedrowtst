@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.svg?v=3">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.png?v=3" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.svg?v=5">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.png?v=5" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
   </picture>
 </div>
 
@@ -22,8 +22,6 @@
 
 ---
 
-### 🏛️ Architectural Dossier
-
 ```text
 ┌── [ SYSTEM ARCHITECT DOSSIER ] ──────────────────────────────────────────────────┐
 │ ARCHITECT   : Pedro Mautone — Co-Founder & Systems Architect                     │
@@ -42,18 +40,14 @@
 
 ---
 
-### ⚡ Architectural Core Modules
-
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.svg?v=3">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.png?v=3" width="100%" alt="Zirtuno Engineering Modules" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.svg?v=5">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.png?v=5" width="100%" alt="Zirtuno Engineering Modules" />
   </picture>
 </div>
 
 ---
-
-### 🛠️ Technology & Protocol Matrix
 
 <div align="center">
   <a href="https://skillicons.dev">
@@ -71,19 +65,14 @@
 
 ---
 
-### 🐍 Contribution Activity (Zirtuno Liquid Snake)
-
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake-dark.svg?v=3">
-    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake.svg?v=3">
-    <img alt="GitHub Contribution Snake" src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake-dark.svg?v=3" width="100%" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.svg?v=5">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.png?v=5" width="100%" alt="Liquid Contribution Field" />
   </picture>
 </div>
 
 ---
-
-### 📊 Real-Time Telemetry & Metrics
 
 <div align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=Pedrowtst&show_icons=true&bg_color=020306&title_color=00E3FE&text_color=94A3B8&icon_color=00E3FE&border_color=1e293b&hide_border=false&count_private=true&border_radius=8" height="175" alt="GitHub Stats" />
@@ -93,8 +82,6 @@
 </div>
 
 ---
-
-### 📌 Featured Systems & Platforms
 
 <table>
   <tr>
@@ -123,7 +110,7 @@
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.svg?v=3">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.png?v=3" width="100%" alt="Footer" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.svg?v=5">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.png?v=5" width="100%" alt="Footer" />
   </picture>
 </div>
