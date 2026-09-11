@@ -1,61 +1,102 @@
 ﻿<div align="center">
-
-# Pedro Mautone
-
-**Software Engineering Student @ PUCPR · Co-Founder @ [Zirtuno](https://github.com/ZIRTUNO)**  
-*Interactive Graphics (WebGL2 / Three.js) · Edge Computer Vision (YOLOv8 / ESP32) · AI Systems*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-mautone/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pedrowtst)
-
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=220&section=header&text=Pedro%20Mautone&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%E2%80%A2%20Creative%20Computing%20%26%20Edge%20Vision&descAlignY=58&descAlign=50" width="100%" alt="Header" />
 </div>
+
+<div align="center">
+  <a href="https://github.com/Pedrowtst">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&lines=Software+Engineering+Student+%40+PUCPR;Co-Founder+%26+Developer+%40+Zirtuno;Creative+Computing+%7C+WebGL2+%7C+Three.js;Edge+Computer+Vision+(YOLOv8+%2B+ESP32);Agentic+Engineering+%26+Context+Architectures" alt="Typing SVG" />
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/pedro-mautone/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</div>
+
+<br />
 
 ---
 
 ### 🚀 About Me
 
-- 💻 **Software Engineering** student at **PUCPR** (Pontifícia Universidade Católica do Paraná).
-- 🛠️ **Co-Founder & Developer** at [Zirtuno](https://github.com/ZIRTUNO), building interactive digital experiences and creative computing architectures.
-- 🎯 **Areas of Focus**:
-  - **Creative Computing & Graphics**: WebGL2, OGL, and Three.js systems with GPU tier detection and smooth spline choreographies.
-  - **Edge Vision & IoT**: Direction-aware tracking systems pairing microcontrollers (ESP32-CAM in C++) with Python services (YOLOv8n + BoT-SORT) and Flask telemetry.
-  - **AI Workflows & Context Systems**: Agentic engineering, Model Context Protocol (MCP), and structured context pipelines.
+```text
+Identity:   Software Engineering Student (PUCPR) · Co-Founder & Developer (Zirtuno)
+Focus:      Creative Computing · Edge Computer Vision · Context-Engineered AI Systems
+Location:   Curitiba, Brazil 🇧🇷
+```
+
+- 🎓 **Education**: Software Engineering student at **PUCPR** (Pontifícia Universidade Católica do Paraná) · Class Representative.
+- 🏢 **Studio Work**: Co-Founder & Developer at **[Zirtuno](https://github.com/ZIRTUNO)**, crafting immersive interactive digital experiences, WebGL architectures, and design-led engineering systems.
+- 👁️ **Edge Vision & IoT**: Direction-aware computer vision architectures pairing microcontrollers (ESP32-CAM in C++) with Python services (YOLOv8n + BoT-SORT) and real-time Flask dashboards.
+- ⚡ **AI Tooling & Workflows**: Daily engineering utilizing Claude Code, Model Context Protocol (MCP), and structured context architectures (Obsidian PARA) with automated regression testing and scoped diff reviews.
 
 ---
 
-### 🛠️ Tech Stack & Tools
-
-#### Languages & Core
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-
-#### Graphics, Vision & IoT
-![Three.js](https://img.shields.io/badge/Three.js-black?style=flat-square&logo=three.js&logoColor=white)
-![WebGL](https://img.shields.io/badge/WebGL2-990000?style=flat-square&logo=webgl&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=ultralytics&logoColor=black)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
-
-#### Frameworks & Infrastructure
-![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
----
-
-### 📊 GitHub Activity & Stats
+### 🛠️ Tech Stack & Tooling
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Pedro's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=ts,py,cpp,c,threejs,nextjs,react,opencv,flask,arduino,git,github,vscode,linux,docker&perline=8" alt="Tech Stack" />
+  </a>
 </div>
 
 ---
 
-### 📌 Featured Work
+### 🐍 Contribution Activity (Snake Game)
 
-- **[smart-parking-esp32](https://github.com/Pedrowtst/smart-parking-esp32)**: Direction-aware vehicle tracking and count system using ESP32-CAM, YOLOv8n, BoT-SORT, and a real-time Flask dashboard.
-- **[Zirtuno](https://github.com/ZIRTUNO)**: Interactive studio projects, WebGL explorations, and digital architectures.
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake-dark.svg">
+  </picture>
+</div>
+
+---
+
+### 📊 Real-Time GitHub Analytics
+
+<div align="center">
+  <a href="https://github.com/Pedrowtst">
+    <img src="https://github-readme-stats.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&border_radius=10" height="175" alt="GitHub Stats" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Pedrowtst&theme=tokyonight&hide_border=true&border_radius=10" height="175" alt="Streak Stats" />
+  </a>
+  <br />
+  <a href="https://github.com/Pedrowtst">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&theme=tokyonight&hide_border=true&border_radius=10" height="150" alt="Top Languages" />
+  </a>
+</div>
+
+---
+
+### 📌 Featured Engineering
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center"><a href="https://github.com/Pedrowtst/smart-parking-esp32">smart-parking-esp32</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Hardware-ESP32--CAM-red?style=flat-square" alt="Hardware" />
+        <img src="https://img.shields.io/badge/Model-YOLOv8n-cyan?style=flat-square" alt="YOLOv8" />
+        <img src="https://img.shields.io/badge/Backend-Flask-black?style=flat-square" alt="Flask" />
+      </p>
+      <p>Direction-aware vehicle tracking and count system combining C++ firmware on an ESP32-CAM module with a Python YOLOv8 tracking service (BoT-SORT) and a live telemetry dashboard.</p>
+    </td>
+    <td width="50%">
+      <h3 align="center"><a href="https://github.com/ZIRTUNO">ZIRTUNO Studio</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-blue?style=flat-square" alt="WebGL2" />
+        <img src="https://img.shields.io/badge/Framework-Next.js%20%2F%20React-black?style=flat-square" alt="Next.js" />
+        <img src="https://img.shields.io/badge/A11y-WCAG%20AA-green?style=flat-square" alt="WCAG" />
+      </p>
+      <p>Independent creative computing studio developing fluid web interfaces, GPU tier adaptors, Catmull-Rom spline camera choreography, and context-engineered systems.</p>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=120&section=footer" width="100%" alt="Footer" />
+</div>
