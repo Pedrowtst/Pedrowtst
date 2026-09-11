@@ -1,5 +1,5 @@
 ﻿<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=220&section=header&text=Pedro%20Mautone&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%E2%80%A2%20Creative%20Computing%20%26%20Edge%20Vision&descAlignY=58&descAlign=50" width="100%" alt="Header" />
+  <img src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/header.svg" width="100%" alt="Pedro Mautone — Software Engineer" />
 </div>
 
 <div align="center">
@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/pedro-mautone/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/pedro-mautone/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </div>
@@ -47,9 +47,9 @@ Location:   Curitiba, Brazil 🇧🇷
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake-dark.svg" width="100%" />
   </picture>
 </div>
 
@@ -58,14 +58,10 @@ Location:   Curitiba, Brazil 🇧🇷
 ### 📊 Real-Time GitHub Analytics
 
 <div align="center">
-  <a href="https://github.com/Pedrowtst">
-    <img src="https://github-readme-stats.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&border_radius=10" height="175" alt="GitHub Stats" />
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Pedrowtst&theme=tokyonight&hide_border=true&border_radius=10" height="175" alt="Streak Stats" />
-  </a>
+  <img src="https://github-stats-extended.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&border_radius=10" height="175" alt="GitHub Stats" />
+  <img src="https://streak-stats.demolab.com/?user=Pedrowtst&theme=tokyonight&hide_border=true&border_radius=10" height="175" alt="Streak Stats" />
   <br />
-  <a href="https://github.com/Pedrowtst">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&theme=tokyonight&hide_border=true&border_radius=10" height="150" alt="Top Languages" />
-  </a>
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&theme=tokyonight&hide_border=true&border_radius=10" height="150" alt="Top Languages" />
 </div>
 
 ---
@@ -98,5 +94,5 @@ Location:   Curitiba, Brazil 🇧🇷
 <br />
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,20&height=120&section=footer" width="100%" alt="Footer" />
+  <img src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/footer.svg" width="100%" alt="Footer" />
 </div>
