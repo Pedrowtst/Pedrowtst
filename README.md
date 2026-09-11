@@ -7,7 +7,7 @@
 
 <div align="center">
   <a href="https://github.com/Pedrowtst">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&lines=Software+Engineering+Student+%40+PUCPR;Co-Founder+%26+Developer+%40+Zirtuno;Creative+Computing+%7C+WebGL2+%7C+Three.js;Edge+Computer+Vision+(YOLOv8+%2B+ESP32);Agentic+Engineering+%26+Context+Architectures" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&lines=Co-Founder+%26+Systems+Architect+%40+Zirtuno;Enterprise+Systems+%26+Automation+(ERP+%2F+CRM);Reverse+Engineering+%26+Systems+(C+%2F+C%2B%2B);Computer+Vision+%26+Edge+IoT+(YOLOv8+%2B+ESP32);Real-Time+Graphics+%7C+WebGL2+%7C+Three.js" alt="Typing SVG" />
   </a>
 </div>
 
@@ -24,15 +24,16 @@
 ### 🚀 About Me
 
 ```text
-Identity:   Software Engineering Student (PUCPR) · Co-Founder & Developer (Zirtuno)
-Focus:      Creative Computing · Edge Computer Vision · Context-Engineered AI Systems
+Identity:   Software Engineer · Co-Founder & Systems Architect (Zirtuno)
+Focus:      Enterprise Systems & Automation · Reverse Engineering · Computer Vision · Real-Time Graphics
 Location:   Curitiba, Brazil 🇧🇷
 ```
 
-- 🎓 **Education**: Software Engineering student at **PUCPR** (Pontifícia Universidade Católica do Paraná) · Class Representative.
-- 🏢 **Studio Work**: Co-Founder & Developer at **[Zirtuno](https://github.com/ZIRTUNO)**, crafting immersive interactive digital experiences, WebGL architectures, and design-led engineering systems.
-- 👁️ **Edge Vision & IoT**: Direction-aware computer vision architectures pairing microcontrollers (ESP32-CAM in C++) with Python services (YOLOv8n + BoT-SORT) and real-time Flask dashboards.
-- ⚡ **AI Tooling & Workflows**: Daily engineering utilizing Claude Code, Model Context Protocol (MCP), and structured context architectures (Obsidian PARA) with automated regression testing and scoped diff reviews.
+- 🏢 **Zirtuno**: Co-Founder & Systems Architect at **[Zirtuno](https://github.com/ZIRTUNO)**, engineering custom enterprise systems, mission-critical business automations, ERP/CRM integration pipelines, reverse-engineered protocol layers, and real-time graphics engines.
+- ⚙️ **Enterprise Systems & Automation**: Designing scalable backend architectures, custom ERP and CRM data synchronization workflows, automated ETL pipelines, webhook orchestration, and event-driven services.
+- 🔬 **Reverse Engineering & Systems**: Binary analysis, communication protocol reverse engineering, memory inspection, and low-level development in C, C++, and Python to interface with legacy, proprietary, or undocumented hardware and systems.
+- 👁️ **Computer Vision & Embedded IoT**: Direction-aware computer vision architectures pairing microcontroller firmware (ESP32-CAM in C++) with real-time detection & tracking services (YOLOv8 + BoT-SORT) and live telemetry backends.
+- 🎮 **Real-Time Graphics**: WebGL2 and Three.js interactive visual systems, GPU tier adaptation, and hardware-accelerated 3D graphics.
 
 ---
 
@@ -40,9 +41,17 @@ Location:   Curitiba, Brazil 🇧🇷
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=ts,py,cpp,c,threejs,nextjs,react,opencv,flask,arduino,git,github,vscode,linux,docker&perline=8" alt="Tech Stack" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,py,ts,js,go,rust,bash,postgres,mysql,redis,docker,linux,nextjs,react,threejs,opencv,flask,arduino,git,githubactions,postman,nginx&perline=8" alt="Tech Stack" />
   </a>
 </div>
+
+<br />
+
+| Domain | Core Technologies & Tooling |
+|---|---|
+| **Low-Level & Reverse Engineering** | `C`, `C++`, `Python`, `Linux`, `Bash`, `GDB`, Binary Analysis, Protocol Dissection, Network Sniffing |
+| **Enterprise, ERP/CRM & Automations** | `PostgreSQL`, `MySQL`, `Redis`, `Docker`, `Next.js`, `Flask`, `FastAPI`, `Nginx`, Webhooks, CI/CD Actions |
+| **Vision, Graphics & IoT** | `OpenCV`, `YOLOv8`, `Three.js`, `WebGL2`, `ESP32-CAM (Arduino/C++)`, BoT-SORT Tracking |
 
 ---
 
@@ -69,27 +78,27 @@ Location:   Curitiba, Brazil 🇧🇷
 
 ---
 
-### 📌 Featured Engineering
+### 📌 Featured Systems & Projects
 
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center"><a href="https://github.com/ZIRTUNO">ZIRTUNO Systems</a></h3>
+      <p align="center">
+        <img src="https://img.shields.io/badge/Enterprise-Systems%20%26%20Automation-purple?style=flat-square" alt="Enterprise Systems" />
+        <img src="https://img.shields.io/badge/Architecture-ERP%20%2F%20CRM%20Pipelines-blue?style=flat-square" alt="ERP & CRM" />
+        <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-black?style=flat-square" alt="WebGL2" />
+      </p>
+      <p>Co-Founder & Systems Architect. Engineering specialized enterprise automation platforms, custom ERP/CRM integration pipelines, reverse-engineered protocol layers, real-time graphics engines, and resilient digital architectures.</p>
+    </td>
+    <td width="50%">
       <h3 align="center"><a href="https://github.com/Pedrowtst/smart-parking-esp32">smart-parking-esp32</a></h3>
       <p align="center">
         <img src="https://img.shields.io/badge/Hardware-ESP32--CAM-red?style=flat-square" alt="Hardware" />
-        <img src="https://img.shields.io/badge/Model-YOLOv8n-cyan?style=flat-square" alt="YOLOv8" />
-        <img src="https://img.shields.io/badge/Backend-Flask-black?style=flat-square" alt="Flask" />
+        <img src="https://img.shields.io/badge/Vision-YOLOv8%20%2B%20BoT--SORT-cyan?style=flat-square" alt="YOLOv8" />
+        <img src="https://img.shields.io/badge/Telemetry-Flask%20Live-black?style=flat-square" alt="Flask" />
       </p>
-      <p>Direction-aware vehicle tracking and count system combining C++ firmware on an ESP32-CAM module with a Python YOLOv8 tracking service (BoT-SORT) and a live telemetry dashboard.</p>
-    </td>
-    <td width="50%">
-      <h3 align="center"><a href="https://github.com/ZIRTUNO">ZIRTUNO Studio</a></h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-blue?style=flat-square" alt="WebGL2" />
-        <img src="https://img.shields.io/badge/Framework-Next.js%20%2F%20React-black?style=flat-square" alt="Next.js" />
-        <img src="https://img.shields.io/badge/A11y-WCAG%20AA-green?style=flat-square" alt="WCAG" />
-      </p>
-      <p>Independent creative computing studio developing fluid web interfaces, GPU tier adaptors, Catmull-Rom spline camera choreography, and context-engineered systems.</p>
+      <p>Direction-aware vehicle tracking and counting system combining low-level C++ firmware on an ESP32-CAM module with a Python YOLOv8 tracking service (BoT-SORT) and a live telemetry dashboard.</p>
     </td>
   </tr>
 </table>
