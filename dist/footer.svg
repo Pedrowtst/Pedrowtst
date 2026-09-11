@@ -1,49 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120">
+  <defs>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E3FE" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00E3FE" stop-opacity="0.12"/>
+    </linearGradient>
 
-      <svg
-        width="854"
-        height="120"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="z-index:1;position:relative"
-        viewBox="0 0 854 120"
-      >
-        <style>
-      .text {   font-size: 70px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 20px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } path {   transform: rotate(180deg);   transform-origin: 50% 50%;  } 
-      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
-    </style>
-        <defs>
-              <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#D38312"/><stop offset="100%" stop-color="#A83279"/>
-              </linearGradient>
-            </defs>
-        
-      <g transform="translate(427, 60) scale(1, 1) translate(-427, -60)">
-        <path d="" fill="url(#linear)" opacity="0.4" >
-          <animate
-              attributeName="d"
-              dur="20s"
-              repeatCount="indefinite"
-              keyTimes="0;0.333;0.667;1"
-              calcmod="spline"
-              keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-              begin="0s"
-              values="M0 0L 0 40Q 213.5 80 427 50T 854 75L 854 0 Z;M0 0L 0 65Q 213.5 80 427 60T 854 50L 854 0 Z;M0 0L 0 85Q 213.5 55 427 85T 854 50L 854 0 Z;M0 0L 0 40Q 213.5 80 427 50T 854 75L 854 0 Z">
-          </animate>
-        </path>
-        <path d="" fill="url(#linear)" opacity="0.4" >
-          <animate
-            attributeName="d"
-            dur="20s"
-            repeatCount="indefinite"
-            keyTimes="0;0.333;0.667;1"
-            calcmod="spline"
-            keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-            begin="-10s"
-            values="M0 0L 0 55Q 213.5 100 427 70T 854 80L 854 0 Z;M0 0L 0 70Q 213.5 40 427 40T 854 60L 854 0 Z;M0 0L 0 65Q 213.5 45 427 70T 854 85L 854 0 Z;M0 0L 0 55Q 213.5 100 427 70T 854 80L 854 0 Z">
-          </animate>
-        </path>
-      </g>
-         
-        
-      </svg>
-    
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#00E3FE" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040407"/>
+      <stop offset="100%" stop-color="#080912"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="120" fill="url(#bg)" />
+
+  <g opacity="0.9">
+    <path fill="url(#wave1)">
+      <animate attributeName="d" dur="14s" repeatCount="indefinite"
+        values="
+          M0 0 L0 60 Q300 100 600 50 T1200 70 L1200 0 Z;
+          M0 0 L0 45 Q300 30 600 80 T1200 45 L1200 0 Z;
+          M0 0 L0 70 Q300 60 600 30 T1200 80 L1200 0 Z;
+          M0 0 L0 60 Q300 100 600 50 T1200 70 L1200 0 Z"
+      />
+    </path>
+    <path fill="url(#wave2)">
+      <animate attributeName="d" dur="18s" repeatCount="indefinite"
+        values="
+          M0 0 L0 40 Q400 20 700 70 T1200 35 L1200 0 Z;
+          M0 0 L0 65 Q400 80 700 30 T1200 60 L1200 0 Z;
+          M0 0 L0 35 Q400 50 700 80 T1200 40 L1200 0 Z;
+          M0 0 L0 40 Q400 20 700 70 T1200 35 L1200 0 Z"
+      />
+    </path>
+  </g>
+</svg>

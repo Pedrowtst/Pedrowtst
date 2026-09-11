@@ -1,43 +1,48 @@
 ﻿<div align="center">
   <picture>
     <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/header.svg">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/header.png" width="100%" alt="Pedro Mautone — Software Engineer" />
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/header.png" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
   </picture>
 </div>
 
 <div align="center">
   <a href="https://github.com/Pedrowtst">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&lines=Co-Founder+%26+Systems+Architect+%40+Zirtuno;Enterprise+Systems+%26+Automation+(ERP+%2F+CRM);Reverse+Engineering+%26+Systems+(C+%2F+C%2B%2B);Computer+Vision+%26+Edge+IoT+(YOLOv8+%2B+ESP32);Real-Time+Graphics+%7C+WebGL2+%7C+Three.js" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&pause=1200&color=00E3FE&center=true&vCenter=true&width=720&lines=Zirtuno+Systems+Architect+%26+Co-Founder;Enterprise+Systems+%26+Business+Automation+(ERP+%2F+CRM);Reverse+Engineering+%26+Protocol+Analysis+(C+%2F+C%2B%2B);Real-Time+Graphics+%7C+WebGL2+%7C+Three.js+Shaders;Edge+Computer+Vision+%26+Hardware+Telemetry+(YOLOv8+%2B+ESP32)" alt="Typing SVG" />
   </a>
 </div>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/pedro-mautone/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://github.com/ZIRTUNO" target="_blank"><img src="https://img.shields.io/badge/STUDIO-ZIRTUNO-00E3FE?style=for-the-badge&logo=github&logoColor=black&labelColor=0d1117" alt="Zirtuno" /></a>
+  <a href="https://www.linkedin.com/in/pedro-mautone/" target="_blank"><img src="https://img.shields.io/badge/CONNECT-LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn" /></a>
+  <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/DISPATCH-GITHUB-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub" /></a>
+  <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/TRANSMIT-EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email" /></a>
 </div>
 
 <br />
 
 ---
 
-### 🚀 About Me
+### 🏛️ Architectural Dossier
 
 ```text
-Identity:   Software Engineer · Co-Founder & Systems Architect (Zirtuno)
-Focus:      Enterprise Systems & Automation · Reverse Engineering · Computer Vision · Real-Time Graphics
-Location:   Curitiba, Brazil 🇧🇷
+┌── [ SYSTEM ARCHITECT DOSSIER ] ──────────────────────────────────────────────────┐
+│ ARCHITECT   : Pedro Mautone — Co-Founder & Systems Architect                     │
+│ VENTURE     : ZIRTUNO (Autonomous Digital Studio & Systems Engineering)          │
+│ CORE DISCIPLINES: Enterprise Automation · Reverse Engineering · Real-Time Graphics │
+│ MANIFESTO   : "One liquid. One system. One motivated architecture."              │
+│ LOCATION    : Curitiba, Brazil 🇧🇷                                                │
+└──────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-- 🏢 **Zirtuno**: Co-Founder & Systems Architect at **[Zirtuno](https://github.com/ZIRTUNO)**, engineering custom enterprise systems, mission-critical business automations, ERP/CRM integration pipelines, reverse-engineered protocol layers, and real-time graphics engines.
-- ⚙️ **Enterprise Systems & Automation**: Designing scalable backend architectures, custom ERP and CRM data synchronization workflows, automated ETL pipelines, webhook orchestration, and event-driven services.
-- 🔬 **Reverse Engineering & Systems**: Binary analysis, communication protocol reverse engineering, memory inspection, and low-level development in C, C++, and Python to interface with legacy, proprietary, or undocumented hardware and systems.
-- 👁️ **Computer Vision & Embedded IoT**: Direction-aware computer vision architectures pairing microcontroller firmware (ESP32-CAM in C++) with real-time detection & tracking services (YOLOv8 + BoT-SORT) and live telemetry backends.
-- 🎮 **Real-Time Graphics**: WebGL2 and Three.js interactive visual systems, GPU tier adaptation, and hardware-accelerated 3D graphics.
+- 🏢 **Zirtuno Systems**: Co-Founder & Systems Architect at **[Zirtuno](https://github.com/ZIRTUNO)**. Far beyond web applications, Zirtuno engineers resilient digital infrastructure, custom enterprise automation pipelines, automated ERP/CRM data synchronizers, reverse-engineered integration protocols, and high-performance WebGL2 graphics engines.
+- ⚙️ **Enterprise Systems & Automation**: Designing mission-critical backend architectures, custom ERP/CRM data sync pipelines, distributed asynchronous workers, automated business telemetry, and robust API orchestration (`PostgreSQL`, `Redis`, `Docker`, `Nginx`, `FastAPI`).
+- 🔬 **Reverse Engineering & Systems**: Binary inspection, communication protocol reverse engineering, memory mapping, and low-level development in `C`, `C++`, and `Python` to interface with proprietary, legacy, or undocumented hardware and industrial ERP systems.
+- 👁️ **Computer Vision & Embedded IoT**: Edge computer vision architectures pairing low-level C++ firmware on microcontrollers (`ESP32-CAM`) with real-time neural detection & tracking (`YOLOv8` + `BoT-SORT`) and live telemetry backends.
+- 🌊 **Real-Time Graphics & Liquid Physics**: WebGL2 and Three.js mathematical signed distance fields (SDFs), metaball fluids, custom GLSL shaders, GPU tier adaptation, and smooth spline choreography.
 
 ---
 
-### 🛠️ Tech Stack & Tooling
+### 🛠️ Technology & Protocol Matrix
 
 <div align="center">
   <a href="https://skillicons.dev">
@@ -47,15 +52,15 @@ Location:   Curitiba, Brazil 🇧🇷
 
 <br />
 
-| Domain | Core Technologies & Tooling |
+| Domain | Systems, Tooling & Protocols |
 |---|---|
-| **Low-Level & Reverse Engineering** | `C`, `C++`, `Python`, `Linux`, `Bash`, `GDB`, Binary Analysis, Protocol Dissection, Network Sniffing |
-| **Enterprise, ERP/CRM & Automations** | `PostgreSQL`, `MySQL`, `Redis`, `Docker`, `Next.js`, `Flask`, `FastAPI`, `Nginx`, Webhooks, CI/CD Actions |
-| **Vision, Graphics & IoT** | `OpenCV`, `YOLOv8`, `Three.js`, `WebGL2`, `ESP32-CAM (Arduino/C++)`, BoT-SORT Tracking |
+| **Low-Level & Reverse Engineering** | `C`, `C++`, `Python`, `Linux`, `Bash`, `GDB`, Binary Analysis, Protocol Dissection, Network Sniffing, Assembly |
+| **Enterprise, ERP/CRM & Automations** | `PostgreSQL`, `MySQL`, `Redis`, `Docker`, `Next.js`, `FastAPI`, `Flask`, `Nginx`, Webhooks, CI/CD GitHub Actions |
+| **Vision, Graphics & Embedded IoT** | `OpenCV`, `YOLOv8`, `BoT-SORT`, `Three.js`, `WebGL2`, `GLSL Shaders`, `ESP32-CAM (C++)`, Arduino |
 
 ---
 
-### 🐍 Contribution Activity (Snake Game)
+### 🐍 Contribution Activity (Zirtuno Liquid Snake)
 
 <div align="center">
   <picture>
@@ -67,7 +72,7 @@ Location:   Curitiba, Brazil 🇧🇷
 
 ---
 
-### 📊 Real-Time GitHub Analytics
+### 📊 Real-Time Telemetry & Metrics
 
 <div align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&border_radius=10" height="175" alt="GitHub Stats" />
@@ -78,16 +83,16 @@ Location:   Curitiba, Brazil 🇧🇷
 
 ---
 
-### 📌 Featured Systems & Projects
+### 📌 Featured Systems & Platforms
 
 <table>
   <tr>
     <td width="50%">
       <h3 align="center"><a href="https://github.com/ZIRTUNO">ZIRTUNO Systems</a></h3>
       <p align="center">
-        <img src="https://img.shields.io/badge/Enterprise-Systems%20%26%20Automation-purple?style=flat-square" alt="Enterprise Systems" />
+        <img src="https://img.shields.io/badge/Domain-Enterprise%20Systems-purple?style=flat-square" alt="Enterprise Systems" />
         <img src="https://img.shields.io/badge/Architecture-ERP%20%2F%20CRM%20Pipelines-blue?style=flat-square" alt="ERP & CRM" />
-        <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-black?style=flat-square" alt="WebGL2" />
+        <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-00E3FE?style=flat-square&logoColor=black" alt="WebGL2" />
       </p>
       <p>Co-Founder & Systems Architect. Engineering specialized enterprise automation platforms, custom ERP/CRM integration pipelines, reverse-engineered protocol layers, real-time graphics engines, and resilient digital architectures.</p>
     </td>
