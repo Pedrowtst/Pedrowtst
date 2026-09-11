@@ -1,0 +1,68 @@
+{
+  "repos": 2,
+  "stars": 1,
+  "commits": 227,
+  "followers": 1,
+  "bytes": 67406,
+  "languages": [
+    [
+      "Python",
+      52336
+    ],
+    [
+      "C++",
+      15070
+    ]
+  ],
+  "monthly": [
+    {
+      "month": 10,
+      "value": 0
+    },
+    {
+      "month": 11,
+      "value": 1
+    },
+    {
+      "month": 12,
+      "value": 0
+    },
+    {
+      "month": 1,
+      "value": 0
+    },
+    {
+      "month": 2,
+      "value": 0
+    },
+    {
+      "month": 3,
+      "value": 0
+    },
+    {
+      "month": 4,
+      "value": 0
+    },
+    {
+      "month": 5,
+      "value": 44
+    },
+    {
+      "month": 6,
+      "value": 41
+    },
+    {
+      "month": 7,
+      "value": 26
+    },
+    {
+      "month": 8,
+      "value": 32
+    },
+    {
+      "month": 9,
+      "value": 102
+    }
+  ],
+  "built": "11 SEP 2026"
+}

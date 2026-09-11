@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 650" width="920" height="650" role="img" aria-label="Pedro Mautone - Systems Architect Console">
+<defs>
+  <radialGradient id="bg" cx="0.5" cy="0.15" r="0.85">
+    <stop offset="0%" stop-color="#EAF1F4"/>
+    <stop offset="100%" stop-color="#F6F9FA"/>
+  </radialGradient>
+  <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0284C7"/>
+    <stop offset="70%" stop-color="#00A86B"/>
+    <stop offset="100%" stop-color="#00A86B"/>
+  </linearGradient>
+  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00A86B" stop-opacity="0.32"/>
+    <stop offset="100%" stop-color="#00A86B" stop-opacity="0.01"/>
+  </linearGradient>
+  <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#00A86B" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#0284C7" stop-opacity="0.04"/>
+  </linearGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#62868E" stroke-width="0.8" stroke-opacity="0.04"/>
+  </pattern>
+  <filter id="laserGlow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="consoleClip">
+    <rect x="0" y="0" width="920" height="650" rx="12"/>
+  </clipPath>
+</defs>
+<g clip-path="url(#consoleClip)">
+<rect width="920" height="650" fill="url(#bg)"/>
+<rect width="920" height="650" fill="url(#grid)"/>
+<rect width="920" height="42" fill="#E4ECEF"/>
+<line x1="0" y1="42" x2="920" y2="42" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="24" cy="21" r="3.8" fill="#62868E" opacity="0.60"/>
+<circle cx="40" cy="21" r="3.8" fill="#0284C7" opacity="0.80"/>
+<circle cx="56" cy="21" r="3.8" fill="#00A86B" opacity="1.00"/>
+<text x="80" y="25" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#00A86B" letter-spacing="1.5">[ ZIRTUNO ]</text>
+<text x="172" y="25" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#62868E" letter-spacing="1.2">// SYSTEMS ARCHITECTURAL CONSOLE</text>
+<text x="888" y="25" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#00A86B" letter-spacing="1.2" text-anchor="end">● NODE: CURITIBA, PR · BR // SYSTEMS OPERATIONAL // BUS ACTIVE</text>
+<g transform="translate(32, 56)">
+<text x="0" y="32" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="800" fill="#092226" letter-spacing="3.0">PEDRO MAUTONE</text>
+<text x="0" y="52" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#00A86B" letter-spacing="2.2">CO-FOUNDER &amp; SYSTEMS ARCHITECT · ZIRTUNO</text>
+<g transform="translate(496.0, 6)">
+<rect width="360" height="76" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<rect width="3" height="76" rx="1.5" fill="#00A86B"/>
+<text x="16" y="24" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#00A86B" letter-spacing="1.8">CORE ARCHITECTURAL DIRECTIVE</text>
+<text x="16" y="44" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#2B525A">Engineering high-concurrency backends, edge computer vision</text>
+<text x="16" y="60" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#2B525A">telemetry, and resilient enterprise data pipelines.</text>
+</g>
+<rect x="0.0" y="66" width="124.2" height="20" rx="3" fill="url(#badgeGrad)" stroke="#CFDDE2" stroke-width="1"/>
+<text x="7.0" y="80" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="8.5" font-weight="600" fill="#2B525A" letter-spacing="0.8">DISTRIBUTED SYSTEMS</text>
+<rect x="130.2" y="66" width="124.2" height="20" rx="3" fill="url(#badgeGrad)" stroke="#CFDDE2" stroke-width="1"/>
+<text x="137.2" y="80" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="8.5" font-weight="600" fill="#2B525A" letter-spacing="0.8">REVERSE ENGINEERING</text>
+<rect x="260.4" y="66" width="95.2" height="20" rx="3" fill="url(#badgeGrad)" stroke="#CFDDE2" stroke-width="1"/>
+<text x="267.4" y="80" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="8.5" font-weight="600" fill="#2B525A" letter-spacing="0.8">EDGE TELEMETRY</text>
+<rect x="361.6" y="66" width="112.6" height="20" rx="3" fill="url(#badgeGrad)" stroke="#CFDDE2" stroke-width="1"/>
+<text x="368.6" y="80" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="8.5" font-weight="600" fill="#2B525A" letter-spacing="0.8">ERP/CRM PIPELINES</text>
+</g>
+<line x1="32" y1="156" x2="888" y2="156" stroke="#CFDDE2" stroke-width="1"/>
+<g transform="translate(32.0, 170)">
+<rect width="205.0" height="76" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="16" cy="18" r="2.5" fill="#00A86B"/>
+<text x="26" y="21" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#62868E" letter-spacing="1.5">REPOSITORIES</text>
+<text x="16" y="52" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="800" fill="#092226" letter-spacing="0.8">02</text>
+<text x="16" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" letter-spacing="1.0">OWNED ARCHITECTURES</text>
+</g>
+<g transform="translate(249.0, 170)">
+<rect width="205.0" height="76" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="16" cy="18" r="2.5" fill="#00A86B"/>
+<text x="26" y="21" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#62868E" letter-spacing="1.5">STARS EARNED</text>
+<text x="16" y="52" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="800" fill="#092226" letter-spacing="0.8">01</text>
+<text x="16" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" letter-spacing="1.0">RECOGNITION METRIC</text>
+</g>
+<g transform="translate(466.0, 170)">
+<rect width="205.0" height="76" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="16" cy="18" r="2.5" fill="#00A86B"/>
+<text x="26" y="21" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#62868E" letter-spacing="1.5">LIFETIME COMMITS</text>
+<text x="16" y="52" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="800" fill="#092226" letter-spacing="0.8">227</text>
+<text x="16" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" letter-spacing="1.0">CODE COMMITS</text>
+</g>
+<g transform="translate(683.0, 170)">
+<rect width="205.0" height="76" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="16" cy="18" r="2.5" fill="#00A86B"/>
+<text x="26" y="21" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#62868E" letter-spacing="1.5">CODEBASE VOLUME</text>
+<text x="16" y="52" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="800" fill="#092226" letter-spacing="0.8">66 KB</text>
+<text x="16" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" letter-spacing="1.0">SYSTEM RUNTIMES</text>
+</g>
+<g transform="translate(32, 260)">
+<rect width="540" height="152" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<text x="18" y="24" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#00A86B" letter-spacing="1.8">ENGINEERING VELOCITY // 12-MONTH TIMELINE</text>
+<rect x="380" y="11" width="144" height="20" rx="3" fill="url(#badgeGrad)" stroke="#CFDDE2" stroke-width="1"/>
+<text x="452" y="24" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#00A86B" letter-spacing="1.2" text-anchor="middle">246 CONTRIBUTIONS</text>
+<path d="M20.00,121.08 C27.27,120.96 50.91,120.32 65.45,120.32 C80.00,120.32 96.36,120.96 110.91,121.08 C125.45,121.20 141.82,121.08 156.36,121.08 C170.91,121.08 187.27,121.08 201.82,121.08 C216.36,121.08 232.73,121.08 247.27,121.08 C261.82,121.08 278.18,126.40 292.73,121.08 C307.27,115.76 323.64,92.79 338.18,87.83 C352.73,82.87 369.09,87.92 383.64,90.10 C398.18,92.27 414.55,100.34 429.09,101.43 C443.64,102.52 460.00,106.09 474.55,96.90 C489.09,87.71 512.73,52.46 520.00,44.00 L520,126 L20,126 Z" fill="url(#areaGrad)"/>
+<path d="M20.00,121.08 C27.27,120.96 50.91,120.32 65.45,120.32 C80.00,120.32 96.36,120.96 110.91,121.08 C125.45,121.20 141.82,121.08 156.36,121.08 C170.91,121.08 187.27,121.08 201.82,121.08 C216.36,121.08 232.73,121.08 247.27,121.08 C261.82,121.08 278.18,126.40 292.73,121.08 C307.27,115.76 323.64,92.79 338.18,87.83 C352.73,82.87 369.09,87.92 383.64,90.10 C398.18,92.27 414.55,100.34 429.09,101.43 C443.64,102.52 460.00,106.09 474.55,96.90 C489.09,87.71 512.73,52.46 520.00,44.00" fill="none" stroke="url(#traceGrad)" stroke-width="2.2" stroke-linecap="round" class="traceLine" filter="url(#laserGlow)"/>
+<line x1="20" y1="126" x2="520" y2="126" stroke="#CFDDE2" stroke-width="1"/>
+<text x="20.0" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">O</text>
+<text x="65.5" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">N</text>
+<text x="110.9" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">D</text>
+<text x="156.4" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">J</text>
+<text x="201.8" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">F</text>
+<text x="247.3" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">M</text>
+<text x="292.7" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">A</text>
+<text x="338.2" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">M</text>
+<text x="383.6" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">J</text>
+<text x="429.1" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">J</text>
+<text x="474.5" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">A</text>
+<text x="520.0" y="140" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#62868E" text-anchor="middle">S</text>
+</g>
+<g transform="translate(588, 260)">
+<rect width="300" height="152" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<text x="18" y="24" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#00A86B" letter-spacing="1.8">RUNTIME BY BYTE VOLUME</text>
+<g transform="translate(18, 44)"><g class="barGrow">
+<rect x="0.0" y="0" width="203.4" height="10" rx="2" fill="#00A86B"/>
+<rect x="205.4" y="0" width="58.6" height="10" rx="2" fill="#0284C7"/>
+</g></g>
+<rect x="18" y="70" width="8" height="8" rx="2" fill="#00A86B"/>
+<text x="34" y="78" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#092226">Python</text>
+<text x="282" y="78" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#00A86B" text-anchor="end">77.6%</text>
+<rect x="18" y="92" width="8" height="8" rx="2" fill="#0284C7"/>
+<text x="34" y="100" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#092226">C++</text>
+<text x="282" y="100" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#0284C7" text-anchor="end">22.4%</text>
+</g>
+<g transform="translate(32.0, 426)">
+<rect width="276.0" height="154" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<rect width="276.0" height="28" rx="6" fill="#E4ECEF"/>
+<rect y="22" width="276.0" height="6" fill="#E4ECEF"/>
+<line x1="0" y1="28" x2="276.0" y2="28" stroke="#CFDDE2" stroke-width="1"/>
+<text x="12" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#00A86B" letter-spacing="1.2">[ NODE 01 ]</text>
+<text x="82" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#092226" letter-spacing="1.0">EDGE TELEMETRY &amp; CV</text>
+<text x="12" y="46" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#0284C7" letter-spacing="0.8">ESP32-CAM · FreeRTOS · YOLOv8</text>
+<circle cx="15" cy="63" r="1.8" fill="#00A86B"/>
+<text x="24" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Direction-aware vehicle tracking</text>
+<circle cx="15" cy="82" r="1.8" fill="#00A86B"/>
+<text x="24" y="85" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Sub-100ms occupancy streaming</text>
+<circle cx="15" cy="101" r="1.8" fill="#00A86B"/>
+<text x="24" y="104" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Spatial computer vision on edge</text>
+<line x1="12" y1="126" x2="264.0" y2="126" stroke="#CFDDE2" stroke-width="0.8"/>
+<text x="12" y="141" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#00A86B" letter-spacing="1.0">INFERENCE &lt; 100ms // 60 FPS BUS</text>
+</g>
+<g transform="translate(322.0, 426)">
+<rect width="276.0" height="154" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<rect width="276.0" height="28" rx="6" fill="#E4ECEF"/>
+<rect y="22" width="276.0" height="6" fill="#E4ECEF"/>
+<line x1="0" y1="28" x2="276.0" y2="28" stroke="#CFDDE2" stroke-width="1"/>
+<text x="12" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#00A86B" letter-spacing="1.2">[ NODE 02 ]</text>
+<text x="82" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#092226" letter-spacing="1.0">ENTERPRISE DATA BUS</text>
+<text x="12" y="46" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#0284C7" letter-spacing="0.8">FastAPI · Redis · PostgreSQL · ERP</text>
+<circle cx="15" cy="63" r="1.8" fill="#00A86B"/>
+<text x="24" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Bi-directional ERP/CRM sync engine</text>
+<circle cx="15" cy="82" r="1.8" fill="#00A86B"/>
+<text x="24" y="85" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Transactional outbox pattern</text>
+<circle cx="15" cy="101" r="1.8" fill="#00A86B"/>
+<text x="24" y="104" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Idempotent queue processing</text>
+<line x1="12" y1="126" x2="264.0" y2="126" stroke="#CFDDE2" stroke-width="0.8"/>
+<text x="12" y="141" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#00A86B" letter-spacing="1.0">ZERO DATA LOSS // REAL-TIME SYNC</text>
+</g>
+<g transform="translate(612.0, 426)">
+<rect width="276.0" height="154" rx="6" fill="#FFFFFF" stroke="#CFDDE2" stroke-width="1"/>
+<rect width="276.0" height="28" rx="6" fill="#E4ECEF"/>
+<rect y="22" width="276.0" height="6" fill="#E4ECEF"/>
+<line x1="0" y1="28" x2="276.0" y2="28" stroke="#CFDDE2" stroke-width="1"/>
+<text x="12" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" fill="#00A86B" letter-spacing="1.2">[ NODE 03 ]</text>
+<text x="82" y="19" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#092226" letter-spacing="1.0">LOW-LEVEL &amp; PROTOCOLS</text>
+<text x="12" y="46" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#0284C7" letter-spacing="0.8">C / C++ · Linux / POSIX · GDB</text>
+<circle cx="15" cy="63" r="1.8" fill="#00A86B"/>
+<text x="24" y="66" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Binary protocol reverse engineering</text>
+<circle cx="15" cy="82" r="1.8" fill="#00A86B"/>
+<text x="24" y="85" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Proprietary socket dissection</text>
+<circle cx="15" cy="101" r="1.8" fill="#00A86B"/>
+<text x="24" y="104" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#2B525A">Deterministic memory profiling</text>
+<line x1="12" y1="126" x2="264.0" y2="126" stroke="#CFDDE2" stroke-width="0.8"/>
+<text x="12" y="141" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#00A86B" letter-spacing="1.0">DETERMINISTIC // ZERO-COPY IO</text>
+</g>
+<line x1="32" y1="594" x2="888" y2="594" stroke="#CFDDE2" stroke-width="1"/>
+<circle cx="38" cy="621" r="3.5" fill="#00A86B" class="pulseDot"/>
+<text x="50" y="625" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#2B525A" letter-spacing="1.2">UPTIME: CONTINUOUS // ARCHITECTING NEXT-GEN INFRASTRUCTURE @ ZIRTUNO</text>
+<text x="888" y="625" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#62868E" letter-spacing="1.5" text-anchor="end">TELEMETRY SYNCED: 11 SEP 2026 // GRAPHQL v4</text>
+<rect x="0.5" y="0.5" width="919" height="649" rx="12" fill="none" stroke="#CFDDE2" stroke-width="1"/>
+</g>
+<style>
+    text { text-rendering: geometricPrecision; }
+
+    .pulseDot {
+        animation: beaconPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes beaconPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+    }
+
+    .traceLine {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: traceDraw 3.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+    @keyframes traceDraw {
+        to { stroke-dashoffset: 0; }
+    }
+
+    .barGrow {
+        transform-origin: 0 0;
+        animation: barSpread 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes barSpread {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .pulseDot { animation: none !important; opacity: 1; }
+        .traceLine { animation: none !important; stroke-dashoffset: 0; }
+        .barGrow { animation: none !important; transform: scaleX(1); }
+    }
+    </style>
+</svg>
