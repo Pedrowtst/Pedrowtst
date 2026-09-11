@@ -94,44 +94,50 @@
       <path d="M 0 600 L 0.00 378.00 L 23.50 377.24 L 47.00 375.11 L 70.50 372.10 L 94.00 368.84 L 117.50 366.05 L 141.00 364.34 L 164.50 364.09 L 188.00 365.34 L 211.50 367.82 L 235.00 371.00 L 258.50 374.18 L 282.00 376.66 L 305.50 377.91 L 329.00 377.66 L 352.50 375.95 L 376.00 373.16 L 399.50 369.90 L 423.00 366.89 L 446.50 364.76 L 470.00 364.00 L 493.50 364.76 L 517.00 366.89 L 540.50 369.90 L 564.00 373.16 L 587.50 375.95 L 611.00 377.66 L 634.50 377.91 L 658.00 376.66 L 681.50 374.18 L 705.00 371.00 L 728.50 367.82 L 752.00 365.34 L 775.50 364.09 L 799.00 364.34 L 822.50 366.05 L 846.00 368.84 L 869.50 372.10 L 893.00 375.11 L 916.50 377.24 L 940.00 378.00 L 963.50 377.24 L 987.00 375.11 L 1010.50 372.10 L 1034.00 368.84 L 1057.50 366.05 L 1081.00 364.34 L 1104.50 364.09 L 1128.00 365.34 L 1151.50 367.82 L 1175.00 371.00 L 1198.50 374.18 L 1222.00 376.66 L 1245.50 377.91 L 1269.00 377.66 L 1292.50 375.95 L 1316.00 373.16 L 1339.50 369.90 L 1363.00 366.89 L 1386.50 364.76 L 1410.00 364.00 L 1433.50 364.76 L 1457.00 366.89 L 1480.50 369.90 L 1504.00 373.16 L 1527.50 375.95 L 1551.00 377.66 L 1574.50 377.91 L 1598.00 376.66 L 1621.50 374.18 L 1645.00 371.00 L 1668.50 367.82 L 1692.00 365.34 L 1715.50 364.09 L 1739.00 364.34 L 1762.50 366.05 L 1786.00 368.84 L 1809.50 372.10 L 1833.00 375.11 L 1856.50 377.24 L 1880.00 378.00 L 1903.50 377.24 L 1927.00 375.11 L 1950.50 372.10 L 1974.00 368.84 L 1997.50 366.05 L 2021.00 364.34 L 2044.50 364.09 L 2068.00 365.34 L 2091.50 367.82 L 2115.00 371.00 L 2138.50 374.18 L 2162.00 376.66 L 2185.50 377.91 L 2209.00 377.66 L 2232.50 375.95 L 2256.00 373.16 L 2279.50 369.90 L 2303.00 366.89 L 2326.50 364.76 L 2350.00 364.00 L 2373.50 364.76 L 2397.00 366.89 L 2420.50 369.90 L 2444.00 373.16 L 2467.50 375.95 L 2491.00 377.66 L 2514.50 377.91 L 2538.00 376.66 L 2561.50 374.18 L 2585.00 371.00 L 2608.50 367.82 L 2632.00 365.34 L 2655.50 364.09 L 2679.00 364.34 L 2702.50 366.05 L 2726.00 368.84 L 2749.50 372.10 L 2773.00 375.11 L 2796.50 377.24 L 2820.00 378.00 L 2820.00 600 Z" fill="url(#liquidGrad3)"/>
     </g>
 </g>
-<g transform="translate(0, 388)">
-<line x1="44" y1="0" x2="896" y2="0" stroke="rgba(0, 155, 176, 0.35)" stroke-width="1.2" stroke-dasharray="4 6"/>
-<circle cx="64.0" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="64.0" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">OCT</text>
-<line x1="137.8" y1="0" x2="137.8" y2="-4.0" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<g transform="translate(0, 386)">
+<rect x="40" y="6" width="860" height="24" rx="12" fill="rgba(255, 255, 255, 0.90)" stroke="rgba(0, 155, 176, 0.40)" stroke-width="1.2"/>
+<circle cx="64.0" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="64.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">OCT</text>
+<line x1="137.8" y1="6" x2="137.8" y2="-4.0" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
 <circle cx="137.8" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="137.8" y="-13.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">1</text>
-<text x="137.8" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">NOV</text>
-<circle cx="211.6" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="211.6" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">DEC</text>
-<circle cx="285.5" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="285.5" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">JAN</text>
-<circle cx="359.3" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="359.3" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">FEB</text>
-<circle cx="433.1" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="433.1" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">MAR</text>
-<circle cx="506.9" cy="0" r="2" fill="#009BB0" opacity="0.3"/>
-<text x="506.9" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">APR</text>
-<line x1="580.7" y1="0" x2="580.7" y2="-20.7" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="580.7" cy="-20.7" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="580.7" y="-29.7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">44</text>
-<text x="580.7" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">MAY</text>
-<line x1="654.5" y1="0" x2="654.5" y2="-19.3" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="654.5" cy="-19.3" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="654.5" y="-28.3" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">41</text>
-<text x="654.5" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">JUN</text>
-<line x1="728.4" y1="0" x2="728.4" y2="-12.2" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="728.4" cy="-12.2" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="728.4" y="-21.2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">26</text>
-<text x="728.4" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">JUL</text>
-<line x1="802.2" y1="0" x2="802.2" y2="-15.1" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="802.2" cy="-15.1" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="802.2" y="-24.1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">32</text>
-<text x="802.2" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">AUG</text>
-<line x1="876.0" y1="0" x2="876.0" y2="-48.0" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="876.0" cy="-48.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<text x="876.0" y="-57.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#08161A" text-anchor="middle">102</text>
-<text x="876.0" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="#344D55" text-anchor="middle" letter-spacing="1">SEP</text>
+<rect x="124.8" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="137.8" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">1</text>
+<text x="137.8" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">NOV</text>
+<circle cx="211.6" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="211.6" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">DEC</text>
+<circle cx="285.5" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="285.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">JAN</text>
+<circle cx="359.3" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="359.3" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">FEB</text>
+<circle cx="433.1" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="433.1" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">MAR</text>
+<circle cx="506.9" cy="18" r="2" fill="#009BB0" opacity="0.35"/>
+<text x="506.9" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1">APR</text>
+<line x1="580.7" y1="6" x2="580.7" y2="-19.8" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="580.7" cy="-19.8" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="567.7" y="-37.8" width="26" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="580.7" y="-26.8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">44</text>
+<text x="580.7" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">MAY</text>
+<line x1="654.5" y1="6" x2="654.5" y2="-18.5" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="654.5" cy="-18.5" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="641.5" y="-36.5" width="26" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="654.5" y="-25.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">41</text>
+<text x="654.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">JUN</text>
+<line x1="728.4" y1="6" x2="728.4" y2="-11.7" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="728.4" cy="-11.7" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="715.4" y="-29.7" width="26" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="728.4" y="-18.7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">26</text>
+<text x="728.4" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">JUL</text>
+<line x1="802.2" y1="6" x2="802.2" y2="-14.4" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="802.2" cy="-14.4" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="789.2" y="-32.4" width="26" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="802.2" y="-21.4" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">32</text>
+<text x="802.2" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">AUG</text>
+<line x1="876.0" y1="6" x2="876.0" y2="-46.0" stroke="#00B6CC" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="876.0" cy="-46.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="860.0" y="-64.0" width="32" height="15" rx="7.5" fill="rgba(255, 255, 255, 0.95)" stroke="#009BB0" stroke-width="1"/>
+<text x="876.0" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#08161A" text-anchor="middle">102</text>
+<text x="876.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#006C7A" text-anchor="middle" letter-spacing="1">SEP</text>
 </g>
 <g transform="translate(44, 40)">
 <g transform="translate(0, 0)">
@@ -171,29 +177,27 @@
 <text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="#6B8891" letter-spacing="1.2">PRIMARY STACK</text>
 <text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00B6CC">77.6% Py · 22.4% C++</text>
 </g>
-<g transform="translate(44.0, 452)" class="pillarCard">
-<rect width="274.7" height="82" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
+<g transform="translate(44.0, 456)" class="pillarCard">
+<rect width="274.7" height="84" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#009BB0"/>
 <text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#08161A">EDGE TELEMETRY &amp; CV</text>
 <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#00B6CC">ESP32-CAM · FreeRTOS · YOLOv8</text>
-<text x="16" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Sub-100ms spatial vehicle tracking &amp; occupancy stream</text>
+<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Sub-100ms spatial vehicle tracking &amp; occupancy stream</text>
 </g>
-<g transform="translate(332.7, 452)" class="pillarCard">
-<rect width="274.7" height="82" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
+<g transform="translate(332.7, 456)" class="pillarCard">
+<rect width="274.7" height="84" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#009BB0"/>
 <text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#08161A">ENTERPRISE DATA BUS</text>
 <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#00B6CC">FastAPI · Redis · PostgreSQL · ERP</text>
-<text x="16" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Bi-directional ERP/CRM sync engine with transactional outbox</text>
+<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Bi-directional ERP/CRM sync engine with transactional outbox</text>
 </g>
-<g transform="translate(621.3, 452)" class="pillarCard">
-<rect width="274.7" height="82" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
+<g transform="translate(621.3, 456)" class="pillarCard">
+<rect width="274.7" height="84" rx="10" fill="rgba(255, 255, 255, 0.88)" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#009BB0"/>
 <text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#08161A">LOW-LEVEL &amp; PROTOCOLS</text>
 <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#00B6CC">C / C++ · Linux / POSIX · GDB</text>
-<text x="16" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Binary reverse engineering &amp; hardware socket interop</text>
+<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#344D55">Binary reverse engineering &amp; hardware socket interop</text>
 </g>
-<text x="44" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="#6B8891" letter-spacing="1.2">ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE</text>
-<text x="896" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="#6B8891" letter-spacing="1.2" text-anchor="end">TELEMETRY SYNCED 11 SEP 2026</text>
 <rect x="0.5" y="0.5" width="939" height="599" rx="16" fill="none" stroke="rgba(0, 155, 176, 0.25)" stroke-width="1"/>
 </g>
 <style>

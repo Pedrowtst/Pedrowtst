@@ -75,8 +75,13 @@ def render_liquid(stats, theme="dark"):
         paper_sub = "#5E6875"
         glass_fill = "rgba(10, 14, 20, 0.80)"
         glass_border = "rgba(0, 227, 254, 0.20)"
-        glass_border_hi = "rgba(0, 227, 254, 0.45)"
-        datum_color = "rgba(0, 227, 254, 0.30)"
+        ribbon_fill = "rgba(4, 9, 14, 0.78)"
+        ribbon_border = "rgba(0, 227, 254, 0.35)"
+        month_active = "#00E3FE"
+        month_inactive = "#7E8D9F"
+        badge_bg = "rgba(4, 8, 12, 0.88)"
+        badge_border = "#4DECFF"
+        badge_text = "#FFFFFF"
     else:
         bg0 = "#F4F7F8"
         bg1 = "#EBF2F5"
@@ -89,8 +94,13 @@ def render_liquid(stats, theme="dark"):
         paper_sub = "#6B8891"
         glass_fill = "rgba(255, 255, 255, 0.88)"
         glass_border = "rgba(0, 155, 176, 0.25)"
-        glass_border_hi = "rgba(0, 155, 176, 0.60)"
-        datum_color = "rgba(0, 155, 176, 0.35)"
+        ribbon_fill = "rgba(255, 255, 255, 0.90)"
+        ribbon_border = "rgba(0, 155, 176, 0.40)"
+        month_active = "#006C7A"
+        month_inactive = "#64748B"
+        badge_bg = "rgba(255, 255, 255, 0.95)"
+        badge_border = "#009BB0"
+        badge_text = "#08161A"
 
     total_contribs = sum(m["value"] for m in stats["monthly"])
     lifetime_commits = stats["commits"]
@@ -231,12 +241,12 @@ def render_liquid(stats, theme="dark"):
     o.append('</g>') # End liquidOrgan
 
     # =========================================================================
-    # 3. CONTRIBUTION TIMELINE RESTING ON THE FLUID WATERLINE
+    # 3. CONTRIBUTION TIMELINE WITH FROSTED HIGH-VISIBILITY RIBBON
     # =========================================================================
-    o.append(f'<g transform="translate(0, {wave_base + 32})">')
+    o.append(f'<g transform="translate(0, {wave_base + 30})">')
     
-    # Horizontal glass datum line
-    o.append(f'<line x1="44" y1="0" x2="{W - 44}" y2="0" stroke="{datum_color}" stroke-width="1.2" stroke-dasharray="4 6"/>')
+    # Frosted Datum Ribbon across the waterline
+    o.append(f'<rect x="40" y="6" width="{W - 80}" height="24" rx="12" fill="{ribbon_fill}" stroke="{ribbon_border}" stroke-width="1.2"/>')
     
     step_m = (W - 128) / 11
     for mi in range(12):
@@ -245,17 +255,24 @@ def render_liquid(stats, theme="dark"):
         m_name = month_names[mi]
         
         h_ratio = val / max_val
-        beacon_h = max(h_ratio * 48, 4)
+        beacon_h = max(h_ratio * 46, 4)
         
         if val > 0:
-            # Pulsing beacon line rising from the liquid
-            o.append(f'<line x1="{mx:.1f}" y1="0" x2="{mx:.1f}" y2="{-beacon_h:.1f}" stroke="{cyan_glow}" stroke-width="2" stroke-linecap="round" class="beaconLine"/>')
+            # Pulsing beacon line rising from the ribbon to crest
+            o.append(f'<line x1="{mx:.1f}" y1="6" x2="{mx:.1f}" y2="{-beacon_h:.1f}" stroke="{cyan_glow}" stroke-width="2" stroke-linecap="round" class="beaconLine"/>')
             o.append(f'<circle cx="{mx:.1f}" cy="{-beacon_h:.1f}" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>')
-            o.append(f'<text x="{mx:.1f}" y="{-beacon_h - 9:.1f}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="{paper}" text-anchor="middle">{val}</text>')
-        else:
-            o.append(f'<circle cx="{mx:.1f}" cy="0" r="2" fill="{cyan}" opacity="0.3"/>')
             
-        o.append(f'<text x="{mx:.1f}" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="600" fill="{paper_muted}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
+            # Badge pill for number - guaranteed 100% visible against any background
+            badge_w = 26 if val < 100 else 32
+            o.append(f'''<rect x="{mx - badge_w/2:.1f}" y="{-beacon_h - 18:.1f}" width="{badge_w}" height="15" rx="7.5" fill="{badge_bg}" stroke="{badge_border}" stroke-width="1"/>''')
+            o.append(f'<text x="{mx:.1f}" y="{-beacon_h - 7:.1f}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="{badge_text}" text-anchor="middle">{val}</text>')
+            
+            # Month label inside ribbon: bold active color
+            o.append(f'<text x="{mx:.1f}" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="{month_active}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
+        else:
+            o.append(f'<circle cx="{mx:.1f}" cy="18" r="2" fill="{cyan}" opacity="0.35"/>')
+            # Month label inside ribbon: clear muted silver
+            o.append(f'<text x="{mx:.1f}" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="{month_inactive}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
 
     o.append('</g>')
 
@@ -313,7 +330,7 @@ def render_liquid(stats, theme="dark"):
         o.append('</g>')
 
     # =========================================================================
-    # 7. ARCHITECTURAL PILLARS (Suspended in the lower fluid substrate)
+    # 7. ARCHITECTURAL PILLARS (Suspended in lower fluid with clean bottom margin)
     # =========================================================================
     pillars = [
         ("EDGE TELEMETRY & CV", "ESP32-CAM · FreeRTOS · YOLOv8", "Sub-100ms spatial vehicle tracking & occupancy stream"),
@@ -324,18 +341,16 @@ def render_liquid(stats, theme="dark"):
     card_w = (W - 88 - 2 * 14) / 3
     for ci, (ctitle, cstack, cdesc) in enumerate(pillars):
         cx = 44 + ci * (card_w + 14)
-        cy = 452
+        cy = 456
         o.append(f'<g transform="translate({cx:.1f}, {cy})" class="pillarCard">')
-        o.append(f'<rect width="{card_w:.1f}" height="82" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
+        o.append(f'<rect width="{card_w:.1f}" height="84" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
         o.append(f'<circle cx="16" cy="23" r="3.2" fill="{cyan}"/>')
         o.append(f'<text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="{paper}">{esc(ctitle)}</text>')
         o.append(f'<text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="{cyan_glow}">{esc(cstack)}</text>')
-        o.append(f'<text x="16" y="64" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="{paper_muted}">{esc(cdesc)}</text>')
+        o.append(f'<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="{paper_muted}">{esc(cdesc)}</text>')
         o.append('</g>')
 
-    # Footer datum
-    o.append(f'<text x="44" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="{paper_sub}" letter-spacing="1.2">ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE</text>')
-    o.append(f'<text x="{W - 44}" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="{paper_sub}" letter-spacing="1.2" text-anchor="end">TELEMETRY SYNCED {esc(stats["built"])}</text>')
+    # NOTICE: Redundant footer text "ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE" REMOVED
 
     # Border perimeter
     o.append(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="{glass_border}" stroke-width="1"/>')
