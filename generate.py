@@ -2,7 +2,8 @@
 """
 ZIRTUNO Liquid Contributions & Systems Architecture Organ
 Generates the authentic, fully-animated liquid SVG for Pedro Mautone.
-Strictly follows Zirtuno's R5 'One Continuous Liquid' design system.
+Built strictly on Zirtuno R5 'One Continuous Liquid' design system.
+Guarantees 100% seamless, mathematically continuous infinite fluid animation.
 """
 
 import json
@@ -24,7 +25,7 @@ def load_stats():
     return {
         "repos": 2,
         "stars": 1,
-        "commits": 243,
+        "commits": 227,
         "followers": 1,
         "bytes": 67406,
         "languages": [("Python", 52336), ("C++", 15070)],
@@ -36,10 +37,14 @@ def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 def generate_wave(width, height, baseline, amplitude, frequency, phase=0):
-    """Generate seamless repeating SVG wave path for infinite CSS translation (period = width)"""
+    """
+    Generate seamless repeating SVG wave path for infinite CSS translation.
+    Frequency MUST be an integer so that y(x + width) == y(x) for all x,
+    ensuring 100% mathematical continuity and zero reset jump.
+    """
     points = []
-    total_w = width * 2
-    steps = 80
+    total_w = width * 3  # 3 full widths for ample buffer
+    steps = 120
     dx = total_w / steps
     for i in range(steps + 1):
         x = i * dx
@@ -67,7 +72,7 @@ def render_liquid(stats, theme="dark"):
         paper = "#F2F0EB"
         paper_muted = "#9BA3AF"
         paper_sub = "#5E6875"
-        glass_fill = "rgba(10, 14, 20, 0.78)"
+        glass_fill = "rgba(10, 14, 20, 0.80)"
         glass_border = "rgba(0, 227, 254, 0.20)"
         glass_border_hi = "rgba(0, 227, 254, 0.45)"
         datum_color = "rgba(0, 227, 254, 0.30)"
@@ -89,10 +94,10 @@ def render_liquid(stats, theme="dark"):
     total_contribs = sum(m["value"] for m in stats["monthly"])
     lifetime_commits = stats["commits"]
     
-    # 3 Continuous flowing wave paths
+    # 3 Continuous flowing wave paths with EXACT INTEGER FREQUENCIES for seamless loop
     wave_base = 356
-    w_path1 = generate_wave(W, H, baseline=wave_base, amplitude=14, frequency=1.5, phase=0)
-    w_path2 = generate_wave(W, H, baseline=wave_base + 8, amplitude=11, frequency=2.2, phase=math.pi / 3)
+    w_path1 = generate_wave(W, H, baseline=wave_base, amplitude=14, frequency=1.0, phase=0)
+    w_path2 = generate_wave(W, H, baseline=wave_base + 8, amplitude=10, frequency=2.0, phase=math.pi / 3)
     w_path3 = generate_wave(W, H, baseline=wave_base + 15, amplitude=7, frequency=3.0, phase=math.pi / 2)
 
     # Months mapping & contribution tide heights
@@ -101,7 +106,6 @@ def render_liquid(stats, theme="dark"):
     max_val = max(m_vals) or 1
 
     # Liquid droplets positioned over contribution hot spots
-    # (cx, cy, r, anim_class, delay)
     droplets = [
         (800, 310, 19, "moteFloat1", "0s"),    # Peak over Sep (102 contribs!)
         (760, 332, 13, "moteFloat2", "1.1s"),
@@ -199,11 +203,15 @@ def render_liquid(stats, theme="dark"):
     # =========================================================================
     o.append('<g class="liquidOrgan">')
     
-    # Wave 1 (Deepest, slowest current)
-    o.append(f'<path d="{w_path1}" fill="url(#liquidGrad1)" class="waveMove1"/>')
+    # Wave 1 (Deepest, slowest current) - Wrapped in G for 100% clean hardware-accelerated transform
+    o.append(f'''<g class="waveMove1">
+      <path d="{w_path1}" fill="url(#liquidGrad1)"/>
+    </g>''')
     
     # Wave 2 (Middle current)
-    o.append(f'<path d="{w_path2}" fill="url(#liquidGrad2)" class="waveMove2"/>')
+    o.append(f'''<g class="waveMove2">
+      <path d="{w_path2}" fill="url(#liquidGrad2)"/>
+    </g>''')
     
     # Metaball Droplets Group (Morphing & fusing with the wave crests)
     o.append('<g filter="url(#metaballFilter)">')
@@ -212,7 +220,9 @@ def render_liquid(stats, theme="dark"):
     o.append('</g>')
 
     # Wave 3 (Forefront liquid crest with bright luminous meniscus)
-    o.append(f'<path d="{w_path3}" fill="url(#liquidGrad3)" class="waveMove3"/>')
+    o.append(f'''<g class="waveMove3">
+      <path d="{w_path3}" fill="url(#liquidGrad3)"/>
+    </g>''')
 
     o.append('</g>') # End liquidOrgan
 
@@ -256,8 +266,8 @@ def render_liquid(stats, theme="dark"):
     o.append('</g>')
 
     # Studio Title & Monogram
-    o.append(f'<text x="44" y="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="800" fill="{paper}" letter-spacing="2">ZIRTUNO</text>')
-    o.append(f'<text x="136" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">STUDIO // SYSTEMS ARCHITECTURE</text>')
+    o.append(f'<text x="50" y="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="800" fill="{paper}" letter-spacing="2">ZIRTUNO</text>')
+    o.append(f'<text x="142" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">STUDIO // SYSTEMS ARCHITECTURE</text>')
 
     # Live Systems Status Beacon
     o.append(f'<g transform="translate({W - 88 - 260}, 10)">')
@@ -291,9 +301,9 @@ def render_liquid(stats, theme="dark"):
         px = 44 + pi * (pill_w + 12)
         py = 216
         o.append(f'<g transform="translate({px:.1f}, {py})" class="glassCapsule">')
-        o.append(f'<rect width="{pill_w:.1f}" height="52" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
+        o.append(f'<rect width="{pill_w:.1f}" height="54" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
         o.append(f'<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="{paper_sub}" letter-spacing="1.2">{esc(plabel)}</text>')
-        o.append(f'<text x="14" y="40" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="{pcol}">{esc(pval)}</text>')
+        o.append(f'<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="{pcol}">{esc(pval)}</text>')
         o.append('</g>')
 
     # =========================================================================
@@ -326,31 +336,34 @@ def render_liquid(stats, theme="dark"):
     o.append('</g>') # End stageClip
 
     # =========================================================================
-    # 8. PURE CSS CONTINUOUS FLUID ANIMATIONS (60 FPS Infinite Loops)
+    # 8. PURE CSS CONTINUOUS FLUID ANIMATIONS (100% Seamless Infinite Loops)
     # =========================================================================
     css = f'''
-    /* Continuous infinite wave translation */
+    /* Continuous seamless wave translation across exact integer wavelengths */
     .waveMove1 {{
-        animation: waveShift1 16s linear infinite;
+        animation: waveShift1 18s linear infinite;
+        will-change: transform;
     }}
     .waveMove2 {{
-        animation: waveShift2 11s linear infinite;
+        animation: waveShift2 12s linear infinite;
+        will-change: transform;
     }}
     .waveMove3 {{
-        animation: waveShift3 7.5s linear infinite;
+        animation: waveShift3 8s linear infinite;
+        will-change: transform;
     }}
 
     @keyframes waveShift1 {{
-        0%   {{ transform: translateX(0px); }}
-        100% {{ transform: translateX(-{W}px); }}
+        0%   {{ transform: translate3d(0px, 0, 0); }}
+        100% {{ transform: translate3d(-{W}px, 0, 0); }}
     }}
     @keyframes waveShift2 {{
-        0%   {{ transform: translateX(-{W}px); }}
-        100% {{ transform: translateX(0px); }}
+        0%   {{ transform: translate3d(-{W}px, 0, 0); }}
+        100% {{ transform: translate3d(0px, 0, 0); }}
     }}
     @keyframes waveShift3 {{
-        0%   {{ transform: translateX(0px); }}
-        100% {{ transform: translateX(-{W}px); }}
+        0%   {{ transform: translate3d(0px, 0, 0); }}
+        100% {{ transform: translate3d(-{W}px, 0, 0); }}
     }}
 
     /* Droplet bobbing and coalescing with fill-box transform-origin */
