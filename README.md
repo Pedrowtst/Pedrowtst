@@ -1,5 +1,8 @@
 ﻿<div align="center">
-  <img src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/header.svg" width="100%" alt="Pedro Mautone — Software Engineer" />
+  <picture>
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/header.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/header.png" width="100%" alt="Pedro Mautone — Software Engineer" />
+  </picture>
 </div>
 
 <div align="center">
@@ -47,9 +50,9 @@ Location:   Curitiba, Brazil 🇧🇷
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/github-contribution-grid-snake-dark.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/github-contribution-grid-snake-dark.svg" width="100%" />
   </picture>
 </div>
 
@@ -94,5 +97,8 @@ Location:   Curitiba, Brazil 🇧🇷
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/main/dist/footer.svg" width="100%" alt="Footer" />
+  <picture>
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/footer.svg">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/footer.png" width="100%" alt="Footer" />
+  </picture>
 </div>
