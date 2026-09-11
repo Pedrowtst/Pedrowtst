@@ -46,7 +46,16 @@
 
 ---
 
+### 📊 GitHub Activity & Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Pedrowtst&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Pedro's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</div>
+
+---
+
 ### 📌 Featured Work
 
 - **[smart-parking-esp32](https://github.com/Pedrowtst/smart-parking-esp32)**: Direction-aware vehicle tracking and count system using ESP32-CAM, YOLOv8n, BoT-SORT, and a real-time Flask dashboard.
-- **[Zirtuno](https://github.com/ZIRTUNO)**: Interactive studio projects and digital architectures.
+- **[Zirtuno](https://github.com/ZIRTUNO)**: Interactive studio projects, WebGL explorations, and digital architectures.
