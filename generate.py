@@ -328,7 +328,6 @@ def render_liquid(stats, theme="dark"):
         o.append('</g>')
 
     # Footer datum
-    o.append(f'<text x="44" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="{paper_sub}" letter-spacing="1.2">ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE</text>')
     o.append(f'<text x="{W - 44}" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" fill="{paper_sub}" letter-spacing="1.2" text-anchor="end">TELEMETRY SYNCED {esc(stats["built"])}</text>')
 
     # Border perimeter
