@@ -1,49 +1,41 @@
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.svg?v=5">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.png?v=5" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.svg?v=6">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-hero.png?v=6" width="100%" alt="Pedro Mautone — Systems Architect & Co-Founder @ Zirtuno" />
   </picture>
 </div>
 
 <div align="center">
   <a href="https://github.com/Pedrowtst">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&pause=1200&color=00E3FE&center=true&vCenter=true&width=780&lines=Zirtuno+Systems+Architect+%26+Co-Founder;Enterprise+Automation+%26+Distributed+Pipelines+(ERP+%2F+CRM);Reverse+Engineering%2C+Protocols+%26+Binary+Analysis+(C+%2F+C%2B%2B);Real-Time+Graphics+%7C+WebGL2+%7C+Metaball+Fluid+SDF;Edge+Computer+Vision+%26+Embedded+Hardware+(YOLOv8+%2B+ESP32)" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&pause=1200&color=00E3FE&center=true&vCenter=true&width=780&lines=Co-Founder+%26+Systems+Architect+at+Zirtuno;Enterprise+Automation+%26+Integration+Pipelines;Reverse+Engineering+%26+Low-Level+Systems+in+C+%2F+C%2B%2B;Real-Time+WebGL2+Graphics+%26+Fluid+Shaders;Edge+Computer+Vision+with+YOLOv8+%26+ESP32" alt="Typing SVG" />
   </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/ZIRTUNO" target="_blank"><img src="https://img.shields.io/badge/STUDIO-ZIRTUNO-00E3FE?style=for-the-badge&logo=github&logoColor=black&labelColor=04060c" alt="Zirtuno" /></a>
-  <a href="https://www.linkedin.com/in/pedro-mautone/" target="_blank"><img src="https://img.shields.io/badge/CONNECT-LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=04060c" alt="LinkedIn" /></a>
-  <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/DISPATCH-GITHUB-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=04060c" alt="GitHub" /></a>
-  <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/TRANSMIT-EMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=04060c" alt="Email" /></a>
+  <a href="https://github.com/ZIRTUNO" target="_blank"><img src="https://img.shields.io/badge/Zirtuno-00E3FE?style=for-the-badge&logo=github&logoColor=black&labelColor=04060c" alt="Zirtuno" /></a>
+  <a href="https://www.linkedin.com/in/pedro-mautone/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=04060c" alt="LinkedIn" /></a>
+  <a href="https://github.com/Pedrowtst"><img src="https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white&labelColor=04060c" alt="GitHub" /></a>
+  <a href="mailto:pedropaivamautone@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=04060c" alt="Email" /></a>
 </div>
 
 <br />
 
 ---
 
-```text
-┌── [ SYSTEM ARCHITECT DOSSIER ] ──────────────────────────────────────────────────┐
-│ ARCHITECT   : Pedro Mautone — Co-Founder & Systems Architect                     │
-│ VENTURE     : ZIRTUNO (Autonomous Digital Studio & Systems Engineering)          │
-│ DISCIPLINES : Enterprise Automation · Reverse Engineering · Real-Time Graphics   │
-│ MANIFESTO   : "One liquid. One system. One motivated architecture."              │
-│ LOCATION    : Curitiba, Brazil 🇧🇷                                                │
-└──────────────────────────────────────────────────────────────────────────────────┘
-```
+Co-Founder and Systems Architect at **[Zirtuno](https://github.com/ZIRTUNO)**, an autonomous digital studio and systems engineering firm based in Curitiba, Brazil.
 
-- 🏢 **Zirtuno Systems**: Co-Founder & Systems Architect at **[Zirtuno](https://github.com/ZIRTUNO)**. Far beyond web applications, Zirtuno engineers resilient digital infrastructure, custom enterprise automation pipelines, automated ERP/CRM data synchronizers, reverse-engineered integration protocols, and high-performance WebGL2 graphics engines.
-- ⚙️ **Enterprise Systems & Automation**: Designing mission-critical backend architectures, custom ERP/CRM data sync pipelines, distributed asynchronous workers, automated business telemetry, and robust API orchestration (`PostgreSQL`, `Redis`, `Docker`, `Nginx`, `FastAPI`).
-- 🔬 **Reverse Engineering & Systems**: Binary inspection, communication protocol reverse engineering, memory mapping, and low-level development in `C`, `C++`, and `Python` to interface with proprietary, legacy, or undocumented hardware and industrial ERP systems.
-- 🌊 **Real-Time Graphics & Liquid Physics**: WebGL2 and Three.js mathematical signed distance fields (SDFs), metaball fluids, custom GLSL shaders, GPU tier adaptation, and smooth spline choreography.
-- 👁️ **Computer Vision & Embedded IoT**: Edge computer vision architectures pairing low-level C++ firmware on microcontrollers (`ESP32-CAM`) with real-time neural detection & tracking (`YOLOv8` + `BoT-SORT`) and live telemetry backends.
+Engineering focus spans four core domains:
+- **Enterprise Automation & Integration**: Resilient backend architectures, custom ERP/CRM data synchronizers, distributed job queues, and robust API orchestration (`PostgreSQL`, `Redis`, `Docker`, `Nginx`, `FastAPI`).
+- **Reverse Engineering & Protocols**: Binary inspection, communication protocol reverse engineering, memory mapping, and low-level development in `C`, `C++`, and `Python` to interface with proprietary or undocumented hardware and industrial platforms.
+- **Real-Time Graphics & Fluid Physics**: Mathematical signed distance fields (SDFs), GPU metaball fluids, custom GLSL shaders, GPU tier adaptation, and smooth spline choreography (`WebGL2`, `Three.js`).
+- **Edge Computer Vision & Hardware**: Low-level C++ firmware on microcontrollers (`ESP32-CAM`) paired with real-time neural detection and tracking (`YOLOv8` + `BoT-SORT`) and live telemetry backends.
 
 ---
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.svg?v=5">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.png?v=5" width="100%" alt="Zirtuno Engineering Modules" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.svg?v=6">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-system-modules.png?v=6" width="100%" alt="Engineering Architecture" />
   </picture>
 </div>
 
@@ -51,7 +43,7 @@
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,py,ts,js,go,rust,bash,postgres,mysql,redis,docker,linux,nextjs,react,threejs,opencv,fastapi,flask,arduino,git,githubactions,postman,nginx&perline=8" alt="Tech Stack" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,py,ts,js,go,rust,bash,postgres,mysql,redis,docker,linux,nextjs,react,threejs,opencv,fastapi,flask,arduino,git,githubactions,postman,nginx&perline=8" alt="Technology Stack" />
   </a>
 </div>
 
@@ -59,26 +51,17 @@
 
 | Domain | Systems, Tooling & Protocols |
 |---|---|
-| **Low-Level & Reverse Engineering** | `C`, `C++`, `Python`, `Linux`, `Bash`, `GDB`, Binary Analysis, Protocol Dissection, Network Sniffing, Assembly |
-| **Enterprise, ERP/CRM & Automations** | `PostgreSQL`, `MySQL`, `Redis`, `Docker`, `FastAPI`, `Flask`, `Next.js`, `Nginx`, Webhooks, CI/CD GitHub Actions |
-| **Vision, Graphics & Embedded IoT** | `OpenCV`, `YOLOv8`, `BoT-SORT`, `Three.js`, `WebGL2`, `GLSL Shaders`, `ESP32-CAM (C++)`, Arduino, FreeRTOS |
+| **Low-Level & Reverse Engineering** | `C`, `C++`, `Python`, `Linux`, `Bash`, `GDB`, Binary Disassembly, Protocol Dissection, Network Sockets, Assembly |
+| **Enterprise Automation & ERP/CRM** | `PostgreSQL`, `MySQL`, `Redis`, `Docker`, `FastAPI`, `Flask`, `Next.js`, `Nginx`, Webhooks, Distributed Queues |
+| **Graphics, Vision & Embedded Systems** | `Three.js`, `WebGL2`, `GLSL Shaders`, `OpenCV`, `YOLOv8`, `BoT-SORT`, `ESP32-CAM (C++)`, Arduino, FreeRTOS |
 
 ---
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.svg?v=5">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.png?v=5" width="100%" alt="Liquid Contribution Field" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.svg?v=6">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-liquid-contributions.png?v=6" width="100%" alt="Annual Contributions" />
   </picture>
-</div>
-
----
-
-<div align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=Pedrowtst&show_icons=true&bg_color=020306&title_color=00E3FE&text_color=94A3B8&icon_color=00E3FE&border_color=1e293b&hide_border=false&count_private=true&border_radius=8" height="175" alt="GitHub Stats" />
-  <img src="https://streak-stats.demolab.com/?user=Pedrowtst&background=020306&border=1e293b&stroke=00E3FE&ring=00E3FE&fire=00E3FE&currStreakNum=00E3FE&sideNums=E2E8F0&currStreakLabel=00E3FE&sideLabels=94A3B8&dates=64748B&border_radius=8" height="175" alt="Streak Stats" />
-  <br />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Pedrowtst&layout=compact&bg_color=020306&title_color=00E3FE&text_color=94A3B8&border_color=1e293b&hide_border=false&border_radius=8" height="150" alt="Top Languages" />
 </div>
 
 ---
@@ -86,10 +69,10 @@
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center"><a href="https://github.com/ZIRTUNO">ZIRTUNO Systems</a></h3>
+      <h3 align="center"><a href="https://github.com/ZIRTUNO">Zirtuno Systems</a></h3>
       <p align="center">
-        <img src="https://img.shields.io/badge/Domain-Enterprise%20Systems-00E3FE?style=flat-square&labelColor=04060c" alt="Enterprise Systems" />
-        <img src="https://img.shields.io/badge/Architecture-ERP%20%2F%20CRM%20Pipelines-38BDF8?style=flat-square&labelColor=04060c" alt="ERP & CRM" />
+        <img src="https://img.shields.io/badge/Enterprise-Systems-00E3FE?style=flat-square&labelColor=04060c" alt="Enterprise Systems" />
+        <img src="https://img.shields.io/badge/Pipelines-ERP%20%2F%20CRM-38BDF8?style=flat-square&labelColor=04060c" alt="ERP & CRM" />
         <img src="https://img.shields.io/badge/Graphics-WebGL2%20%2F%20Three.js-818CF8?style=flat-square&labelColor=04060c" alt="WebGL2" />
       </p>
       <p>Co-Founder & Systems Architect. Engineering specialized enterprise automation platforms, custom ERP/CRM integration pipelines, reverse-engineered protocol layers, real-time graphics engines, and resilient digital architectures.</p>
@@ -99,7 +82,7 @@
       <p align="center">
         <img src="https://img.shields.io/badge/Hardware-ESP32--CAM-EF4444?style=flat-square&labelColor=04060c" alt="Hardware" />
         <img src="https://img.shields.io/badge/Vision-YOLOv8%20%2B%20BoT--SORT-00E3FE?style=flat-square&labelColor=04060c" alt="YOLOv8" />
-        <img src="https://img.shields.io/badge/Telemetry-Flask%20Live-10B981?style=flat-square&labelColor=04060c" alt="Flask" />
+        <img src="https://img.shields.io/badge/Backend-Flask%20Live-10B981?style=flat-square&labelColor=04060c" alt="Flask" />
       </p>
       <p>Direction-aware vehicle tracking and counting system combining low-level C++ firmware on an ESP32-CAM module with a Python YOLOv8 tracking service (BoT-SORT) and a live telemetry dashboard.</p>
     </td>
@@ -110,7 +93,7 @@
 
 <div align="center">
   <picture>
-    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.svg?v=5">
-    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.png?v=5" width="100%" alt="Footer" />
+    <source type="image/svg+xml" srcset="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.svg?v=6">
+    <img src="https://cdn.jsdelivr.net/gh/Pedrowtst/Pedrowtst@main/dist/zirtuno-matrix-footer.png?v=6" width="100%" alt="Footer" />
   </picture>
 </div>
