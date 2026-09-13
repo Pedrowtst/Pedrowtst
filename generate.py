@@ -288,9 +288,9 @@ def render_liquid(stats, theme="dark"):
       </g>
     </g>''')
 
-    # Studio Title & Monogram
+    # Brand Title & Tag
     o.append(f'<text x="32" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="800" fill="{paper}" letter-spacing="2">ZIRTUNO</text>')
-    o.append(f'<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">STUDIO // SYSTEMS ARCHITECTURE</text>')
+    o.append(f'<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">// SYSTEMS ARCHITECTURE</text>')
 
     # Live Systems Status Beacon (Aligned to exact same Y axis)
     o.append(f'<g transform="translate({W - 88 - 250}, 0)">')

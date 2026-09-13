@@ -6,7 +6,7 @@
 
 <div align="center">
 
-**[Zirtuno Studio](https://github.com/ZIRTUNO)** · **[zirtuno.com ↗](https://zirtuno.com)** · **[LinkedIn](https://www.linkedin.com/in/pedro-mautone/)** · **[pedropaivamautone@gmail.com](mailto:pedropaivamautone@gmail.com)**
+**[Zirtuno](https://github.com/ZIRTUNO)** · **[zirtuno.com ↗](https://zirtuno.com)** · **[LinkedIn](https://www.linkedin.com/in/pedro-mautone/)** · **[pedropaivamautone@gmail.com](mailto:pedropaivamautone@gmail.com)**
 
 </div>
 
@@ -16,7 +16,7 @@
 
 #### [Zirtuno Systems Core](https://github.com/ZIRTUNO)
 `Next.js` `TypeScript` `WebGL2` `Raw GLSL` `PostgreSQL` `Redis` `Docker`
-- Co-founded digital studio engineering connected software, real-time 3D pipelines, and high-concurrency cloud backends.
+- Co-founded Zirtuno, engineering connected software, real-time 3D pipelines, and high-concurrency cloud backends.
 - Architected the R5 unified fluid engine and persistent WebGL2 canvas pipeline, handling continuous metaball dynamics, spatial tile-binning, and zero-stutter frame budgets.
 - Engineered resilient API gateways and automated event-driven sync microservices powering client ecosystems.
 

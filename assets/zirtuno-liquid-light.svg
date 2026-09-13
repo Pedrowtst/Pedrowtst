@@ -146,7 +146,7 @@
       </g>
     </g>
 <text x="32" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="800" fill="#08161A" letter-spacing="2">ZIRTUNO</text>
-<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="#009BB0" letter-spacing="1.5">STUDIO // SYSTEMS ARCHITECTURE</text>
+<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="#009BB0" letter-spacing="1.5">// SYSTEMS ARCHITECTURE</text>
 <g transform="translate(602, 0)">
 <circle cx="0" cy="13.5" r="4.5" fill="#009BB0" class="beaconPulse"/>
 <text x="14" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="#00B6CC" letter-spacing="1.2">SYSTEMS ACTIVE // NODE: LATAM-01</text>
