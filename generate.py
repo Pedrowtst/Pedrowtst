@@ -17,6 +17,12 @@ import subprocess
 from pathlib import Path
 
 def load_stats():
+    repo_cache = Path(__file__).resolve().parent / "cache" / "data.json"
+    if repo_cache.exists():
+        try:
+            return json.loads(repo_cache.read_text(encoding="utf-8"))
+        except Exception:
+            pass
     cache_path = Path(r"C:\Users\pedro\.gemini\antigravity\brain\59c11caf-5a39-4a7d-8fde-539ec21d1553\scratch\pedro_stats.json")
     if cache_path.exists():
         try:
