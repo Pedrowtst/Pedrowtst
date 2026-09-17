@@ -23,12 +23,6 @@ def load_stats():
             return json.loads(repo_cache.read_text(encoding="utf-8"))
         except Exception:
             pass
-    cache_path = Path(r"C:\Users\pedro\.gemini\antigravity\brain\59c11caf-5a39-4a7d-8fde-539ec21d1553\scratch\pedro_stats.json")
-    if cache_path.exists():
-        try:
-            return json.loads(cache_path.read_text(encoding="utf-8"))
-        except Exception:
-            pass
     return {
         "repos": 2,
         "stars": 1,
@@ -315,14 +309,21 @@ def render_liquid(stats, theme="dark"):
     o.append(f'<text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="{paper_muted}">High-concurrency distributed backends · Edge computer vision telemetry · Low-level protocol dissection</text>')
     o.append('</g>')
 
-    # =========================================================================
-    # 6. SUSPENDED GLASS TELEMETRY CAPSULES
-    # =========================================================================
+    stack_parts = []
+    total_lang_bytes = sum(item[1] for item in stats.get("languages", []))
+    if total_lang_bytes > 0:
+        for item in stats.get("languages", [])[:2]:
+            lang_name, b = item[0], item[1]
+            pct = (b / total_lang_bytes) * 100
+            short_name = "Py" if lang_name == "Python" else lang_name
+            stack_parts.append(f"{pct:.1f}% {short_name}")
+    stack_str = " · ".join(stack_parts) if stack_parts else "77.6% Py · 22.4% C++"
+
     pills = [
         ("LIFETIME COMMITS", f"{lifetime_commits}", f"{paper}"),
         ("ANNUAL VELOCITY", f"{total_contribs} contribs", f"{cyan}"),
         ("ACTIVE REPOSITORIES", f"{stats['repos']:02d} systems", f"{paper}"),
-        ("PRIMARY STACK", "77.6% Py · 22.4% C++", f"{cyan_glow}"),
+        ("PRIMARY STACK", stack_str, f"{cyan_glow}"),
     ]
     
     pill_w = (W - 88 - 3 * 12) / 4
