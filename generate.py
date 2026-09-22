@@ -26,11 +26,11 @@ def load_stats():
     return {
         "repos": 2,
         "stars": 1,
-        "commits": 227,
+        "commits": 230,
         "followers": 1,
         "bytes": 67406,
         "languages": [("Python", 52336), ("C++", 15070)],
-        "monthly": [{"month": m, "value": v} for m, v in zip(range(1, 13), [0, 1, 0, 0, 0, 0, 0, 44, 41, 26, 32, 102])],
+        "monthly": [{"month": m, "value": v} for m, v in zip(range(1, 13), [0, 1, 0, 0, 0, 0, 0, 44, 41, 26, 32, 105])],
         "built": datetime.date.today().strftime("%d %b %Y").upper()
     }
 
@@ -489,8 +489,16 @@ def render_liquid(stats, theme="dark"):
 def main():
     repo_dir = Path(__file__).resolve().parent
     assets_dir = repo_dir / "assets"
+    cache_path = repo_dir / "cache" / "data.json"
     assets_dir.mkdir(exist_ok=True)
     stats = load_stats()
+    stats["built"] = datetime.date.today().strftime("%d %b %Y").upper()
+
+    if cache_path.parent.exists():
+        try:
+            cache_path.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
+        except Exception:
+            pass
     
     for theme in ("dark", "light"):
         svg_code = render_liquid(stats, theme)
