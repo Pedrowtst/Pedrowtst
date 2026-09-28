@@ -1,9 +1,9 @@
 <picture>
-  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-mobile.svg">
-  <source media="(max-width: 640px)" srcset="./assets/zirtuno-liquid-light-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/zirtuno-liquid-light.svg">
-  <img alt="Pedro Mautone — Co-Founder &amp; Systems Architect at Zirtuno. Animated liquid console; dated contribution data is linked below." src="./assets/zirtuno-liquid-dark.svg" width="100%">
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-mobile.svg?v=20260928">
+  <source media="(max-width: 640px)" srcset="./assets/zirtuno-liquid-light-mobile.svg?v=20260928">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark.svg?v=20260928">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/zirtuno-liquid-light.svg?v=20260928">
+  <img alt="Pedro Mautone — Co-Founder &amp; Systems Architect at Zirtuno. Animated liquid console; dated contribution data is linked below." src="./assets/zirtuno-liquid-dark.svg?v=20260928" width="100%">
 </picture>
 
 <div align="center">
