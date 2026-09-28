@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-ZIRTUNO Liquid Contributions & Systems Architecture Organ
-Generates the authentic, fully-animated liquid SVG for Pedro Mautone.
-Built strictly on Zirtuno R5 'One Continuous Liquid' design system.
-Guarantees 100% seamless, mathematically continuous infinite fluid animation
-and laser-aligned brand typography.
+Zirtuno liquid systems console for Pedro Mautone.
+Preserves the original waves, droplets, identity, and three engineering pillars.
+Renders responsive theme variants from a dated GitHub contribution snapshot.
 """
 
+import argparse
+import calendar
 import json
+import profile_data as data
 import math
 import os
 import sys
@@ -16,23 +17,7 @@ import urllib.request
 import subprocess
 from pathlib import Path
 
-def load_stats():
-    repo_cache = Path(__file__).resolve().parent / "cache" / "data.json"
-    if repo_cache.exists():
-        try:
-            return json.loads(repo_cache.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    return {
-        "repos": 2,
-        "stars": 1,
-        "commits": 231,
-        "followers": 1,
-        "bytes": 67406,
-        "languages": [("Python", 52336), ("C++", 15070)],
-        "monthly": [{"month": m, "value": v} for m, v in zip(range(1, 13), [0, 1, 0, 0, 0, 0, 0, 44, 41, 26, 32, 106])],
-        "built": datetime.date.today().strftime("%d %b %Y").upper()
-    }
+ROOT = Path(__file__).resolve().parent
 
 def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
@@ -51,7 +36,7 @@ def generate_wave(width, height, baseline, amplitude, frequency, phase=0):
         x = i * dx
         y = baseline + amplitude * math.sin((x / width) * 2 * math.pi * frequency + phase)
         points.append((x, y))
-    
+
     d = [f"M 0 {height}"]
     d.append(f"L {points[0][0]:.2f} {points[0][1]:.2f}")
     for p in points[1:]:
@@ -60,9 +45,10 @@ def generate_wave(width, height, baseline, amplitude, frequency, phase=0):
     d.append("Z")
     return " ".join(d)
 
-def render_liquid(stats, theme="dark"):
-    W, H = 940, 600
-    
+def render_liquid(stats, theme="dark", mobile=False):
+    W, H = (480, 1050) if mobile else (940, 620)
+    margin = 28 if mobile else 44
+
     if theme == "dark":
         bg0 = "#050709"
         bg1 = "#090D12"
@@ -71,8 +57,8 @@ def render_liquid(stats, theme="dark"):
         cyan_deep = "#008B9E"
         cyan_dark = "#002933"
         paper = "#F2F0EB"
-        paper_muted = "#9BA3AF"
-        paper_sub = "#5E6875"
+        paper_muted = "#B6C4CF"
+        paper_sub = "#99ACBB"
         glass_fill = "rgba(10, 14, 20, 0.80)"
         glass_border = "rgba(0, 227, 254, 0.20)"
         ribbon_fill = "rgba(4, 9, 14, 0.78)"
@@ -85,13 +71,13 @@ def render_liquid(stats, theme="dark"):
     else:
         bg0 = "#F4F7F8"
         bg1 = "#EBF2F5"
-        cyan = "#009BB0"
-        cyan_glow = "#00B6CC"
+        cyan = "#007C8F"
+        cyan_glow = "#007487"
         cyan_deep = "#006C7A"
         cyan_dark = "#C2E8EF"
         paper = "#08161A"
         paper_muted = "#344D55"
-        paper_sub = "#6B8891"
+        paper_sub = "#476571"
         glass_fill = "rgba(255, 255, 255, 0.88)"
         glass_border = "rgba(0, 155, 176, 0.25)"
         ribbon_fill = "rgba(255, 255, 255, 0.90)"
@@ -104,15 +90,15 @@ def render_liquid(stats, theme="dark"):
 
     total_contribs = sum(m["value"] for m in stats["monthly"])
     lifetime_commits = stats["commits"]
-    
+
     # 3 Continuous flowing wave paths with EXACT INTEGER FREQUENCIES for seamless loop
-    wave_base = 356
+    wave_base = 526 if mobile else 356
     w_path1 = generate_wave(W, H, baseline=wave_base, amplitude=14, frequency=1.0, phase=0)
     w_path2 = generate_wave(W, H, baseline=wave_base + 8, amplitude=10, frequency=2.0, phase=math.pi / 3)
     w_path3 = generate_wave(W, H, baseline=wave_base + 15, amplitude=7, frequency=3.0, phase=math.pi / 2)
 
     # Months mapping & contribution tide heights
-    month_names = ["OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP"]
+    month_names = [calendar.month_abbr[int(m["month"][5:])].upper() for m in stats["monthly"]]
     m_vals = [m["value"] for m in stats["monthly"]]
     max_val = max(m_vals) or 1
 
@@ -129,16 +115,21 @@ def render_liquid(stats, theme="dark"):
         (230, 364, 7,  "moteFloat3", "1.4s"),
     ]
 
+    if mobile:
+        droplets = [(x * W / 940, y + wave_base - 356, r * .85, cls, delay) for x, y, r, cls, delay in droplets]
+
     # Logo mark scale for exact 22px height
     mark_scale = 22.0 / 2926.12
 
     o = [f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
+<title>Pedro Mautone — Zirtuno systems architecture</title>
+<desc>{esc("Monthly contributions: " + "; ".join(m["month"] + ": " + str(m["value"]) for m in stats["monthly"]))}. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
 <defs>
   <!-- Background radial depth -->
   <radialGradient id="abyssGrad" cx="50%" cy="25%" r="80%">
     <stop offset="0%" stop-color="{bg1}"/>
     <stop offset="65%" stop-color="{bg0}"/>
-    <stop offset="100%" stop-color="#020304"/>
+    <stop offset="100%" stop-color="{bg0}"/>
   </radialGradient>
 
   <!-- Liquid wave layer 1 (deepest current) -->
@@ -201,7 +192,7 @@ def render_liquid(stats, theme="dark"):
 </defs>''']
 
     o.append('<g clip-path="url(#stageClip)">')
-    
+
     # 1. Base void & caustic glow
     o.append(f'<rect width="{W}" height="{H}" fill="url(#abyssGrad)"/>')
     o.append(f'<rect width="{W}" height="{H}" fill="url(#causticGlow)"/>')
@@ -216,17 +207,17 @@ def render_liquid(stats, theme="dark"):
     # 2. CONTINUOUS LIQUID BODY (Undulating waves + contribution metaballs)
     # =========================================================================
     o.append('<g class="liquidOrgan">')
-    
+
     # Wave 1 (Deepest, slowest current)
     o.append(f'''<g class="waveMove1">
       <path d="{w_path1}" fill="url(#liquidGrad1)"/>
     </g>''')
-    
+
     # Wave 2 (Middle current)
     o.append(f'''<g class="waveMove2">
       <path d="{w_path2}" fill="url(#liquidGrad2)"/>
     </g>''')
-    
+
     # Metaball Droplets Group (Morphing & fusing with the wave crests)
     o.append('<g filter="url(#metaballFilter)">')
     for cx, cy, r, acls, dly in droplets:
@@ -244,29 +235,29 @@ def render_liquid(stats, theme="dark"):
     # 3. CONTRIBUTION TIMELINE WITH FROSTED HIGH-VISIBILITY RIBBON
     # =========================================================================
     o.append(f'<g transform="translate(0, {wave_base + 30})">')
-    
+
     # Frosted Datum Ribbon across the waterline
     o.append(f'<rect x="40" y="6" width="{W - 80}" height="24" rx="12" fill="{ribbon_fill}" stroke="{ribbon_border}" stroke-width="1.2"/>')
-    
-    step_m = (W - 128) / 11
+
+    step_m = (W - 96) / 11 if mobile else (W - 128) / 11
     for mi in range(12):
-        mx = 64 + mi * step_m
+        mx = (48 if mobile else 64) + mi * step_m
         val = m_vals[mi]
         m_name = month_names[mi]
-        
+
         h_ratio = val / max_val
         beacon_h = max(h_ratio * 46, 4)
-        
+
         if val > 0:
             # Pulsing beacon line rising from the ribbon to crest
             o.append(f'<line x1="{mx:.1f}" y1="6" x2="{mx:.1f}" y2="{-beacon_h:.1f}" stroke="{cyan_glow}" stroke-width="2" stroke-linecap="round" class="beaconLine"/>')
             o.append(f'<circle cx="{mx:.1f}" cy="{-beacon_h:.1f}" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>')
-            
+
             # Badge pill for number - guaranteed 100% visible against any background
-            badge_w = 26 if val < 100 else 32
+            badge_w = max(26, 10 + len(str(val)) * 7)
             o.append(f'''<rect x="{mx - badge_w/2:.1f}" y="{-beacon_h - 18:.1f}" width="{badge_w}" height="15" rx="7.5" fill="{badge_bg}" stroke="{badge_border}" stroke-width="1"/>''')
             o.append(f'<text x="{mx:.1f}" y="{-beacon_h - 7:.1f}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="{badge_text}" text-anchor="middle">{val}</text>')
-            
+
             # Month label inside ribbon: bold active color
             o.append(f'<text x="{mx:.1f}" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="{month_active}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
         else:
@@ -279,8 +270,8 @@ def render_liquid(stats, theme="dark"):
     # =========================================================================
     # 4. BRAND HEADER & STAGE IDENTITY (Laser-Aligned Coordinates)
     # =========================================================================
-    o.append('<g transform="translate(44, 40)">')
-    
+    o.append(f'<g transform="translate({margin}, 40)">')
+
     # ZIRTUNO AUTHENTIC VECTOR LOGO MARK (Exact normalized bounding box)
     o.append(f'''<g transform="translate(0, 0)">
       <g transform="scale({mark_scale:.6f}) translate(-1221.92, -998.42)" fill="{cyan}" filter="url(#fluidBloom)">
@@ -293,7 +284,7 @@ def render_liquid(stats, theme="dark"):
     o.append(f'<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">// SYSTEMS ARCHITECTURE</text>')
 
     # Live Systems Status Beacon (Aligned to exact same Y axis)
-    o.append(f'<g transform="translate({W - 88 - 250}, 0)">')
+    o.append(f'<g transform="translate({0 if mobile else W - 88 - 250}, {38 if mobile else 0})">')
     o.append(f'<circle cx="0" cy="13.5" r="4.5" fill="{cyan}" class="beaconPulse"/>')
     o.append(f'<text x="14" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan_glow}" letter-spacing="1.2">SYSTEMS ACTIVE // NODE: LATAM-01</text>')
     o.append('</g>')
@@ -303,10 +294,16 @@ def render_liquid(stats, theme="dark"):
     # =========================================================================
     # 5. HERO IDENTITY & DISPLAY COPY
     # =========================================================================
-    o.append('<g transform="translate(44, 98)">')
+    o.append(f'<g transform="translate({margin}, {128 if mobile else 98})">')
     o.append(f'<text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800" fill="{paper}" letter-spacing="1.5">PEDRO MAUTONE</text>')
-    o.append(f'<text x="0" y="66" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="600" fill="{cyan}" letter-spacing="1.2">Co-Founder &amp; Systems Architect at Zirtuno</text>')
-    o.append(f'<text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="{paper_muted}">High-concurrency distributed backends · Edge computer vision telemetry · Low-level protocol dissection</text>')
+    if mobile:
+        o.append(f'<text x="0" y="75" font-family="Segoe UI, sans-serif" font-size="18" font-weight="600" fill="{cyan}">Co-Founder &amp; Systems Architect</text>')
+        o.append(f'<text x="0" y="101" font-family="Segoe UI, sans-serif" font-size="18" fill="{cyan}">at Zirtuno</text>')
+        o.append(f'<text x="0" y="139" font-family="Segoe UI, sans-serif" font-size="14" fill="{paper_muted}">Distributed backends · Edge computer vision</text>')
+        o.append(f'<text x="0" y="163" font-family="Segoe UI, sans-serif" font-size="14" fill="{paper_muted}">Low-level systems &amp; protocol engineering</text>')
+    else:
+        o.append(f'<text x="0" y="66" font-family="Segoe UI, sans-serif" font-size="14.5" font-weight="600" fill="{cyan}" letter-spacing="1.2">Co-Founder &amp; Systems Architect at Zirtuno</text>')
+        o.append(f'<text x="0" y="90" font-family="Segoe UI, sans-serif" font-size="12" fill="{paper_muted}">Distributed backends · Edge computer vision · Low-level systems &amp; protocol engineering</text>')
     o.append('</g>')
 
     stack_parts = []
@@ -317,45 +314,50 @@ def render_liquid(stats, theme="dark"):
             pct = (b / total_lang_bytes) * 100
             short_name = "Py" if lang_name == "Python" else lang_name
             stack_parts.append(f"{pct:.1f}% {short_name}")
-    stack_str = " · ".join(stack_parts) if stack_parts else "77.6% Py · 22.4% C++"
+    stack_str = " · ".join(stack_parts) if stack_parts else "No public code data"
 
     pills = [
-        ("LIFETIME COMMITS", f"{lifetime_commits}", f"{paper}"),
-        ("ANNUAL VELOCITY", f"{total_contribs} contribs", f"{cyan}"),
-        ("ACTIVE REPOSITORIES", f"{stats['repos']:02d} systems", f"{paper}"),
-        ("PRIMARY STACK", stack_str, f"{cyan_glow}"),
+        ("COMMITS / PERIOD", f"{lifetime_commits}", f"{paper}"),
+        ("CONTRIBUTIONS / PERIOD", f"{total_contribs} contribs", f"{cyan}"),
+        ("PUBLIC PROJECTS", f"{stats['repos']:02d} repositories", f"{paper}"),
+        ("PUBLIC CODE MIX", stack_str, f"{cyan_glow}"),
     ]
-    
-    pill_w = (W - 88 - 3 * 12) / 4
+
+    pill_w = (W - 2 * margin - 12) / 2 if mobile else (W - 88 - 3 * 12) / 4
     for pi, (plabel, pval, pcol) in enumerate(pills):
-        px = 44 + pi * (pill_w + 12)
-        py = 216
+        px = margin + (pi % 2 if mobile else pi) * (pill_w + 12)
+        py = 318 + (pi // 2) * 74 if mobile else 216
         o.append(f'<g transform="translate({px:.1f}, {py})" class="glassCapsule">')
-        o.append(f'<rect width="{pill_w:.1f}" height="54" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
-        o.append(f'<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="{paper_sub}" letter-spacing="1.2">{esc(plabel)}</text>')
-        o.append(f'<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="{pcol}">{esc(pval)}</text>')
+        o.append(f'<rect width="{pill_w:.1f}" height="{62 if mobile else 54}" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
+        o.append(f'<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="{9 if mobile else 8.5}" font-weight="700" fill="{paper_sub}" letter-spacing="{.6 if mobile else 1}">{esc(plabel)}</text>')
+        o.append(f'<text x="14" y="{45 if mobile else 41}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="{15 if mobile else 14}" font-weight="700" fill="{pcol}">{esc(pval)}</text>')
         o.append('</g>')
 
     # =========================================================================
     # 7. ARCHITECTURAL PILLARS (Suspended in lower fluid with clean bottom margin)
     # =========================================================================
     pillars = [
-        ("EDGE TELEMETRY & CV", "ESP32-CAM · FreeRTOS · YOLOv8", "Sub-100ms spatial vehicle tracking & occupancy stream"),
-        ("ENTERPRISE DATA BUS", "FastAPI · Redis · PostgreSQL · ERP", "Bi-directional ERP/CRM sync engine with transactional outbox"),
-        ("LOW-LEVEL & PROTOCOLS", "C / C++ · Linux / POSIX · GDB", "Binary reverse engineering & hardware socket interop"),
+        ("EDGE TELEMETRY & CV", "ESP32-CAM · Python · YOLOv8", ("Directional vehicle tracking", "& live occupancy dashboards")),
+        ("ENTERPRISE DATA BUS", "FastAPI · Redis · PostgreSQL", ("ERP/CRM integration, event flows", "& resilient synchronization")),
+        ("LOW-LEVEL & PROTOCOLS", "C / C++ · Linux / POSIX · GDB", ("Binary analysis, socket tooling", "& hardware interoperability")),
     ]
-    
-    card_w = (W - 88 - 2 * 14) / 3
-    for ci, (ctitle, cstack, cdesc) in enumerate(pillars):
-        cx = 44 + ci * (card_w + 14)
-        cy = 456
+    card_w = W - 2 * margin if mobile else (W - 88 - 2 * 14) / 3
+    for ci, (ctitle, cstack, lines) in enumerate(pillars):
+        cx = margin if mobile else margin + ci * (card_w + 14)
+        cy = 640 + ci * 120 if mobile else 456
         o.append(f'<g transform="translate({cx:.1f}, {cy})" class="pillarCard">')
-        o.append(f'<rect width="{card_w:.1f}" height="84" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
+        o.append(f'<rect width="{card_w:.1f}" height="106" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
         o.append(f'<circle cx="16" cy="23" r="3.2" fill="{cyan}"/>')
-        o.append(f'<text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="{paper}">{esc(ctitle)}</text>')
-        o.append(f'<text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="{cyan_glow}">{esc(cstack)}</text>')
-        o.append(f'<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="{paper_muted}">{esc(cdesc)}</text>')
+        o.append(f'<text x="26" y="28" font-family="Segoe UI, sans-serif" font-size="{16 if mobile else 11.5}" font-weight="700" fill="{paper}">{esc(ctitle)}</text>')
+        o.append(f'<text x="16" y="50" font-family="Consolas, monospace" font-size="{14 if mobile else 10}" font-weight="600" fill="{cyan_glow}">{esc(cstack)}</text>')
+        for li, line in enumerate(lines):
+            o.append(f'<text x="16" y="{73 + li * 17}" font-family="Segoe UI, sans-serif" font-size="{14 if mobile else 11}" fill="{paper_muted}">{esc(line)}</text>')
         o.append('</g>')
+    date = datetime.date.fromisoformat(stats["through"])
+    period = f'{stats["from"][:7]} — {stats["through"][:7]}'
+    footer = f'{period} · UPDATED {date:%d %b %Y} UTC'.upper()
+    o.append(f'<rect x="{margin}" y="{H-40}" width="{W-2*margin}" height="22" rx="11" fill="{ribbon_fill}"/>')
+    o.append(f'<text x="{W/2}" y="{H-25}" text-anchor="middle" font-family="Consolas, monospace" font-size="{10 if mobile else 9}" fill="{paper}">{esc(footer)} · MONTH IN PROGRESS</text>')
 
     # NOTICE: Redundant footer text "ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE" REMOVED
 
@@ -486,32 +488,38 @@ def render_liquid(stats, theme="dark"):
     o.append('</svg>')
     return "\n".join(o)
 
-def main():
-    repo_dir = Path(__file__).resolve().parent
-    assets_dir = repo_dir / "assets"
-    cache_path = repo_dir / "cache" / "data.json"
-    assets_dir.mkdir(exist_ok=True)
-    stats = load_stats()
-    stats["built"] = datetime.date.today().strftime("%d %b %Y").upper()
 
-    if cache_path.parent.exists():
-        try:
-            cache_path.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
-        except Exception:
-            pass
-    
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--refresh", action="store_true")
+    args = parser.parse_args()
+    root = ROOT
+    login = os.environ.get("GH_USERNAME", "Pedrowtst")
+    cache = root / "cache/data.json"
+    if args.refresh:
+        now = datetime.datetime.now(datetime.timezone.utc)
+        response = data.graphql({"login": login, "from": data.month_window(now.date())[0] + "-01T00:00:00Z", "to": now.isoformat(timespec="seconds")})
+        stats = data.aggregate(response["calendar"], login, now)
+        stats.update(response["summary"])
+        data.validate_cache(stats, login)
+    else:
+        stats = data.validate_cache(json.loads(cache.read_text(encoding="utf-8")), login)
+    files = {}
     for theme in ("dark", "light"):
-        svg_code = render_liquid(stats, theme)
-        
-        # New Zirtuno Liquid assets
-        p1 = assets_dir / f"zirtuno-liquid-{theme}.svg"
-        p1.write_text(svg_code, encoding="utf-8")
-        print(f"Generated {p1.name} ({p1.stat().st_size / 1024:.1f} KB)")
-        
-        # Legacy/Compatibility filenames
-        p2 = assets_dir / f"console-{theme}.svg"
-        p2.write_text(svg_code, encoding="utf-8")
-        print(f"Updated compatibility asset {p2.name}")
+        for mobile in (False, True):
+            suffix = theme + ("-mobile" if mobile else "")
+            files[f"zirtuno-liquid-{suffix}.svg"] = render_liquid(stats, theme, mobile)
+        files[f"console-{theme}.svg"] = files[f"zirtuno-liquid-{theme}.svg"]
+    for name, svg in files.items():
+        (root / "assets" / name).write_text(svg + "\n", encoding="utf-8", newline="\n")
+    if args.refresh:
+        cache.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8", newline="\n")
+    print(f"Generated {len(files)} liquid assets; {stats['total']} contributions through {stats['through']}.")
+
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (ValueError, KeyError, OSError, subprocess.SubprocessError) as error:
+        print(f"Generation failed ({type(error).__name__}); no fabricated fallback data used.", file=sys.stderr)
+        sys.exit(1)

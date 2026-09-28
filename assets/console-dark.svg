@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" width="940" height="600" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
+<title>Pedro Mautone — Zirtuno systems architecture</title>
+<desc>Monthly contributions: 2025-10: 0; 2025-11: 1; 2025-12: 0; 2026-01: 0; 2026-02: 0; 2026-03: 0; 2026-04: 0; 2026-05: 44; 2026-06: 41; 2026-07: 26; 2026-08: 32; 2026-09: 355. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
 <defs>
   <!-- Background radial depth -->
   <radialGradient id="abyssGrad" cx="50%" cy="25%" r="80%">
     <stop offset="0%" stop-color="#090D12"/>
     <stop offset="65%" stop-color="#050709"/>
-    <stop offset="100%" stop-color="#020304"/>
+    <stop offset="100%" stop-color="#050709"/>
   </radialGradient>
 
   <!-- Liquid wave layer 1 (deepest current) -->
@@ -62,22 +64,22 @@
 
   <!-- Clip boundary -->
   <clipPath id="stageClip">
-    <rect x="0" y="0" width="940" height="600" rx="16"/>
+    <rect x="0" y="0" width="940" height="620" rx="16"/>
   </clipPath>
 </defs>
 <g clip-path="url(#stageClip)">
-<rect width="940" height="600" fill="url(#abyssGrad)"/>
-<rect width="940" height="600" fill="url(#causticGlow)"/>
+<rect width="940" height="620" fill="url(#abyssGrad)"/>
+<rect width="940" height="620" fill="url(#causticGlow)"/>
 <circle cx="180" cy="130" r="1.4" fill="#00E3FE" opacity="0.35" class="particleDrift1"/>
 <circle cx="460" cy="85"  r="2.0" fill="#4DECFF" opacity="0.50" class="particleDrift2"/>
 <circle cx="780" cy="115" r="1.6" fill="#00E3FE" opacity="0.45" class="particleDrift3"/>
 <circle cx="890" cy="205" r="2.2" fill="#4DECFF" opacity="0.35" class="particleDrift1"/>
 <g class="liquidOrgan">
 <g class="waveMove1">
-      <path d="M 0 600 L 0.00 356.00 L 23.50 358.19 L 47.00 360.33 L 70.50 362.36 L 94.00 364.23 L 117.50 365.90 L 141.00 367.33 L 164.50 368.47 L 188.00 369.31 L 211.50 369.83 L 235.00 370.00 L 258.50 369.83 L 282.00 369.31 L 305.50 368.47 L 329.00 367.33 L 352.50 365.90 L 376.00 364.23 L 399.50 362.36 L 423.00 360.33 L 446.50 358.19 L 470.00 356.00 L 493.50 353.81 L 517.00 351.67 L 540.50 349.64 L 564.00 347.77 L 587.50 346.10 L 611.00 344.67 L 634.50 343.53 L 658.00 342.69 L 681.50 342.17 L 705.00 342.00 L 728.50 342.17 L 752.00 342.69 L 775.50 343.53 L 799.00 344.67 L 822.50 346.10 L 846.00 347.77 L 869.50 349.64 L 893.00 351.67 L 916.50 353.81 L 940.00 356.00 L 963.50 358.19 L 987.00 360.33 L 1010.50 362.36 L 1034.00 364.23 L 1057.50 365.90 L 1081.00 367.33 L 1104.50 368.47 L 1128.00 369.31 L 1151.50 369.83 L 1175.00 370.00 L 1198.50 369.83 L 1222.00 369.31 L 1245.50 368.47 L 1269.00 367.33 L 1292.50 365.90 L 1316.00 364.23 L 1339.50 362.36 L 1363.00 360.33 L 1386.50 358.19 L 1410.00 356.00 L 1433.50 353.81 L 1457.00 351.67 L 1480.50 349.64 L 1504.00 347.77 L 1527.50 346.10 L 1551.00 344.67 L 1574.50 343.53 L 1598.00 342.69 L 1621.50 342.17 L 1645.00 342.00 L 1668.50 342.17 L 1692.00 342.69 L 1715.50 343.53 L 1739.00 344.67 L 1762.50 346.10 L 1786.00 347.77 L 1809.50 349.64 L 1833.00 351.67 L 1856.50 353.81 L 1880.00 356.00 L 1903.50 358.19 L 1927.00 360.33 L 1950.50 362.36 L 1974.00 364.23 L 1997.50 365.90 L 2021.00 367.33 L 2044.50 368.47 L 2068.00 369.31 L 2091.50 369.83 L 2115.00 370.00 L 2138.50 369.83 L 2162.00 369.31 L 2185.50 368.47 L 2209.00 367.33 L 2232.50 365.90 L 2256.00 364.23 L 2279.50 362.36 L 2303.00 360.33 L 2326.50 358.19 L 2350.00 356.00 L 2373.50 353.81 L 2397.00 351.67 L 2420.50 349.64 L 2444.00 347.77 L 2467.50 346.10 L 2491.00 344.67 L 2514.50 343.53 L 2538.00 342.69 L 2561.50 342.17 L 2585.00 342.00 L 2608.50 342.17 L 2632.00 342.69 L 2655.50 343.53 L 2679.00 344.67 L 2702.50 346.10 L 2726.00 347.77 L 2749.50 349.64 L 2773.00 351.67 L 2796.50 353.81 L 2820.00 356.00 L 2820.00 600 Z" fill="url(#liquidGrad1)"/>
+      <path d="M 0 620 L 0.00 356.00 L 23.50 358.19 L 47.00 360.33 L 70.50 362.36 L 94.00 364.23 L 117.50 365.90 L 141.00 367.33 L 164.50 368.47 L 188.00 369.31 L 211.50 369.83 L 235.00 370.00 L 258.50 369.83 L 282.00 369.31 L 305.50 368.47 L 329.00 367.33 L 352.50 365.90 L 376.00 364.23 L 399.50 362.36 L 423.00 360.33 L 446.50 358.19 L 470.00 356.00 L 493.50 353.81 L 517.00 351.67 L 540.50 349.64 L 564.00 347.77 L 587.50 346.10 L 611.00 344.67 L 634.50 343.53 L 658.00 342.69 L 681.50 342.17 L 705.00 342.00 L 728.50 342.17 L 752.00 342.69 L 775.50 343.53 L 799.00 344.67 L 822.50 346.10 L 846.00 347.77 L 869.50 349.64 L 893.00 351.67 L 916.50 353.81 L 940.00 356.00 L 963.50 358.19 L 987.00 360.33 L 1010.50 362.36 L 1034.00 364.23 L 1057.50 365.90 L 1081.00 367.33 L 1104.50 368.47 L 1128.00 369.31 L 1151.50 369.83 L 1175.00 370.00 L 1198.50 369.83 L 1222.00 369.31 L 1245.50 368.47 L 1269.00 367.33 L 1292.50 365.90 L 1316.00 364.23 L 1339.50 362.36 L 1363.00 360.33 L 1386.50 358.19 L 1410.00 356.00 L 1433.50 353.81 L 1457.00 351.67 L 1480.50 349.64 L 1504.00 347.77 L 1527.50 346.10 L 1551.00 344.67 L 1574.50 343.53 L 1598.00 342.69 L 1621.50 342.17 L 1645.00 342.00 L 1668.50 342.17 L 1692.00 342.69 L 1715.50 343.53 L 1739.00 344.67 L 1762.50 346.10 L 1786.00 347.77 L 1809.50 349.64 L 1833.00 351.67 L 1856.50 353.81 L 1880.00 356.00 L 1903.50 358.19 L 1927.00 360.33 L 1950.50 362.36 L 1974.00 364.23 L 1997.50 365.90 L 2021.00 367.33 L 2044.50 368.47 L 2068.00 369.31 L 2091.50 369.83 L 2115.00 370.00 L 2138.50 369.83 L 2162.00 369.31 L 2185.50 368.47 L 2209.00 367.33 L 2232.50 365.90 L 2256.00 364.23 L 2279.50 362.36 L 2303.00 360.33 L 2326.50 358.19 L 2350.00 356.00 L 2373.50 353.81 L 2397.00 351.67 L 2420.50 349.64 L 2444.00 347.77 L 2467.50 346.10 L 2491.00 344.67 L 2514.50 343.53 L 2538.00 342.69 L 2561.50 342.17 L 2585.00 342.00 L 2608.50 342.17 L 2632.00 342.69 L 2655.50 343.53 L 2679.00 344.67 L 2702.50 346.10 L 2726.00 347.77 L 2749.50 349.64 L 2773.00 351.67 L 2796.50 353.81 L 2820.00 356.00 L 2820.00 620 Z" fill="url(#liquidGrad1)"/>
     </g>
 <g class="waveMove2">
-      <path d="M 0 600 L 0.00 372.66 L 23.50 373.78 L 47.00 373.95 L 70.50 373.14 L 94.00 371.43 L 117.50 369.00 L 141.00 366.08 L 164.50 362.95 L 188.00 359.93 L 211.50 357.31 L 235.00 355.34 L 258.50 354.22 L 282.00 354.05 L 305.50 354.86 L 329.00 356.57 L 352.50 359.00 L 376.00 361.92 L 399.50 365.05 L 423.00 368.07 L 446.50 370.69 L 470.00 372.66 L 493.50 373.78 L 517.00 373.95 L 540.50 373.14 L 564.00 371.43 L 587.50 369.00 L 611.00 366.08 L 634.50 362.95 L 658.00 359.93 L 681.50 357.31 L 705.00 355.34 L 728.50 354.22 L 752.00 354.05 L 775.50 354.86 L 799.00 356.57 L 822.50 359.00 L 846.00 361.92 L 869.50 365.05 L 893.00 368.07 L 916.50 370.69 L 940.00 372.66 L 963.50 373.78 L 987.00 373.95 L 1010.50 373.14 L 1034.00 371.43 L 1057.50 369.00 L 1081.00 366.08 L 1104.50 362.95 L 1128.00 359.93 L 1151.50 357.31 L 1175.00 355.34 L 1198.50 354.22 L 1222.00 354.05 L 1245.50 354.86 L 1269.00 356.57 L 1292.50 359.00 L 1316.00 361.92 L 1339.50 365.05 L 1363.00 368.07 L 1386.50 370.69 L 1410.00 372.66 L 1433.50 373.78 L 1457.00 373.95 L 1480.50 373.14 L 1504.00 371.43 L 1527.50 369.00 L 1551.00 366.08 L 1574.50 362.95 L 1598.00 359.93 L 1621.50 357.31 L 1645.00 355.34 L 1668.50 354.22 L 1692.00 354.05 L 1715.50 354.86 L 1739.00 356.57 L 1762.50 359.00 L 1786.00 361.92 L 1809.50 365.05 L 1833.00 368.07 L 1856.50 370.69 L 1880.00 372.66 L 1903.50 373.78 L 1927.00 373.95 L 1950.50 373.14 L 1974.00 371.43 L 1997.50 369.00 L 2021.00 366.08 L 2044.50 362.95 L 2068.00 359.93 L 2091.50 357.31 L 2115.00 355.34 L 2138.50 354.22 L 2162.00 354.05 L 2185.50 354.86 L 2209.00 356.57 L 2232.50 359.00 L 2256.00 361.92 L 2279.50 365.05 L 2303.00 368.07 L 2326.50 370.69 L 2350.00 372.66 L 2373.50 373.78 L 2397.00 373.95 L 2420.50 373.14 L 2444.00 371.43 L 2467.50 369.00 L 2491.00 366.08 L 2514.50 362.95 L 2538.00 359.93 L 2561.50 357.31 L 2585.00 355.34 L 2608.50 354.22 L 2632.00 354.05 L 2655.50 354.86 L 2679.00 356.57 L 2702.50 359.00 L 2726.00 361.92 L 2749.50 365.05 L 2773.00 368.07 L 2796.50 370.69 L 2820.00 372.66 L 2820.00 600 Z" fill="url(#liquidGrad2)"/>
+      <path d="M 0 620 L 0.00 372.66 L 23.50 373.78 L 47.00 373.95 L 70.50 373.14 L 94.00 371.43 L 117.50 369.00 L 141.00 366.08 L 164.50 362.95 L 188.00 359.93 L 211.50 357.31 L 235.00 355.34 L 258.50 354.22 L 282.00 354.05 L 305.50 354.86 L 329.00 356.57 L 352.50 359.00 L 376.00 361.92 L 399.50 365.05 L 423.00 368.07 L 446.50 370.69 L 470.00 372.66 L 493.50 373.78 L 517.00 373.95 L 540.50 373.14 L 564.00 371.43 L 587.50 369.00 L 611.00 366.08 L 634.50 362.95 L 658.00 359.93 L 681.50 357.31 L 705.00 355.34 L 728.50 354.22 L 752.00 354.05 L 775.50 354.86 L 799.00 356.57 L 822.50 359.00 L 846.00 361.92 L 869.50 365.05 L 893.00 368.07 L 916.50 370.69 L 940.00 372.66 L 963.50 373.78 L 987.00 373.95 L 1010.50 373.14 L 1034.00 371.43 L 1057.50 369.00 L 1081.00 366.08 L 1104.50 362.95 L 1128.00 359.93 L 1151.50 357.31 L 1175.00 355.34 L 1198.50 354.22 L 1222.00 354.05 L 1245.50 354.86 L 1269.00 356.57 L 1292.50 359.00 L 1316.00 361.92 L 1339.50 365.05 L 1363.00 368.07 L 1386.50 370.69 L 1410.00 372.66 L 1433.50 373.78 L 1457.00 373.95 L 1480.50 373.14 L 1504.00 371.43 L 1527.50 369.00 L 1551.00 366.08 L 1574.50 362.95 L 1598.00 359.93 L 1621.50 357.31 L 1645.00 355.34 L 1668.50 354.22 L 1692.00 354.05 L 1715.50 354.86 L 1739.00 356.57 L 1762.50 359.00 L 1786.00 361.92 L 1809.50 365.05 L 1833.00 368.07 L 1856.50 370.69 L 1880.00 372.66 L 1903.50 373.78 L 1927.00 373.95 L 1950.50 373.14 L 1974.00 371.43 L 1997.50 369.00 L 2021.00 366.08 L 2044.50 362.95 L 2068.00 359.93 L 2091.50 357.31 L 2115.00 355.34 L 2138.50 354.22 L 2162.00 354.05 L 2185.50 354.86 L 2209.00 356.57 L 2232.50 359.00 L 2256.00 361.92 L 2279.50 365.05 L 2303.00 368.07 L 2326.50 370.69 L 2350.00 372.66 L 2373.50 373.78 L 2397.00 373.95 L 2420.50 373.14 L 2444.00 371.43 L 2467.50 369.00 L 2491.00 366.08 L 2514.50 362.95 L 2538.00 359.93 L 2561.50 357.31 L 2585.00 355.34 L 2608.50 354.22 L 2632.00 354.05 L 2655.50 354.86 L 2679.00 356.57 L 2702.50 359.00 L 2726.00 361.92 L 2749.50 365.05 L 2773.00 368.07 L 2796.50 370.69 L 2820.00 372.66 L 2820.00 620 Z" fill="url(#liquidGrad2)"/>
     </g>
 <g filter="url(#metaballFilter)">
 <circle cx="800" cy="310" r="19" fill="url(#dropletShimmer)" class="moteFloat1" style="animation-delay:0s;"/>
@@ -91,7 +93,7 @@
 <circle cx="230" cy="364" r="7" fill="url(#dropletShimmer)" class="moteFloat3" style="animation-delay:1.4s;"/>
 </g>
 <g class="waveMove3">
-      <path d="M 0 600 L 0.00 378.00 L 23.50 377.24 L 47.00 375.11 L 70.50 372.10 L 94.00 368.84 L 117.50 366.05 L 141.00 364.34 L 164.50 364.09 L 188.00 365.34 L 211.50 367.82 L 235.00 371.00 L 258.50 374.18 L 282.00 376.66 L 305.50 377.91 L 329.00 377.66 L 352.50 375.95 L 376.00 373.16 L 399.50 369.90 L 423.00 366.89 L 446.50 364.76 L 470.00 364.00 L 493.50 364.76 L 517.00 366.89 L 540.50 369.90 L 564.00 373.16 L 587.50 375.95 L 611.00 377.66 L 634.50 377.91 L 658.00 376.66 L 681.50 374.18 L 705.00 371.00 L 728.50 367.82 L 752.00 365.34 L 775.50 364.09 L 799.00 364.34 L 822.50 366.05 L 846.00 368.84 L 869.50 372.10 L 893.00 375.11 L 916.50 377.24 L 940.00 378.00 L 963.50 377.24 L 987.00 375.11 L 1010.50 372.10 L 1034.00 368.84 L 1057.50 366.05 L 1081.00 364.34 L 1104.50 364.09 L 1128.00 365.34 L 1151.50 367.82 L 1175.00 371.00 L 1198.50 374.18 L 1222.00 376.66 L 1245.50 377.91 L 1269.00 377.66 L 1292.50 375.95 L 1316.00 373.16 L 1339.50 369.90 L 1363.00 366.89 L 1386.50 364.76 L 1410.00 364.00 L 1433.50 364.76 L 1457.00 366.89 L 1480.50 369.90 L 1504.00 373.16 L 1527.50 375.95 L 1551.00 377.66 L 1574.50 377.91 L 1598.00 376.66 L 1621.50 374.18 L 1645.00 371.00 L 1668.50 367.82 L 1692.00 365.34 L 1715.50 364.09 L 1739.00 364.34 L 1762.50 366.05 L 1786.00 368.84 L 1809.50 372.10 L 1833.00 375.11 L 1856.50 377.24 L 1880.00 378.00 L 1903.50 377.24 L 1927.00 375.11 L 1950.50 372.10 L 1974.00 368.84 L 1997.50 366.05 L 2021.00 364.34 L 2044.50 364.09 L 2068.00 365.34 L 2091.50 367.82 L 2115.00 371.00 L 2138.50 374.18 L 2162.00 376.66 L 2185.50 377.91 L 2209.00 377.66 L 2232.50 375.95 L 2256.00 373.16 L 2279.50 369.90 L 2303.00 366.89 L 2326.50 364.76 L 2350.00 364.00 L 2373.50 364.76 L 2397.00 366.89 L 2420.50 369.90 L 2444.00 373.16 L 2467.50 375.95 L 2491.00 377.66 L 2514.50 377.91 L 2538.00 376.66 L 2561.50 374.18 L 2585.00 371.00 L 2608.50 367.82 L 2632.00 365.34 L 2655.50 364.09 L 2679.00 364.34 L 2702.50 366.05 L 2726.00 368.84 L 2749.50 372.10 L 2773.00 375.11 L 2796.50 377.24 L 2820.00 378.00 L 2820.00 600 Z" fill="url(#liquidGrad3)"/>
+      <path d="M 0 620 L 0.00 378.00 L 23.50 377.24 L 47.00 375.11 L 70.50 372.10 L 94.00 368.84 L 117.50 366.05 L 141.00 364.34 L 164.50 364.09 L 188.00 365.34 L 211.50 367.82 L 235.00 371.00 L 258.50 374.18 L 282.00 376.66 L 305.50 377.91 L 329.00 377.66 L 352.50 375.95 L 376.00 373.16 L 399.50 369.90 L 423.00 366.89 L 446.50 364.76 L 470.00 364.00 L 493.50 364.76 L 517.00 366.89 L 540.50 369.90 L 564.00 373.16 L 587.50 375.95 L 611.00 377.66 L 634.50 377.91 L 658.00 376.66 L 681.50 374.18 L 705.00 371.00 L 728.50 367.82 L 752.00 365.34 L 775.50 364.09 L 799.00 364.34 L 822.50 366.05 L 846.00 368.84 L 869.50 372.10 L 893.00 375.11 L 916.50 377.24 L 940.00 378.00 L 963.50 377.24 L 987.00 375.11 L 1010.50 372.10 L 1034.00 368.84 L 1057.50 366.05 L 1081.00 364.34 L 1104.50 364.09 L 1128.00 365.34 L 1151.50 367.82 L 1175.00 371.00 L 1198.50 374.18 L 1222.00 376.66 L 1245.50 377.91 L 1269.00 377.66 L 1292.50 375.95 L 1316.00 373.16 L 1339.50 369.90 L 1363.00 366.89 L 1386.50 364.76 L 1410.00 364.00 L 1433.50 364.76 L 1457.00 366.89 L 1480.50 369.90 L 1504.00 373.16 L 1527.50 375.95 L 1551.00 377.66 L 1574.50 377.91 L 1598.00 376.66 L 1621.50 374.18 L 1645.00 371.00 L 1668.50 367.82 L 1692.00 365.34 L 1715.50 364.09 L 1739.00 364.34 L 1762.50 366.05 L 1786.00 368.84 L 1809.50 372.10 L 1833.00 375.11 L 1856.50 377.24 L 1880.00 378.00 L 1903.50 377.24 L 1927.00 375.11 L 1950.50 372.10 L 1974.00 368.84 L 1997.50 366.05 L 2021.00 364.34 L 2044.50 364.09 L 2068.00 365.34 L 2091.50 367.82 L 2115.00 371.00 L 2138.50 374.18 L 2162.00 376.66 L 2185.50 377.91 L 2209.00 377.66 L 2232.50 375.95 L 2256.00 373.16 L 2279.50 369.90 L 2303.00 366.89 L 2326.50 364.76 L 2350.00 364.00 L 2373.50 364.76 L 2397.00 366.89 L 2420.50 369.90 L 2444.00 373.16 L 2467.50 375.95 L 2491.00 377.66 L 2514.50 377.91 L 2538.00 376.66 L 2561.50 374.18 L 2585.00 371.00 L 2608.50 367.82 L 2632.00 365.34 L 2655.50 364.09 L 2679.00 364.34 L 2702.50 366.05 L 2726.00 368.84 L 2749.50 372.10 L 2773.00 375.11 L 2796.50 377.24 L 2820.00 378.00 L 2820.00 620 Z" fill="url(#liquidGrad3)"/>
     </g>
 </g>
 <g transform="translate(0, 386)">
@@ -113,30 +115,30 @@
 <text x="433.1" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">MAR</text>
 <circle cx="506.9" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
 <text x="506.9" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">APR</text>
-<line x1="580.7" y1="6" x2="580.7" y2="-19.1" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="580.7" cy="-19.1" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="567.7" y="-37.1" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="580.7" y="-26.1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">44</text>
+<line x1="580.7" y1="6" x2="580.7" y2="-5.7" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="580.7" cy="-5.7" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="567.7" y="-23.7" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="580.7" y="-12.7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">44</text>
 <text x="580.7" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">MAY</text>
-<line x1="654.5" y1="6" x2="654.5" y2="-17.8" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="654.5" cy="-17.8" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="641.5" y="-35.8" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="654.5" y="-24.8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">41</text>
+<line x1="654.5" y1="6" x2="654.5" y2="-5.3" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="654.5" cy="-5.3" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="641.5" y="-23.3" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="654.5" y="-12.3" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">41</text>
 <text x="654.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUN</text>
-<line x1="728.4" y1="6" x2="728.4" y2="-11.3" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="728.4" cy="-11.3" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="715.4" y="-29.3" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="728.4" y="-18.3" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">26</text>
+<line x1="728.4" y1="6" x2="728.4" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="728.4" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="715.4" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="728.4" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">26</text>
 <text x="728.4" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUL</text>
-<line x1="802.2" y1="6" x2="802.2" y2="-13.9" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="802.2" cy="-13.9" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="789.2" y="-31.9" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="802.2" y="-20.9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">32</text>
+<line x1="802.2" y1="6" x2="802.2" y2="-4.1" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="802.2" cy="-4.1" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="789.2" y="-22.1" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="802.2" y="-11.1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">32</text>
 <text x="802.2" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">AUG</text>
 <line x1="876.0" y1="6" x2="876.0" y2="-46.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
 <circle cx="876.0" cy="-46.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="860.0" y="-64.0" width="32" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="876.0" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">106</text>
+<rect x="860.5" y="-64.0" width="31" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="876.0" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">355</text>
 <text x="876.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">SEP</text>
 </g>
 <g transform="translate(44, 40)">
@@ -154,51 +156,56 @@
 </g>
 <g transform="translate(44, 98)">
 <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800" fill="#F2F0EB" letter-spacing="1.5">PEDRO MAUTONE</text>
-<text x="0" y="66" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="600" fill="#00E3FE" letter-spacing="1.2">Co-Founder &amp; Systems Architect at Zirtuno</text>
-<text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#9BA3AF">High-concurrency distributed backends · Edge computer vision telemetry · Low-level protocol dissection</text>
+<text x="0" y="66" font-family="Segoe UI, sans-serif" font-size="14.5" font-weight="600" fill="#00E3FE" letter-spacing="1.2">Co-Founder &amp; Systems Architect at Zirtuno</text>
+<text x="0" y="90" font-family="Segoe UI, sans-serif" font-size="12" fill="#B6C4CF">Distributed backends · Edge computer vision · Low-level systems &amp; protocol engineering</text>
 </g>
 <g transform="translate(44.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
-<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="#5E6875" letter-spacing="1.2">LIFETIME COMMITS</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">231</text>
+<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">COMMITS / PERIOD</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">71</text>
 </g>
 <g transform="translate(260.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
-<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="#5E6875" letter-spacing="1.2">ANNUAL VELOCITY</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">250 contribs</text>
+<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">CONTRIBUTIONS / PERIOD</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">499 contribs</text>
 </g>
 <g transform="translate(476.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
-<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="#5E6875" letter-spacing="1.2">ACTIVE REPOSITORIES</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">02 systems</text>
+<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">PUBLIC PROJECTS</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">02 repositories</text>
 </g>
 <g transform="translate(692.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
-<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9" font-weight="700" fill="#5E6875" letter-spacing="1.2">PRIMARY STACK</text>
+<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">PUBLIC CODE MIX</text>
 <text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#4DECFF">77.6% Py · 22.4% C++</text>
 </g>
 <g transform="translate(44.0, 456)" class="pillarCard">
-<rect width="274.7" height="84" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
+<rect width="274.7" height="106" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#00E3FE"/>
-<text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F2F0EB">EDGE TELEMETRY &amp; CV</text>
-<text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#4DECFF">ESP32-CAM · FreeRTOS · YOLOv8</text>
-<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#9BA3AF">Sub-100ms spatial vehicle tracking &amp; occupancy stream</text>
+<text x="26" y="28" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#F2F0EB">EDGE TELEMETRY &amp; CV</text>
+<text x="16" y="50" font-family="Consolas, monospace" font-size="10" font-weight="600" fill="#4DECFF">ESP32-CAM · Python · YOLOv8</text>
+<text x="16" y="73" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">Directional vehicle tracking</text>
+<text x="16" y="90" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">&amp; live occupancy dashboards</text>
 </g>
 <g transform="translate(332.7, 456)" class="pillarCard">
-<rect width="274.7" height="84" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
+<rect width="274.7" height="106" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#00E3FE"/>
-<text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F2F0EB">ENTERPRISE DATA BUS</text>
-<text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#4DECFF">FastAPI · Redis · PostgreSQL · ERP</text>
-<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#9BA3AF">Bi-directional ERP/CRM sync engine with transactional outbox</text>
+<text x="26" y="28" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#F2F0EB">ENTERPRISE DATA BUS</text>
+<text x="16" y="50" font-family="Consolas, monospace" font-size="10" font-weight="600" fill="#4DECFF">FastAPI · Redis · PostgreSQL</text>
+<text x="16" y="73" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">ERP/CRM integration, event flows</text>
+<text x="16" y="90" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">&amp; resilient synchronization</text>
 </g>
 <g transform="translate(621.3, 456)" class="pillarCard">
-<rect width="274.7" height="84" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
+<rect width="274.7" height="106" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <circle cx="16" cy="23" r="3.2" fill="#00E3FE"/>
-<text x="26" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#F2F0EB">LOW-LEVEL &amp; PROTOCOLS</text>
-<text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#4DECFF">C / C++ · Linux / POSIX · GDB</text>
-<text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" fill="#9BA3AF">Binary reverse engineering &amp; hardware socket interop</text>
+<text x="26" y="28" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#F2F0EB">LOW-LEVEL &amp; PROTOCOLS</text>
+<text x="16" y="50" font-family="Consolas, monospace" font-size="10" font-weight="600" fill="#4DECFF">C / C++ · Linux / POSIX · GDB</text>
+<text x="16" y="73" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">Binary analysis, socket tooling</text>
+<text x="16" y="90" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">&amp; hardware interoperability</text>
 </g>
-<rect x="0.5" y="0.5" width="939" height="599" rx="16" fill="none" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1"/>
+<rect x="44" y="580" width="852" height="22" rx="11" fill="rgba(4, 9, 14, 0.78)"/>
+<text x="470.0" y="595" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#F2F0EB">2025-10 — 2026-09 · UPDATED 28 SEP 2026 UTC · MONTH IN PROGRESS</text>
+<rect x="0.5" y="0.5" width="939" height="619" rx="16" fill="none" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1"/>
 </g>
 <style>
     /* Continuous seamless wave translation across exact integer wavelengths */
