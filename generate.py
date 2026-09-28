@@ -26,11 +26,11 @@ def load_stats():
     return {
         "repos": 2,
         "stars": 1,
-        "commits": 230,
+        "commits": 231,
         "followers": 1,
         "bytes": 67406,
         "languages": [("Python", 52336), ("C++", 15070)],
-        "monthly": [{"month": m, "value": v} for m, v in zip(range(1, 13), [0, 1, 0, 0, 0, 0, 0, 44, 41, 26, 32, 105])],
+        "monthly": [{"month": m, "value": v} for m, v in zip(range(1, 13), [0, 1, 0, 0, 0, 0, 0, 44, 41, 26, 32, 106])],
         "built": datetime.date.today().strftime("%d %b %Y").upper()
     }
 
