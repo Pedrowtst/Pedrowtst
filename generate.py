@@ -509,6 +509,7 @@ def main():
         for mobile in (False, True):
             suffix = theme + ("-mobile" if mobile else "")
             files[f"zirtuno-liquid-{suffix}.svg"] = render_liquid(stats, theme, mobile)
+            files[f"zirtuno-liquid-{suffix}-refined.svg"] = files[f"zirtuno-liquid-{suffix}.svg"]
         files[f"console-{theme}.svg"] = files[f"zirtuno-liquid-{theme}.svg"]
     for name, svg in files.items():
         (root / "assets" / name).write_text(svg + "\n", encoding="utf-8", newline="\n")

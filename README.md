@@ -1,9 +1,9 @@
 <picture>
-  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-mobile.svg?v=20260928">
-  <source media="(max-width: 640px)" srcset="./assets/zirtuno-liquid-light-mobile.svg?v=20260928">
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark.svg?v=20260928">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/zirtuno-liquid-light.svg?v=20260928">
-  <img alt="Pedro Mautone — Co-Founder &amp; Systems Architect at Zirtuno. Animated liquid console; dated contribution data is linked below." src="./assets/zirtuno-liquid-dark.svg?v=20260928" width="100%">
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-mobile-refined.svg">
+  <source media="(max-width: 640px)" srcset="./assets/zirtuno-liquid-light-mobile-refined.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-refined.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/zirtuno-liquid-light-refined.svg">
+  <img alt="Pedro Mautone — Co-Founder &amp; Systems Architect at Zirtuno. Animated liquid console; dated contribution data is linked below." src="./assets/zirtuno-liquid-dark-refined.svg" width="100%">
 </picture>
 
 <div align="center">
