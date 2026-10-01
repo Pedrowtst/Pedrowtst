@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
 <title>Pedro Mautone — Zirtuno systems architecture</title>
-<desc>Monthly contributions: 2025-10: 0; 2025-11: 1; 2025-12: 0; 2026-01: 0; 2026-02: 0; 2026-03: 0; 2026-04: 0; 2026-05: 44; 2026-06: 41; 2026-07: 26; 2026-08: 32; 2026-09: 366. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
+<desc>Monthly contributions: 2025-11: 1; 2025-12: 0; 2026-01: 0; 2026-02: 0; 2026-03: 0; 2026-04: 0; 2026-05: 44; 2026-06: 41; 2026-07: 26; 2026-08: 32; 2026-09: 379; 2026-10: 0. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
 <defs>
   <!-- Background radial depth -->
   <radialGradient id="abyssGrad" cx="50%" cy="25%" r="80%">
@@ -98,48 +98,48 @@
 </g>
 <g transform="translate(0, 386)">
 <rect x="40" y="6" width="860" height="24" rx="12" fill="rgba(4, 9, 14, 0.78)" stroke="rgba(0, 227, 254, 0.35)" stroke-width="1.2"/>
-<circle cx="64.0" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="64.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">OCT</text>
-<line x1="137.8" y1="6" x2="137.8" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="137.8" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="124.8" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="137.8" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
-<text x="137.8" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">NOV</text>
+<line x1="64.0" y1="6" x2="64.0" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="64.0" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="51.0" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="64.0" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="64.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">NOV</text>
+<circle cx="137.8" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
+<text x="137.8" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">DEC</text>
 <circle cx="211.6" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="211.6" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">DEC</text>
+<text x="211.6" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">JAN</text>
 <circle cx="285.5" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="285.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">JAN</text>
+<text x="285.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">FEB</text>
 <circle cx="359.3" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="359.3" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">FEB</text>
+<text x="359.3" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">MAR</text>
 <circle cx="433.1" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="433.1" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">MAR</text>
-<circle cx="506.9" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
-<text x="506.9" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">APR</text>
-<line x1="580.7" y1="6" x2="580.7" y2="-5.5" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="580.7" cy="-5.5" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="567.7" y="-23.5" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="580.7" y="-12.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">44</text>
-<text x="580.7" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">MAY</text>
-<line x1="654.5" y1="6" x2="654.5" y2="-5.2" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="654.5" cy="-5.2" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="641.5" y="-23.2" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="654.5" y="-12.2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">41</text>
-<text x="654.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUN</text>
+<text x="433.1" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">APR</text>
+<line x1="506.9" y1="6" x2="506.9" y2="-5.3" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="506.9" cy="-5.3" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="493.9" y="-23.3" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="506.9" y="-12.3" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">44</text>
+<text x="506.9" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">MAY</text>
+<line x1="580.7" y1="6" x2="580.7" y2="-5.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="580.7" cy="-5.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="567.7" y="-23.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="580.7" y="-12.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">41</text>
+<text x="580.7" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUN</text>
+<line x1="654.5" y1="6" x2="654.5" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="654.5" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="641.5" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="654.5" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">26</text>
+<text x="654.5" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUL</text>
 <line x1="728.4" y1="6" x2="728.4" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
 <circle cx="728.4" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
 <rect x="715.4" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="728.4" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">26</text>
-<text x="728.4" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">JUL</text>
-<line x1="802.2" y1="6" x2="802.2" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="802.2" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="789.2" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="802.2" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">32</text>
-<text x="802.2" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">AUG</text>
-<line x1="876.0" y1="6" x2="876.0" y2="-46.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="876.0" cy="-46.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="860.5" y="-64.0" width="31" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="876.0" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">366</text>
-<text x="876.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">SEP</text>
+<text x="728.4" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">32</text>
+<text x="728.4" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">AUG</text>
+<line x1="802.2" y1="6" x2="802.2" y2="-46.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="802.2" cy="-46.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="786.7" y="-64.0" width="31" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="802.2" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">379</text>
+<text x="802.2" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">SEP</text>
+<circle cx="876.0" cy="18" r="2" fill="#00E3FE" opacity="0.35"/>
+<text x="876.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="#7E8D9F" text-anchor="middle" letter-spacing="1">OCT</text>
 </g>
 <g transform="translate(44, 40)">
 <g transform="translate(0, 0)">
@@ -167,7 +167,7 @@
 <g transform="translate(260.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">CONTRIBUTIONS / PERIOD</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">510 contribs</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">523 contribs</text>
 </g>
 <g transform="translate(476.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
@@ -204,7 +204,7 @@
 <text x="16" y="90" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">&amp; hardware interoperability</text>
 </g>
 <rect x="44" y="580" width="852" height="22" rx="11" fill="rgba(4, 9, 14, 0.78)"/>
-<text x="470.0" y="595" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#F2F0EB">2025-10 — 2026-09 · UPDATED 30 SEP 2026 UTC · MONTH IN PROGRESS</text>
+<text x="470.0" y="595" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#F2F0EB">2025-11 — 2026-10 · UPDATED 01 OCT 2026 UTC · MONTH IN PROGRESS</text>
 <rect x="0.5" y="0.5" width="939" height="619" rx="16" fill="none" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1"/>
 </g>
 <style>

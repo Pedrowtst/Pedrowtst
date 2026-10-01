@@ -2,15 +2,11 @@
   "schema": 2,
   "username": "Pedrowtst",
   "source": "GitHub GraphQL contributionCalendar",
-  "fetched_at": "2026-09-30T11:11:34+00:00",
-  "from": "2025-10-01",
-  "through": "2026-09-30",
-  "total": 510,
+  "fetched_at": "2026-10-01T11:38:53+00:00",
+  "from": "2025-11-01",
+  "through": "2026-10-01",
+  "total": 523,
   "monthly": [
-    {
-      "month": "2025-10",
-      "value": 0
-    },
     {
       "month": "2025-11",
       "value": 1
@@ -53,7 +49,11 @@
     },
     {
       "month": "2026-09",
-      "value": 366
+      "value": 379
+    },
+    {
+      "month": "2026-10",
+      "value": 0
     }
   ],
   "commits": 72,
