@@ -103,6 +103,10 @@ def validate_cache(stats, login):
     for field in ("commits", "repos"):
         if type(stats.get(field)) is not int or stats[field] < 0:
             raise ValueError("Cached summary is invalid")
+    try:
+        dt.datetime.fromisoformat(stats["fetched_at"])
+    except (KeyError, ValueError, TypeError):
+        raise ValueError("Cached fetched_at timestamp is invalid")
     if any(not isinstance(name, str) or type(size) is not int or size < 0
            for name, size in stats["languages"]):
         raise ValueError("Cached languages are invalid")

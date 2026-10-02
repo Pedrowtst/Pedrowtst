@@ -62,6 +62,14 @@ class ProfileTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             g.validate_cache({"commits": 231}, "Pedrowtst")
 
+    def test_invalid_fetched_at_rejected(self):
+        data, now = self.fixture()
+        stats = g.aggregate(data, "Pedrowtst", now)
+        stats.update(commits=0, repos=0, languages=[])
+        stats["fetched_at"] = "invalid-date"
+        with self.assertRaisesRegex(ValueError, "fetched_at"):
+            g.validate_cache(stats, "Pedrowtst")
+
     def test_failed_refresh_preserves_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
