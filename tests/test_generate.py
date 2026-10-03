@@ -1,5 +1,6 @@
 import copy
 import datetime as dt
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -69,6 +70,11 @@ class ProfileTests(unittest.TestCase):
         stats["fetched_at"] = "invalid-date"
         with self.assertRaisesRegex(ValueError, "fetched_at"):
             g.validate_cache(stats, "Pedrowtst")
+
+    def test_missing_gh_and_token_raises_actionable_error(self):
+        with patch.dict(os.environ, {}, clear=True), patch("shutil.which", return_value=None):
+            with self.assertRaisesRegex(RuntimeError, "GitHub CLI"):
+                g.graphql({"login": "Pedrowtst", "from": "2025-01-01T00:00:00Z", "to": "2026-01-01T00:00:00Z"})
 
     def test_failed_refresh_preserves_files(self):
         with tempfile.TemporaryDirectory() as directory:

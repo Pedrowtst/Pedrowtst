@@ -3,6 +3,7 @@
 import datetime as dt
 import json
 import os
+import shutil
 import subprocess
 import urllib.request
 
@@ -41,8 +42,13 @@ def graphql(variables):
             result = json.load(response)
     else:
         # Reuse local gh authentication without printing or storing its token.
+        gh_bin = shutil.which("gh")
+        if not gh_bin:
+            raise RuntimeError(
+                "GitHub CLI ('gh') is not installed or not in PATH, and neither GH_TOKEN nor GITHUB_TOKEN is set"
+            )
         process = subprocess.run(
-            ["gh", "api", "graphql", "--input", "-"], input=json.dumps(payload),
+            [gh_bin, "api", "graphql", "--input", "-"], input=json.dumps(payload),
             capture_output=True, text=True, timeout=45, check=True,
         )
         result = json.loads(process.stdout)
