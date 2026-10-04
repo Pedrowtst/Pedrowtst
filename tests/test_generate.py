@@ -63,6 +63,13 @@ class ProfileTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             g.validate_cache({"commits": 231}, "Pedrowtst")
 
+    def test_mismatched_username_rejected(self):
+        data, now = self.fixture()
+        stats = g.aggregate(data, "Pedrowtst", now)
+        stats.update(commits=0, repos=0, languages=[])
+        with self.assertRaisesRegex(ValueError, "No verified cache"):
+            g.validate_cache(stats, "OtherUser")
+
     def test_invalid_fetched_at_rejected(self):
         data, now = self.fixture()
         stats = g.aggregate(data, "Pedrowtst", now)

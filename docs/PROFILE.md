@@ -23,7 +23,7 @@ An offline render keeps the snapshot's original date. To refresh locally, authen
 python generate.py --refresh
 ```
 
-Alternatively provide `GH_TOKEN` or `GITHUB_TOKEN` in the environment. Tokens are never written into assets or the cache. `GH_USERNAME` defaults to `Pedrowtst`.
+Alternatively provide `GH_TOKEN` or `GITHUB_TOKEN` in the environment. Tokens are never written into assets or the cache. `GH_USERNAME` defaults to `Pedrowtst`. When no token is exported, `profile_data.py` resolves the `gh` executable via `shutil.which` and reuses its local active session.
 
 ## What the chart means
 
@@ -31,7 +31,7 @@ The GraphQL `contributionCalendar` supplies daily counts from the first day of t
 
 The repository count and language mix cover owned, public, non-fork, non-archived repositories, excluding the profile repository. Language percentages use GitHub's code-byte counts across those repositories. They exclude organization-owned work and are not a proficiency score. More than 100 repositories triggers an explicit pagination error rather than publishing partial counts.
 
-The generator verifies daily coverage, unique dates, nonnegative counts, and the total before accepting a response. API failures fail the refresh and leave the previous snapshot and images unchanged. There are no invented fallback values. `fetched_at` records the actual retrieval time; the chart displays its UTC date.
+The generator verifies daily coverage, unique dates, nonnegative counts, ISO timestamp validity on `fetched_at`, and the total before accepting a response. API failures fail the refresh and leave the previous snapshot and images unchanged. There are no invented fallback values. `fetched_at` records the actual retrieval time; the chart displays its UTC date.
 
 The workflow runs daily at 05:15 UTC, manually, and when generator-related files change. It validates before refreshing, uses the built-in `GITHUB_TOKEN`, limits write permission to the refresh job, and serializes runs. Pull requests run validation without publishing. Generated-only commits do not retrigger the workflow. A conflicting remote push fails safely; rerun the workflow from the latest main.
 
