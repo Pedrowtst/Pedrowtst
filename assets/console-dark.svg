@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
 <title>Pedro Mautone — Zirtuno systems architecture</title>
-<desc>Monthly contributions: 2025-11: 1; 2025-12: 0; 2026-01: 0; 2026-02: 0; 2026-03: 0; 2026-04: 0; 2026-05: 44; 2026-06: 41; 2026-07: 26; 2026-08: 32; 2026-09: 379; 2026-10: 8. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
+<desc>Monthly contributions: 2025-11: 1; 2025-12: 0; 2026-01: 0; 2026-02: 0; 2026-03: 0; 2026-04: 0; 2026-05: 44; 2026-06: 41; 2026-07: 26; 2026-08: 32; 2026-09: 379; 2026-10: 142. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
 <defs>
   <!-- Background radial depth -->
   <radialGradient id="abyssGrad" cx="50%" cy="25%" r="80%">
@@ -138,10 +138,10 @@
 <rect x="786.7" y="-64.0" width="31" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
 <text x="802.2" y="-53.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">379</text>
 <text x="802.2" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">SEP</text>
-<line x1="876.0" y1="6" x2="876.0" y2="-4.0" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
-<circle cx="876.0" cy="-4.0" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
-<rect x="863.0" y="-22.0" width="26" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
-<text x="876.0" y="-11.0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">8</text>
+<line x1="876.0" y1="6" x2="876.0" y2="-17.2" stroke="#4DECFF" stroke-width="2" stroke-linecap="round" class="beaconLine"/>
+<circle cx="876.0" cy="-17.2" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>
+<rect x="860.5" y="-35.2" width="31" height="15" rx="7.5" fill="rgba(4, 8, 12, 0.88)" stroke="#4DECFF" stroke-width="1"/>
+<text x="876.0" y="-24.2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" text-anchor="middle">142</text>
 <text x="876.0" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="#00E3FE" text-anchor="middle" letter-spacing="1">OCT</text>
 </g>
 <g transform="translate(44, 40)">
@@ -165,17 +165,17 @@
 <g transform="translate(44.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">COMMITS / PERIOD</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">75</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">206</text>
 </g>
 <g transform="translate(260.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">CONTRIBUTIONS / PERIOD</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">531 contribs</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#00E3FE">665 contribs</text>
 </g>
 <g transform="translate(476.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
 <text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="8.5" font-weight="700" fill="#99ACBB" letter-spacing="1">PUBLIC PROJECTS</text>
-<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">02 repositories</text>
+<text x="14" y="41" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#F2F0EB">01 repositories</text>
 </g>
 <g transform="translate(692.0, 216)" class="glassCapsule">
 <rect width="204.0" height="54" rx="10" fill="rgba(10, 14, 20, 0.80)" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1.2"/>
@@ -207,7 +207,7 @@
 <text x="16" y="90" font-family="Segoe UI, sans-serif" font-size="11" fill="#B6C4CF">&amp; hardware interoperability</text>
 </g>
 <rect x="44" y="580" width="852" height="22" rx="11" fill="rgba(4, 9, 14, 0.78)"/>
-<text x="470.0" y="595" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#F2F0EB">2025-11 — 2026-10 · UPDATED 06 OCT 2026 UTC · MONTH IN PROGRESS</text>
+<text x="470.0" y="595" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#F2F0EB">2025-11 — 2026-10 · UPDATED 07 OCT 2026 UTC · MONTH IN PROGRESS</text>
 <rect x="0.5" y="0.5" width="939" height="619" rx="16" fill="none" stroke="rgba(0, 227, 254, 0.20)" stroke-width="1"/>
 </g>
 <style>
