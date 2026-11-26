@@ -2,10 +2,10 @@
   "schema": 2,
   "username": "Pedrowtst",
   "source": "GitHub GraphQL contributionCalendar",
-  "fetched_at": "2026-11-25T15:39:17+00:00",
+  "fetched_at": "2026-11-26T15:21:23+00:00",
   "from": "2025-12-01",
-  "through": "2026-11-25",
-  "total": 875,
+  "through": "2026-11-26",
+  "total": 915,
   "monthly": [
     {
       "month": "2025-12",
@@ -53,19 +53,39 @@
     },
     {
       "month": "2026-11",
-      "value": 109
+      "value": 149
     }
   ],
-  "commits": 253,
-  "repos": 1,
+  "commits": 258,
+  "repos": 2,
   "languages": [
+    [
+      "PHP",
+      115247
+    ],
     [
       "Python",
       52336
     ],
     [
+      "CSS",
+      51480
+    ],
+    [
+      "JavaScript",
+      23400
+    ],
+    [
       "C++",
       15070
+    ],
+    [
+      "HTML",
+      11101
+    ],
+    [
+      "Hack",
+      79
     ]
   ],
   "project_scope": "Owned public non-fork non-archived repositories, excluding the profile repository"
