@@ -58,35 +58,5 @@
   ],
   "commits": 261,
   "repos": 3,
-  "languages": [
-    [
-      "PHP",
-      115247
-    ],
-    [
-      "CSS",
-      60267
-    ],
-    [
-      "Python",
-      52336
-    ],
-    [
-      "HTML",
-      37542
-    ],
-    [
-      "JavaScript",
-      26634
-    ],
-    [
-      "C++",
-      15070
-    ],
-    [
-      "Hack",
-      79
-    ]
-  ],
   "project_scope": "Owned public non-fork non-archived repositories, excluding the profile repository"
 }

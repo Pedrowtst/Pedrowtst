@@ -66,14 +66,14 @@ class ProfileTests(unittest.TestCase):
     def test_mismatched_username_rejected(self):
         data, now = self.fixture()
         stats = g.aggregate(data, "Pedrowtst", now)
-        stats.update(commits=0, repos=0, languages=[])
+        stats.update(commits=0, repos=0)
         with self.assertRaisesRegex(ValueError, "No verified cache"):
             g.validate_cache(stats, "OtherUser")
 
     def test_invalid_fetched_at_rejected(self):
         data, now = self.fixture()
         stats = g.aggregate(data, "Pedrowtst", now)
-        stats.update(commits=0, repos=0, languages=[])
+        stats.update(commits=0, repos=0)
         stats["fetched_at"] = "invalid-date"
         with self.assertRaisesRegex(ValueError, "fetched_at"):
             g.validate_cache(stats, "Pedrowtst")
@@ -103,7 +103,7 @@ class ProfileTests(unittest.TestCase):
             day["contributionCount"] = 0
         data["totalContributions"] = 0
         stats = g.aggregate(data, "Pedrowtst", now)
-        stats.update(commits=0, repos=0, languages=[])
+        stats.update(commits=0, repos=0)
         for theme in ("dark", "light"):
             for mobile in (False, True):
                 for svg in (liquid.render_liquid(stats, theme, mobile),):
@@ -118,10 +118,11 @@ class ProfileTests(unittest.TestCase):
     def test_offline_render_does_not_relabel_cache_date(self):
         data, now = self.fixture()
         stats = g.aggregate(data, "Pedrowtst", now)
-        stats.update(commits=0, repos=0, languages=[])
+        stats.update(commits=0, repos=0, languages=[("LegacyLanguage", 500)])
         before = copy.deepcopy(stats)
         svg = liquid.render_liquid(g.validate_cache(stats, "Pedrowtst"), "dark")
         self.assertIn("Feb 2025 – 02 Jan 2026</text>", svg)
+        self.assertNotIn("LegacyLanguage", svg)
         self.assertEqual(stats, before)
 
 

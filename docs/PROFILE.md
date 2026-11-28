@@ -1,6 +1,6 @@
 # Maintaining this profile
 
-The banner uses Zirtuno’s vector mark, animated water, a monthly contribution chart, and four GitHub statistics. The README links to selected projects and contact information.
+The banner uses Zirtuno’s vector mark, animated water, a monthly contribution chart, and counts for contributions, commits, and public projects. The README links to selected projects and contact information.
 
 ## Edit and preview
 
@@ -30,7 +30,7 @@ Alternatively provide `GH_TOKEN` or `GITHUB_TOKEN` in the environment. Tokens ar
 
 The GraphQL `contributionCalendar` supplies daily counts from the first day of the month eleven months before the current month through the retrieval time, in UTC. Days are aggregated into twelve dated calendar months. The current month is always partial. These counts include the contribution types and visibility GitHub exposes to the requesting token; they are neither lifetime commits nor a performance metric. A local personal token and the workflow's repository token can see different totals. The commits capsule uses `totalCommitContributions` over the same period.
 
-The repository count and language mix cover owned, public, non-fork, non-archived repositories, excluding the profile repository. Language percentages use GitHub's code-byte counts across those repositories. They exclude organization-owned work and are not a proficiency score. More than 100 repositories triggers an explicit pagination error rather than publishing partial counts.
+The project count covers owned, public, non-fork, non-archived repositories, excluding the profile repository. A result exceeding the query’s 100-repository limit raises a pagination error.
 
 The generator verifies daily coverage, unique dates, nonnegative counts, ISO timestamp validity on `fetched_at`, and the total before accepting a response. API failures fail the refresh and leave the previous snapshot and images unchanged. There are no invented fallback values. `fetched_at` records the actual retrieval time; the chart displays its UTC date.
 

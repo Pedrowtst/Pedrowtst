@@ -17,7 +17,7 @@ QUERY = """query($login: String!, $from: DateTime!, $to: DateTime!) {
     }
     repositories(first: 100, ownerAffiliations: [OWNER], privacy: PUBLIC, isFork: false) {
       pageInfo { hasNextPage }
-      nodes { name isArchived languages(first: 100) { edges { size node { name } } } }
+      nodes { name isArchived }
     }
   }
 }"""
@@ -59,14 +59,9 @@ def graphql(variables):
         raise ValueError("Repository pagination required; refusing an incomplete summary")
     projects = [r for r in user["repositories"]["nodes"]
                 if not r["isArchived"] and r["name"].lower() != variables["login"].lower()]
-    languages = {}
-    for repo in projects:
-        for edge in repo["languages"]["edges"]:
-            name = edge["node"]["name"]
-            languages[name] = languages.get(name, 0) + edge["size"]
     return {"calendar": user["contributionsCollection"]["contributionCalendar"],
             "summary": {"commits": user["contributionsCollection"]["totalCommitContributions"],
-                        "repos": len(projects), "languages": sorted(languages.items(), key=lambda x: (-x[1], x[0])),
+                        "repos": len(projects),
                         "project_scope": "Owned public non-fork non-archived repositories, excluding the profile repository"}}
 
 
@@ -113,7 +108,4 @@ def validate_cache(stats, login):
         dt.datetime.fromisoformat(stats["fetched_at"])
     except (KeyError, ValueError, TypeError):
         raise ValueError("Cached fetched_at timestamp is invalid")
-    if any(not isinstance(name, str) or type(size) is not int or size < 0
-           for name, size in stats["languages"]):
-        raise ValueError("Cached languages are invalid")
     return stats

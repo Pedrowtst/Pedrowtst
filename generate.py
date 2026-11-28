@@ -42,8 +42,9 @@ text {font-family:Inter,'Segoe UI',Arial,sans-serif;fill:var(--text)}
 .dates {font-size:11.5px;fill:var(--sub);font-variant-numeric:tabular-nums}
 .mobile .name {font-size:41px;letter-spacing:-1.8px}
 .mobile .role {font-size:16px}
-.mobile .metric {font-size:19px}
-.mobile .caption,.mobile .dates {font-size:11px}
+.mobile .metric {font-size:21px}
+.mobile .caption {font-size:12px}
+.mobile .dates {font-size:11px}
 """
 
 
@@ -154,11 +155,9 @@ def activity(stats, width, margin, shore, mobile):
     start = datetime.date.fromisoformat(stats["from"])
     end = datetime.date.fromisoformat(stats["through"])
     date_range = f"{start:%b %Y} – {end:%d %b %Y}"
-    languages = stats["languages"]
-    language = languages[0][0] if languages and languages[0][1] else "—"
     metrics = [(f"{stats['total']:,}", "Contributions"), (f"{stats['commits']:,}", "Commits"),
-               (str(stats["repos"]), "Public projects"), (language, "Top language")]
-    xs = (margin, 125, 202, 304) if mobile else (margin, 183, 295, 442)
+               (str(stats["repos"]), "Public projects")]
+    xs = (margin, 150, 272) if mobile else (margin, 224, 411)
     out = []
     for (value, caption), x in zip(metrics, xs):
         fit = (75 if mobile else 120) if len(value) > (7 if mobile else 11) else None
