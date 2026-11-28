@@ -1,492 +1,212 @@
 #!/usr/bin/env python3
-"""
-Zirtuno liquid systems console for Pedro Mautone.
-Preserves the original waves, droplets, identity, and three engineering pillars.
-Renders responsive theme variants from a dated GitHub contribution snapshot.
-"""
+"""Render the profile README artwork from the last GitHub contribution snapshot."""
 
 import argparse
-import calendar
+import datetime
+from html import escape
 import json
-import profile_data as data
 import math
 import os
-import sys
-import datetime
-import urllib.request
-import subprocess
 from pathlib import Path
+import subprocess
+import sys
+
+import profile_data as data
 
 ROOT = Path(__file__).resolve().parent
+ART = ROOT / "artwork"
+FRAMES = 16
 
-def esc(s):
-    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+PALETTES = {
+    "dark": {
+        "sky": "#091519", "base": "#0c191d", "text": "#f1f4f0", "sub": "#afbfbd", "accent": "#73dad1",
+        "line": "#293a3c", "water-high": "#78eee1", "water-mid": "#13c6c7", "water-deep": "#078396",
+        "water-low": "#154b61", "back-left": "#17474d", "back-mid": "#267e84", "back-light": "#70c8c0",
+        "back-right": "#285d68", "front-left": "#158d96", "front-mid": "#106074", "front-right": "#11394d",
+    },
+    "light": {
+        "sky": "#f4f7f4", "base": "#f8faf7", "text": "#192b2d", "sub": "#4d6666", "accent": "#087f7d",
+        "line": "#c3d2cf", "water-high": "#99f6e8", "water-mid": "#4bcfc6", "water-deep": "#168fa1",
+        "water-low": "#226c80", "back-left": "#a4d1c9", "back-mid": "#8ccbc3", "back-light": "#b5e8da",
+        "back-right": "#78b5b3", "front-left": "#41b5b4", "front-mid": "#248997", "front-right": "#21677b",
+    },
+}
 
-def generate_wave(width, height, baseline, amplitude, frequency, phase=0):
-    """
-    Generate seamless repeating SVG wave path for infinite CSS translation.
-    Frequency is an integer so that y(x + width) == y(x) for all x,
-    ensuring 100% mathematical continuity and zero reset jump.
-    """
+TYPE = """
+text {font-family:Inter,'Segoe UI',Arial,sans-serif;fill:var(--text)}
+.brand {font-size:13px;font-weight:650;letter-spacing:2px}
+.name {font-size:71px;font-weight:600;letter-spacing:-3.3px}
+.role {font-size:21px;fill:var(--sub)}
+.metric {font-size:21px;font-weight:600;letter-spacing:-.5px}
+.caption {font-size:12px;fill:var(--sub)}
+.dates {font-size:11.5px;fill:var(--sub);font-variant-numeric:tabular-nums}
+.mobile .name {font-size:41px;letter-spacing:-1.8px}
+.mobile .role {font-size:16px}
+.mobile .metric {font-size:19px}
+.mobile .caption,.mobile .dates {font-size:11px}
+"""
+
+
+def text_at(x, y, content, style, anchor="start", fit=None):
+    spacing = f' textLength="{fit}" lengthAdjust="spacingAndGlyphs"' if fit else ""
+    return (f'<text x="{x:g}" y="{y:g}" class="{style}" text-anchor="{anchor}"{spacing}>'
+            f'{escape(str(content))}</text>')
+
+
+def water_height(layer, x, phase, shore, mobile):
+    """Superimpose a travelling swell and a slower crest under the drops."""
+    a = math.tau * x
+    crest_x = .75 + .045 * math.sin(phase)
+    crest = math.exp(-((x - crest_x) / .18) ** 2)
+    k = .74 if mobile else 1
+    surface = shore - k * (68 + 48 * crest)
+    if layer == "far":
+        return surface + k * (13 * math.sin(a + phase + 1) - 19 * math.cos(a * 1.5 - phase))
+    if layer == "near":
+        return shore - k * (22 + 12 * math.sin(a - phase + .45) + 8 * math.sin(2*a + phase))
+    return surface + k * (10 * math.sin(a + phase) + 15 * math.sin(2*a - phase + .7))
+
+
+def surface_path(layer, width, shore, phase, mobile):
+    """Smooth quadratic spans share their knots at every phase of the loop."""
+    intervals = 18
+    step = (width + 40) / intervals
     points = []
-    total_w = width * 3  # 3 full widths for ample buffer
-    steps = 120
-    dx = total_w / steps
-    for i in range(steps + 1):
-        x = i * dx
-        y = baseline + amplitude * math.sin((x / width) * 2 * math.pi * frequency + phase)
+    for i in range(intervals + 1):
+        x = -20 + i * step
+        y = water_height(layer, x / width, phase, shore, mobile)
         points.append((x, y))
+    commands = [f'M{points[0][0]:g} {points[0][1]:.1f}']
+    for (x, y), (end_x, end_y) in zip(points, points[1:]):
+        commands.append(f'Q{x:.1f} {y:.1f} {(x+end_x)/2:.1f} {(y+end_y)/2:.1f}')
+    x, y = points[-1]
+    commands.append(f'L{x:.1f} {y:.1f}V{shore+14}H-20Z')
+    return ''.join(commands)
 
-    d = [f"M 0 {height}"]
-    d.append(f"L {points[0][0]:.2f} {points[0][1]:.2f}")
-    for p in points[1:]:
-        d.append(f"L {p[0]:.2f} {p[1]:.2f}")
-    d.append(f"L {total_w:.2f} {height}")
-    d.append("Z")
-    return " ".join(d)
+
+def motion(name, frames):
+    rules = ''.join(f'{i*100/FRAMES:g}%{{{value}}}' for i, value in enumerate(frames))
+    return f'.{name}{{animation:{name} 13s linear infinite}}@keyframes {name}{{{rules}}}'
+
+
+def highlight_path(width, shore, phase, mobile):
+    """A tapered reflection follows the lit face of the main swell."""
+    scale = .74 if mobile else 1
+    upper, lower = [], []
+    for i in range(19):
+        u = i / 18
+        x = width * (.18 + .82*u)
+        envelope = math.sin(math.pi*u)**2
+        depth = 8 + envelope*(8 + 6*math.sin(phase + 7*u))
+        y = water_height("body", x/width, phase, shore, mobile) + depth*scale
+        upper.append((x, y))
+        lower.append((x, y + scale*envelope*(4.5 + 3.5*math.cos(phase - 10*u))))
+    points = upper + list(reversed(lower))
+    segments = [f'M{points[0][0]:.1f} {points[0][1]:.1f}']
+    for (x, y), (nx, ny) in zip(points, points[1:]):
+        segments.append(f'Q{x:.1f} {y:.1f} {(x+nx)/2:.1f} {(y+ny)/2:.1f}')
+    return ''.join(segments) + 'Z'
+
+
+def liquid(width, shore, mobile):
+    # Set the final phase to exactly zero so the static frame and the seam agree.
+    phases = [math.tau * i / FRAMES for i in range(FRAMES)] + [0]
+    styles, paths = [], {}
+    for layer in ("far", "body", "near"):
+        frames = [surface_path(layer, width, shore, phase, mobile) for phase in phases]
+        paths[layer] = f'class="{layer}" d="{frames[0]}"'
+        styles.append(motion(layer, [f'd:path("{frame}")' for frame in frames]))
+    highlights = [highlight_path(width, shore, phase, mobile) for phase in phases]
+    styles.append(motion("glint", [f'd:path("{frame}")' for frame in highlights]))
+
+    drops = []
+    # Relative position, radius, travel above the crest, and time of release.
+    beads = [(.72, 22, 69, .3), (.79, 9, 84, 1.4), (.86, 12, 41, 2.8), (.65, 6, 33, 3.4)]
+    scale = .65 if mobile else 1
+    for index, (pos, r, travel, offset) in enumerate(beads):
+        transforms = []
+        for phase in phases:
+            lift = (1 + math.cos(phase + offset)) / 2
+            dx = pos * width + 8 * scale * math.sin(phase + offset)
+            dy = water_height("body", dx / width, phase, shore, mobile) + scale * (r * .75 - travel * lift)
+            stretch = 1 + .17 * math.sin(phase + offset)
+            transforms.append((dx, dy, stretch))
+        name = f'drop{index}'
+        styles.append(motion(name, [f'transform:translate({x:.1f}px,{y:.1f}px) scale({1/s:.3f},{s:.3f})'
+                                    for x, y, s in transforms]))
+        x, y, s = transforms[0]
+        drops.append(f'<g class="{name}" transform="translate({x:.1f} {y:.1f}) scale({1/s:.3f} {s:.3f})">'
+                     f'<circle r="{r*scale:g}" fill="url(#bead)"/></g>')
+
+    return ''.join([
+        f'<defs><clipPath id="sea"><rect width="{width}" height="{shore}"/></clipPath></defs>',
+        '<style>@media (prefers-reduced-motion:no-preference){', *styles, '}</style>',
+        '<g clip-path="url(#sea)">',
+        f'<path {paths["far"]} fill="url(#back)"/>',
+        '<g filter="url(#cohesion)">', *drops, f'<path {paths["body"]} fill="url(#water)"/></g>',
+        f'<path class="glint" d="{highlights[0]}" fill="url(#refraction)" opacity=".82"/>',
+        f'<path {paths["near"]} fill="url(#front)" stroke="url(#refraction)" stroke-width="1.1"/>',
+        '</g>',
+    ])
+
+
+def activity(stats, width, margin, shore, mobile):
+    start = datetime.date.fromisoformat(stats["from"])
+    end = datetime.date.fromisoformat(stats["through"])
+    date_range = f"{start:%b %Y} – {end:%d %b %Y}"
+    languages = stats["languages"]
+    language = languages[0][0] if languages and languages[0][1] else "—"
+    metrics = [(f"{stats['total']:,}", "Contributions"), (f"{stats['commits']:,}", "Commits"),
+               (str(stats["repos"]), "Public projects"), (language, "Top language")]
+    xs = (margin, 125, 202, 304) if mobile else (margin, 183, 295, 442)
+    out = []
+    for (value, caption), x in zip(metrics, xs):
+        fit = (75 if mobile else 120) if len(value) > (7 if mobile else 11) else None
+        out.append(text_at(x, shore + 34, value, "metric", fit=fit))
+        out.append(text_at(x, shore + 53, caption, "caption"))
+
+    bar_width = 6 if mobile else 8
+    step = 11 if mobile else 16
+    months = stats["monthly"]
+    peak = max(1, max(m["value"] for m in months))
+    x0 = margin if mobile else width - margin - (len(months)-1) * step - bar_width
+    floor = shore + (93 if mobile else 35)
+    out.append('<g><title>Monthly GitHub contributions</title>')
+    for i, month in enumerate(months):
+        value = month["value"]
+        h = max(1.5, value / peak * 23)
+        out.append(f'<rect x="{x0+i*step}" y="{floor-h:.1f}" width="{bar_width}" height="{h:.1f}" rx="1" '
+                   f'fill="var(--accent)"><title>{month["month"]}: {value}</title></rect>')
+    out.extend(['</g>', text_at(width-margin, shore + (93 if mobile else 53), date_range, "dates", "end")])
+    return '\n'.join(out)
+
 
 def render_liquid(stats, theme="dark", mobile=False):
-    W, H = (480, 1050) if mobile else (940, 620)
-    margin = 28 if mobile else 44
-
-    if theme == "dark":
-        bg0 = "#050709"
-        bg1 = "#090D12"
-        cyan = "#00E3FE"
-        cyan_glow = "#4DECFF"
-        cyan_deep = "#008B9E"
-        cyan_dark = "#002933"
-        paper = "#F2F0EB"
-        paper_muted = "#B6C4CF"
-        paper_sub = "#99ACBB"
-        glass_fill = "rgba(10, 14, 20, 0.80)"
-        glass_border = "rgba(0, 227, 254, 0.20)"
-        ribbon_fill = "rgba(4, 9, 14, 0.78)"
-        ribbon_border = "rgba(0, 227, 254, 0.35)"
-        month_active = "#00E3FE"
-        month_inactive = "#7E8D9F"
-        badge_bg = "rgba(4, 8, 12, 0.88)"
-        badge_border = "#4DECFF"
-        badge_text = "#FFFFFF"
-    else:
-        bg0 = "#F4F7F8"
-        bg1 = "#EBF2F5"
-        cyan = "#007C8F"
-        cyan_glow = "#007487"
-        cyan_deep = "#006C7A"
-        cyan_dark = "#C2E8EF"
-        paper = "#08161A"
-        paper_muted = "#344D55"
-        paper_sub = "#476571"
-        glass_fill = "rgba(255, 255, 255, 0.88)"
-        glass_border = "rgba(0, 155, 176, 0.25)"
-        ribbon_fill = "rgba(255, 255, 255, 0.90)"
-        ribbon_border = "rgba(0, 155, 176, 0.40)"
-        month_active = "#006C7A"
-        month_inactive = "#64748B"
-        badge_bg = "rgba(255, 255, 255, 0.95)"
-        badge_border = "#009BB0"
-        badge_text = "#08161A"
-
-    total_contribs = sum(m["value"] for m in stats["monthly"])
-    lifetime_commits = stats["commits"]
-
-    # 3 Continuous flowing wave paths with EXACT INTEGER FREQUENCIES for seamless loop
-    wave_base = 526 if mobile else 356
-    w_path1 = generate_wave(W, H, baseline=wave_base, amplitude=14, frequency=1.0, phase=0)
-    w_path2 = generate_wave(W, H, baseline=wave_base + 8, amplitude=10, frequency=2.0, phase=math.pi / 3)
-    w_path3 = generate_wave(W, H, baseline=wave_base + 15, amplitude=7, frequency=3.0, phase=math.pi / 2)
-
-    # Months mapping & contribution tide heights
-    month_names = [calendar.month_abbr[int(m["month"][5:])].upper() for m in stats["monthly"]]
-    m_vals = [m["value"] for m in stats["monthly"]]
-    max_val = max(m_vals) or 1
-
-    # Liquid droplets positioned over contribution hot spots
-    droplets = [
-        (800, 310, 19, "moteFloat1", "0s"),    # Peak over Sep (102 contribs!)
-        (760, 332, 13, "moteFloat2", "1.1s"),
-        (840, 338, 14, "moteFloat3", "2.2s"),
-        (680, 345, 12, "moteFloat1", "3.0s"),  # Over Aug (32)
-        (620, 348, 11, "moteFloat2", "0.7s"),  # Over Jul (26)
-        (560, 340, 14, "moteFloat3", "1.8s"),  # Over Jun (41)
-        (500, 342, 13, "moteFloat1", "2.5s"),  # Over May (44)
-        (400, 362, 8,  "moteFloat2", "3.2s"),
-        (230, 364, 7,  "moteFloat3", "1.4s"),
-    ]
-
-    if mobile:
-        droplets = [(x * W / 940, y + wave_base - 356, r * .85, cls, delay) for x, y, r, cls, delay in droplets]
-
-    # Logo mark scale for exact 22px height
-    mark_scale = 22.0 / 2926.12
-
-    o = [f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Pedro Mautone — ZIRTUNO Liquid Contributions &amp; Systems Architecture">
-<title>Pedro Mautone — Zirtuno systems architecture</title>
-<desc>{esc("Monthly contributions: " + "; ".join(m["month"] + ": " + str(m["value"]) for m in stats["monthly"]))}. Current month is partial. Decorative liquid motion does not represent measured telemetry.</desc>
-<defs>
-  <!-- Background radial depth -->
-  <radialGradient id="abyssGrad" cx="50%" cy="25%" r="80%">
-    <stop offset="0%" stop-color="{bg1}"/>
-    <stop offset="65%" stop-color="{bg0}"/>
-    <stop offset="100%" stop-color="{bg0}"/>
-  </radialGradient>
-
-  <!-- Liquid wave layer 1 (deepest current) -->
-  <linearGradient id="liquidGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="{cyan}" stop-opacity="0.35"/>
-    <stop offset="40%" stop-color="{cyan_deep}" stop-opacity="0.65"/>
-    <stop offset="100%" stop-color="{cyan_dark}" stop-opacity="0.95"/>
-  </linearGradient>
-
-  <!-- Liquid wave layer 2 (mid stream) -->
-  <linearGradient id="liquidGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="{cyan_glow}" stop-opacity="0.55"/>
-    <stop offset="35%" stop-color="{cyan}" stop-opacity="0.80"/>
-    <stop offset="100%" stop-color="{cyan_deep}" stop-opacity="0.98"/>
-  </linearGradient>
-
-  <!-- Liquid wave layer 3 (surface crest with bright luminous meniscus) -->
-  <linearGradient id="liquidGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75"/>
-    <stop offset="12%" stop-color="{cyan_glow}" stop-opacity="0.88"/>
-    <stop offset="55%" stop-color="{cyan}" stop-opacity="0.96"/>
-    <stop offset="100%" stop-color="{cyan_deep}" stop-opacity="1"/>
-  </linearGradient>
-
-  <!-- Caustic Bloom / Radiant Glow -->
-  <radialGradient id="causticGlow" cx="78%" cy="60%" r="45%">
-    <stop offset="0%" stop-color="{cyan_glow}" stop-opacity="0.30"/>
-    <stop offset="45%" stop-color="{cyan}" stop-opacity="0.10"/>
-    <stop offset="100%" stop-color="{cyan}" stop-opacity="0"/>
-  </radialGradient>
-
-  <!-- Droplet Radial Shimmer -->
-  <radialGradient id="dropletShimmer" cx="35%" cy="30%" r="70%">
-    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92"/>
-    <stop offset="35%" stop-color="{cyan_glow}" stop-opacity="0.85"/>
-    <stop offset="85%" stop-color="{cyan}" stop-opacity="0.95"/>
-    <stop offset="100%" stop-color="{cyan_deep}" stop-opacity="1"/>
-  </radialGradient>
-
-  <!-- Organic Metaball Fluid Filter -->
-  <filter id="metaballFilter" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
-    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo" />
-    <feBlend in="SourceGraphic" in2="goo" />
-  </filter>
-
-  <!-- Atmospheric Glow Filter -->
-  <filter id="fluidBloom" x="-25%" y="-25%" width="150%" height="150%">
-    <feGaussianBlur stdDeviation="3.5" result="bloom"/>
-    <feMerge>
-      <feMergeNode in="bloom"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-  </filter>
-
-  <!-- Clip boundary -->
-  <clipPath id="stageClip">
-    <rect x="0" y="0" width="{W}" height="{H}" rx="16"/>
-  </clipPath>
-</defs>''']
-
-    o.append('<g clip-path="url(#stageClip)">')
-
-    # 1. Base void & caustic glow
-    o.append(f'<rect width="{W}" height="{H}" fill="url(#abyssGrad)"/>')
-    o.append(f'<rect width="{W}" height="{H}" fill="url(#causticGlow)"/>')
-
-    # Subtle ambient atmospheric particles
-    o.append(f'<circle cx="180" cy="130" r="1.4" fill="{cyan}" opacity="0.35" class="particleDrift1"/>')
-    o.append(f'<circle cx="460" cy="85"  r="2.0" fill="{cyan_glow}" opacity="0.50" class="particleDrift2"/>')
-    o.append(f'<circle cx="780" cy="115" r="1.6" fill="{cyan}" opacity="0.45" class="particleDrift3"/>')
-    o.append(f'<circle cx="890" cy="205" r="2.2" fill="{cyan_glow}" opacity="0.35" class="particleDrift1"/>')
-
-    # =========================================================================
-    # 2. CONTINUOUS LIQUID BODY (Undulating waves + contribution metaballs)
-    # =========================================================================
-    o.append('<g class="liquidOrgan">')
-
-    # Wave 1 (Deepest, slowest current)
-    o.append(f'''<g class="waveMove1">
-      <path d="{w_path1}" fill="url(#liquidGrad1)"/>
-    </g>''')
-
-    # Wave 2 (Middle current)
-    o.append(f'''<g class="waveMove2">
-      <path d="{w_path2}" fill="url(#liquidGrad2)"/>
-    </g>''')
-
-    # Metaball Droplets Group (Morphing & fusing with the wave crests)
-    o.append('<g filter="url(#metaballFilter)">')
-    for cx, cy, r, acls, dly in droplets:
-        o.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="url(#dropletShimmer)" class="{acls}" style="animation-delay:{dly};"/>')
-    o.append('</g>')
-
-    # Wave 3 (Forefront liquid crest with bright luminous meniscus)
-    o.append(f'''<g class="waveMove3">
-      <path d="{w_path3}" fill="url(#liquidGrad3)"/>
-    </g>''')
-
-    o.append('</g>') # End liquidOrgan
-
-    # =========================================================================
-    # 3. CONTRIBUTION TIMELINE WITH FROSTED HIGH-VISIBILITY RIBBON
-    # =========================================================================
-    o.append(f'<g transform="translate(0, {wave_base + 30})">')
-
-    # Frosted Datum Ribbon across the waterline
-    o.append(f'<rect x="40" y="6" width="{W - 80}" height="24" rx="12" fill="{ribbon_fill}" stroke="{ribbon_border}" stroke-width="1.2"/>')
-
-    step_m = (W - 96) / 11 if mobile else (W - 128) / 11
-    for mi in range(12):
-        mx = (48 if mobile else 64) + mi * step_m
-        val = m_vals[mi]
-        m_name = month_names[mi]
-
-        h_ratio = val / max_val
-        beacon_h = max(h_ratio * 46, 4)
-
-        if val > 0:
-            # Pulsing beacon line rising from the ribbon to crest
-            o.append(f'<line x1="{mx:.1f}" y1="6" x2="{mx:.1f}" y2="{-beacon_h:.1f}" stroke="{cyan_glow}" stroke-width="2" stroke-linecap="round" class="beaconLine"/>')
-            o.append(f'<circle cx="{mx:.1f}" cy="{-beacon_h:.1f}" r="3.5" fill="#FFFFFF" filter="url(#fluidBloom)"/>')
-
-            # Badge pill for number - guaranteed 100% visible against any background
-            badge_w = max(26, 10 + len(str(val)) * 7)
-            o.append(f'''<rect x="{mx - badge_w/2:.1f}" y="{-beacon_h - 18:.1f}" width="{badge_w}" height="15" rx="7.5" fill="{badge_bg}" stroke="{badge_border}" stroke-width="1"/>''')
-            o.append(f'<text x="{mx:.1f}" y="{-beacon_h - 7:.1f}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800" fill="{badge_text}" text-anchor="middle">{val}</text>')
-
-            # Month label inside ribbon: bold active color
-            o.append(f'<text x="{mx:.1f}" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="800" fill="{month_active}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
-        else:
-            o.append(f'<circle cx="{mx:.1f}" cy="18" r="2" fill="{cyan}" opacity="0.35"/>')
-            # Month label inside ribbon: clear muted silver
-            o.append(f'<text x="{mx:.1f}" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="9.5" font-weight="600" fill="{month_inactive}" text-anchor="middle" letter-spacing="1">{m_name}</text>')
-
-    o.append('</g>')
-
-    # =========================================================================
-    # 4. BRAND HEADER & STAGE IDENTITY (Laser-Aligned Coordinates)
-    # =========================================================================
-    o.append(f'<g transform="translate({margin}, 40)">')
-
-    # ZIRTUNO AUTHENTIC VECTOR LOGO MARK (Exact normalized bounding box)
-    o.append(f'''<g transform="translate(0, 0)">
-      <g transform="scale({mark_scale:.6f}) translate(-1221.92, -998.42)" fill="{cyan}" filter="url(#fluidBloom)">
-        <path d="M3001.12,3538.79 C3011.52,3602.99 3013.09,3665.3 2995.72,3726.82 C2984.39,3766.97 2967.22,3804.76 2938.56,3835.53 C2877.17,3901.46 2801.66,3924.54 2713.46,3905.9 C2668.3,3896.36 2630.61,3873.61 2598.94,3840.57 C2581.73,3822.61 2568.32,3801.55 2557.96,3779.31 C2540.75,3742.36 2529.15,3703.77 2528.63,3662.1 C2527.96,3608.75 2541.02,3559.32 2565.72,3512.51 C2583.5,3478.8 2605.66,3448.02 2628.13,3417.34 C2658.57,3375.79 2685.32,3332.1 2697.18,3281.07 C2708.19,3233.75 2706.38,3187.09 2687.94,3141.78 C2668.52,3094.05 2639.08,3053.52 2600.1,3019.62 C2555.77,2981.06 2504.75,2954.07 2451.11,2931.5 C2382.08,2902.46 2310.43,2882.05 2236.66,2869.55 C2182.63,2860.39 2128.06,2856.96 2073.3,2860.62 C2022.28,2864.02 1973.31,2875.79 1927.72,2899.76 C1888.31,2920.49 1857.61,2950.42 1835.68,2988.96 C1807.61,3038.3 1801.63,3090.83 1817.1,3145.3 C1826.04,3176.77 1839.28,3206.16 1858.22,3233.53 C1880.35,3265.52 1906.07,3294.13 1931.81,3322.96 C1949.99,3343.32 1967.87,3364.03 1984.69,3385.52 C2005.89,3412.59 2021.05,3443.11 2027.71,3476.96 C2043.75,3558.45 2005.33,3640.8 1925.71,3675.74 C1895.52,3688.99 1864.02,3695.66 1830.72,3696.23 C1761.2,3697.4 1696.09,3680.12 1633.76,3651.25 C1571.08,3622.23 1514.13,3584.03 1462.76,3537.87 C1424.98,3503.92 1391.25,3466.21 1362.17,3424.41 C1304.36,3341.31 1265.36,3250.01 1243.24,3151.43 C1226.94,3078.8 1221.92,3005.11 1224.48,2930.88 C1227.11,2854.79 1237.33,2779.62 1252.91,2705.11 C1265.6,2644.44 1281.05,2584.49 1299.63,2525.39 C1312.21,2485.4 1325.96,2445.75 1340.01,2406.24 C1369.96,2322.03 1406.28,2240.58 1447.69,2161.39 C1476.5,2106.29 1510.46,2054.64 1550.5,2006.98 C1600.44,1947.51 1659.08,1898.99 1729.03,1864.84 C1780.84,1839.55 1835.17,1822.53 1892.63,1815.17 C1933.9,1809.88 1975.25,1809.23 2016.34,1813.06 C2074.24,1818.46 2130.34,1832.64 2184.5,1854.5 C2287.61,1896.1 2375.67,1959.21 2452.22,2039.23 C2493.25,2082.13 2532.46,2126.63 2569.98,2172.6 C2616.76,2229.9 2662.5,2288.06 2709.76,2344.97 C2753.61,2397.77 2797.91,2450.3 2848.65,2496.84 C2875.68,2521.63 2903.29,2545.8 2934.08,2565.9 C2968.21,2588.2 3003.83,2607.68 3043.63,2618 C3082.85,2628.17 3122.44,2631.75 3162.08,2620.28 C3228.91,2600.93 3272.24,2557.13 3291.79,2490.92 C3311.45,2424.32 3307.07,2357.94 3285.72,2292.22 C3275.55,2260.91 3259.76,2232.36 3243.4,2204.19 C3216.72,2158.28 3181.9,2118.76 3142.79,2083.17 C3095.26,2039.92 3042.56,2003.89 2985.94,1973.44 C2931.23,1944.03 2874.25,1919.94 2815.64,1899.74 C2747.68,1876.31 2679.3,1854.08 2611.34,1830.62 C2548.9,1809.07 2487.9,1784.07 2432.56,1747.27 C2385.45,1715.94 2345.32,1677.74 2314.41,1629.74 C2289.54,1591.12 2271.3,1550.07 2262.38,1505.18 C2249.42,1439.98 2250.47,1375 2272.77,1311.87 C2303.61,1224.53 2357.39,1153.94 2432.62,1099.72 C2489.69,1058.59 2553.51,1032.85 2621.31,1015.92 C2659,1006.51 2697.46,1002.87 2736.03,1000.53 C2770.84,998.42 2805.17,1004.21 2839.34,1009.87 C2918.44,1022.96 2991.79,1051.71 3061.13,1091.62 C3162.21,1149.8 3244.88,1227.72 3312.05,1322.69 C3351.48,1378.42 3384.55,1437.66 3409.77,1501.01 C3433.68,1561.06 3453.5,1622.58 3467.68,1685.69 C3480.52,1742.84 3492.03,1800.3 3503.68,1857.72 C3523.97,1957.73 3550.35,2055.92 3588.03,2150.97 C3615.79,2221.03 3648.17,2288.87 3682.7,2355.76 C3708.68,2406.06 3734.02,2456.66 3755.86,2508.95 C3782.21,2572.04 3800.55,2637.31 3806.71,2705.46 C3812.1,2764.93 3809.71,2824.39 3791.54,2881.67 C3761.88,2975.17 3707.97,3050.38 3621.44,3100.3 C3558.66,3136.52 3491.38,3154.06 3419.11,3153.11 C3385.77,3152.67 3352.51,3151.45 3319.85,3143.59 C3242.36,3124.93 3171.88,3091.31 3107.79,3044.2 C3055.03,3005.41 3006.87,2961.47 2961.82,2913.9 C2889.18,2837.17 2826.11,2753.05 2767.02,2665.74 C2756.19,2649.75 2744.36,2634.42 2733.85,2618.22 C2701.59,2568.48 2669.78,2518.45 2637.74,2468.58 C2630.53,2457.37 2623.23,2446.22 2615.71,2435.23 C2579.59,2382.45 2544.62,2328.83 2506.86,2277.26 C2468.94,2225.48 2425.31,2178.64 2372.04,2141.83 C2362.74,2135.41 2353.13,2129.28 2343.13,2124.04 C2302.85,2102.91 2261.05,2085.65 2215.9,2078.15 C2160.8,2068.99 2105.64,2068.37 2051.16,2081.98 C2001.24,2094.44 1956.66,2117.54 1918.51,2152.64 C1875.6,2192.13 1853.94,2241.67 1849.38,2298.95 C1847.46,2322.98 1851.61,2346.71 1858.58,2369.91 C1871.54,2413.05 1895.78,2449.38 1926.33,2481.69 C1964.18,2521.73 2008.37,2553.6 2056.24,2580.65 C2112.55,2612.47 2171.28,2639.29 2229.99,2666.25 C2293.51,2695.43 2357.8,2722.98 2420.01,2755 C2528.26,2810.71 2625.31,2881.43 2708.03,2970.94 C2755.62,3022.43 2797.25,3078.71 2835.53,3137.43 C2866.48,3184.91 2894.78,3233.91 2918.87,3285.27 C2950.64,3352.99 2975.52,3423.16 2993.24,3495.83 C2996.54,3509.38 2998.33,3523.31 3001.12,3538.79 Z M2226.65,2242.32 C2301.1,2206.22 2370.92,2224.53 2421.76,2272.34 C2462.36,2320.25 2479.61,2373.56 2459.21,2435.44 C2438.12,2499.4 2392.24,2536.45 2327.64,2546.74 C2239.94,2560.7 2170.17,2504.01 2148.04,2435.46 C2124.56,2362.74 2151.82,2288.66 2216.72,2248.07 C2219.54,2246.31 2222.49,2244.75 2226.65,2242.32 Z"/>
-      </g>
-    </g>''')
-
-    # Brand Title & Tag
-    o.append(f'<text x="32" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="800" fill="{paper}" letter-spacing="2">ZIRTUNO</text>')
-    o.append(f'<text x="122" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan}" letter-spacing="1.5">// SYSTEMS ARCHITECTURE</text>')
-
-    # Live Systems Status Beacon (Aligned to exact same Y axis)
-    o.append(f'<g transform="translate({0 if mobile else W - 88 - 250}, {38 if mobile else 0})">')
-    o.append(f'<circle cx="0" cy="13.5" r="4.5" fill="{cyan}" class="beaconPulse"/>')
-    o.append(f'<text x="14" y="17" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="10" font-weight="600" fill="{cyan_glow}" letter-spacing="1.2">SYSTEMS ACTIVE // NODE: LATAM-01</text>')
-    o.append('</g>')
-
-    o.append('</g>') # End Header
-
-    # =========================================================================
-    # 5. HERO IDENTITY & DISPLAY COPY
-    # =========================================================================
-    o.append(f'<g transform="translate({margin}, {128 if mobile else 98})">')
-    o.append(f'<text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800" fill="{paper}" letter-spacing="1.5">PEDRO MAUTONE</text>')
-    if mobile:
-        o.append(f'<text x="0" y="75" font-family="Segoe UI, sans-serif" font-size="18" font-weight="600" fill="{cyan}">Co-Founder &amp; Systems Architect</text>')
-        o.append(f'<text x="0" y="101" font-family="Segoe UI, sans-serif" font-size="18" fill="{cyan}">at Zirtuno</text>')
-        o.append(f'<text x="0" y="139" font-family="Segoe UI, sans-serif" font-size="14" fill="{paper_muted}">Distributed backends · Edge computer vision</text>')
-        o.append(f'<text x="0" y="163" font-family="Segoe UI, sans-serif" font-size="14" fill="{paper_muted}">Low-level systems &amp; protocol engineering</text>')
-    else:
-        o.append(f'<text x="0" y="66" font-family="Segoe UI, sans-serif" font-size="14.5" font-weight="600" fill="{cyan}" letter-spacing="1.2">Co-Founder &amp; Systems Architect at Zirtuno</text>')
-        o.append(f'<text x="0" y="90" font-family="Segoe UI, sans-serif" font-size="12" fill="{paper_muted}">Distributed backends · Edge computer vision · Low-level systems &amp; protocol engineering</text>')
-    o.append('</g>')
-
-    stack_parts = []
-    total_lang_bytes = sum(item[1] for item in stats.get("languages", []))
-    if total_lang_bytes > 0:
-        for item in stats.get("languages", [])[:2]:
-            lang_name, b = item[0], item[1]
-            pct = (b / total_lang_bytes) * 100
-            short_name = "Py" if lang_name == "Python" else lang_name
-            stack_parts.append(f"{pct:.1f}% {short_name}")
-    stack_str = " · ".join(stack_parts) if stack_parts else "No public code data"
-
-    pills = [
-        ("COMMITS / PERIOD", f"{lifetime_commits}", f"{paper}"),
-        ("CONTRIBUTIONS / PERIOD", f"{total_contribs} contribs", f"{cyan}"),
-        ("PUBLIC PROJECTS", f"{stats['repos']:02d} repositories", f"{paper}"),
-        ("PUBLIC CODE MIX", stack_str, f"{cyan_glow}"),
-    ]
-
-    pill_w = (W - 2 * margin - 12) / 2 if mobile else (W - 88 - 3 * 12) / 4
-    for pi, (plabel, pval, pcol) in enumerate(pills):
-        px = margin + (pi % 2 if mobile else pi) * (pill_w + 12)
-        py = 318 + (pi // 2) * 74 if mobile else 216
-        o.append(f'<g transform="translate({px:.1f}, {py})" class="glassCapsule">')
-        o.append(f'<rect width="{pill_w:.1f}" height="{62 if mobile else 54}" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
-        o.append(f'<text x="14" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="{9 if mobile else 8.5}" font-weight="700" fill="{paper_sub}" letter-spacing="{.6 if mobile else 1}">{esc(plabel)}</text>')
-        o.append(f'<text x="14" y="{45 if mobile else 41}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="{15 if mobile else 14}" font-weight="700" fill="{pcol}">{esc(pval)}</text>')
-        o.append('</g>')
-
-    # =========================================================================
-    # 7. ARCHITECTURAL PILLARS (Suspended in lower fluid with clean bottom margin)
-    # =========================================================================
-    pillars = [
-        ("EDGE TELEMETRY & CV", "ESP32-CAM · Python · YOLOv8", ("Directional vehicle tracking", "& live occupancy dashboards")),
-        ("ENTERPRISE DATA BUS", "FastAPI · Redis · PostgreSQL", ("ERP/CRM integration, event flows", "& resilient synchronization")),
-        ("LOW-LEVEL & PROTOCOLS", "C / C++ · Linux / POSIX · GDB", ("Binary analysis, socket tooling", "& hardware interoperability")),
-    ]
-    card_w = W - 2 * margin if mobile else (W - 88 - 2 * 14) / 3
-    for ci, (ctitle, cstack, lines) in enumerate(pillars):
-        cx = margin if mobile else margin + ci * (card_w + 14)
-        cy = 640 + ci * 120 if mobile else 456
-        o.append(f'<g transform="translate({cx:.1f}, {cy})" class="pillarCard">')
-        o.append(f'<rect width="{card_w:.1f}" height="106" rx="10" fill="{glass_fill}" stroke="{glass_border}" stroke-width="1.2"/>')
-        o.append(f'<circle cx="16" cy="23" r="3.2" fill="{cyan}"/>')
-        o.append(f'<text x="26" y="28" font-family="Segoe UI, sans-serif" font-size="{16 if mobile else 11.5}" font-weight="700" fill="{paper}">{esc(ctitle)}</text>')
-        o.append(f'<text x="16" y="50" font-family="Consolas, monospace" font-size="{14 if mobile else 10}" font-weight="600" fill="{cyan_glow}">{esc(cstack)}</text>')
-        for li, line in enumerate(lines):
-            o.append(f'<text x="16" y="{73 + li * 17}" font-family="Segoe UI, sans-serif" font-size="{14 if mobile else 11}" fill="{paper_muted}">{esc(line)}</text>')
-        o.append('</g>')
-    date = datetime.date.fromisoformat(stats["through"])
-    period = f'{stats["from"][:7]} — {stats["through"][:7]}'
-    footer = f'{period} · UPDATED {date:%d %b %Y} UTC'.upper()
-    o.append(f'<rect x="{margin}" y="{H-40}" width="{W-2*margin}" height="22" rx="11" fill="{ribbon_fill}"/>')
-    o.append(f'<text x="{W/2}" y="{H-25}" text-anchor="middle" font-family="Consolas, monospace" font-size="{10 if mobile else 9}" fill="{paper}">{esc(footer)} · MONTH IN PROGRESS</text>')
-
-    # NOTICE: Redundant footer text "ZIRTUNO R5 // ONE CONTINUOUS LIQUID ENGINE" REMOVED
-
-    # Border perimeter
-    o.append(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="{glass_border}" stroke-width="1"/>')
-    o.append('</g>') # End stageClip
-
-    # =========================================================================
-    # 8. PURE CSS CONTINUOUS FLUID ANIMATIONS (100% Seamless Infinite Loops)
-    # =========================================================================
-    css = f'''
-    /* Continuous seamless wave translation across exact integer wavelengths */
-    .waveMove1 {{
-        animation: waveShift1 18s linear infinite;
-        will-change: transform;
-    }}
-    .waveMove2 {{
-        animation: waveShift2 12s linear infinite;
-        will-change: transform;
-    }}
-    .waveMove3 {{
-        animation: waveShift3 8s linear infinite;
-        will-change: transform;
-    }}
-
-    @keyframes waveShift1 {{
-        0%   {{ transform: translate3d(0px, 0, 0); }}
-        100% {{ transform: translate3d(-{W}px, 0, 0); }}
-    }}
-    @keyframes waveShift2 {{
-        0%   {{ transform: translate3d(-{W}px, 0, 0); }}
-        100% {{ transform: translate3d(0px, 0, 0); }}
-    }}
-    @keyframes waveShift3 {{
-        0%   {{ transform: translate3d(0px, 0, 0); }}
-        100% {{ transform: translate3d(-{W}px, 0, 0); }}
-    }}
-
-    /* Droplet bobbing and coalescing with fill-box transform-origin */
-    .moteFloat1 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: floatMote1 4.8s ease-in-out infinite;
-    }}
-    .moteFloat2 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: floatMote2 3.9s ease-in-out infinite;
-    }}
-    .moteFloat3 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: floatMote3 5.4s ease-in-out infinite;
-    }}
-
-    @keyframes floatMote1 {{
-        0%, 100% {{ transform: translateY(0px) scale(1); }}
-        50%      {{ transform: translateY(-15px) scale(1.15); }}
-    }}
-    @keyframes floatMote2 {{
-        0%, 100% {{ transform: translateY(0px) scale(1); }}
-        50%      {{ transform: translateY(12px) scale(0.90); }}
-    }}
-    @keyframes floatMote3 {{
-        0%, 100% {{ transform: translateY(0px) scale(1); }}
-        50%      {{ transform: translateY(-9px) scale(1.10); }}
-    }}
-
-    /* High atmosphere ambient drifting particles */
-    .particleDrift1 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: driftParticle1 7s ease-in-out infinite;
-    }}
-    .particleDrift2 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: driftParticle2 10s ease-in-out infinite;
-    }}
-    .particleDrift3 {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: driftParticle3 8.5s ease-in-out infinite;
-    }}
-
-    @keyframes driftParticle1 {{
-        0%, 100% {{ transform: translate(0px, 0px); opacity: 0.35; }}
-        50%      {{ transform: translate(14px, -8px); opacity: 0.75; }}
-    }}
-    @keyframes driftParticle2 {{
-        0%, 100% {{ transform: translate(0px, 0px); opacity: 0.50; }}
-        50%      {{ transform: translate(-12px, 9px); opacity: 0.85; }}
-    }}
-    @keyframes driftParticle3 {{
-        0%, 100% {{ transform: translate(0px, 0px); opacity: 0.45; }}
-        50%      {{ transform: translate(9px, 7px); opacity: 0.80; }}
-    }}
-
-    /* Telemetry Beacon Pulse */
-    .beaconPulse {{
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: pulseBeacon 2.2s ease-in-out infinite;
-    }}
-    @keyframes pulseBeacon {{
-        0%, 100% {{ opacity: 1; transform: scale(1); }}
-        50%      {{ opacity: 0.35; transform: scale(0.75); }}
-    }}
-
-    .beaconLine {{
-        animation: pulseLine 2.5s ease-in-out infinite;
-    }}
-    @keyframes pulseLine {{
-        0%, 100% {{ opacity: 1; }}
-        50%      {{ opacity: 0.5; }}
-    }}
-
-    /* Accessibility reduced motion fallback */
-    @media (prefers-reduced-motion: reduce) {{
-        .waveMove1, .waveMove2, .waveMove3, .moteFloat1, .moteFloat2, .moteFloat3,
-        .particleDrift1, .particleDrift2, .particleDrift3, .beaconPulse, .beaconLine {{
-            animation: none !important;
-        }}
-    }}
-    '''
-
-    o.append(f'<style>{css}</style>')
-    o.append('</svg>')
-    return "\n".join(o)
+    width, height, margin, shore = (400, 376, 20, 267) if mobile else (940, 384, 37, 312)
+    colors = ';'.join(f'--{key}:{value}' for key, value in PALETTES[theme].items())
+    mark = (ART / "zirtuno.path").read_text(encoding="utf-8").strip()
+    definitions = (ART / "liquid-defs.svg").read_text(encoding="utf-8").strip()
+    monthly = ", ".join(f"{m['month']} ({m['value']})" for m in stats["monthly"])
+    end = stats["through"]
+    return '\n'.join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
+        f'class="{"mobile" if mobile else "desktop"}" role="img" aria-labelledby="title desc">',
+        '<title id="title">Pedro Mautone · Zirtuno</title>',
+        f'<desc id="desc">Co-founder and systems architect. Monthly GitHub contributions through {end}: {monthly}.</desc>',
+        f'<style>:root{{{colors}}}{TYPE}</style>', definitions,
+        f'<defs><clipPath id="frame"><rect width="{width}" height="{height}" rx="12"/></clipPath></defs>',
+        '<g clip-path="url(#frame)">',
+        f'<rect width="{width}" height="{height}" fill="var(--base)"/>',
+        f'<rect width="{width}" height="{shore}" fill="var(--sky)"/>', liquid(width, shore, mobile),
+        f'<g transform="translate({margin} {21 if mobile else 26}) scale(.0075) translate(-1221.92 -998.42)">'
+        f'<path d="{mark}" fill="var(--accent)"/></g>',
+        text_at(margin+29, 38 if mobile else 43, "ZIRTUNO", "brand"),
+        text_at(margin-2, 96 if mobile else 133, "Pedro Mautone", "name"),
+        text_at(margin, 125 if mobile else 169, "Co-founder & Systems Architect", "role"),
+        activity(stats, width, margin, shore, mobile),
+        f'<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="12" fill="none" stroke="var(--line)" stroke-width=".8"/>',
+        '</g></svg>',
+    ])
 
 
 def main():

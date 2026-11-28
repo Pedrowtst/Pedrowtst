@@ -8,12 +8,14 @@ on:
     branches: [main]
     paths:
       - generate.py
+      - artwork/**
       - profile_data.py
       - tests/**
       - .github/workflows/update-readme.yml
   pull_request:
     paths:
       - generate.py
+      - artwork/**
       - profile_data.py
       - tests/**
       - .github/workflows/update-readme.yml

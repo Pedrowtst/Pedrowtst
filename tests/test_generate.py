@@ -121,7 +121,7 @@ class ProfileTests(unittest.TestCase):
         stats.update(commits=0, repos=0, languages=[])
         before = copy.deepcopy(stats)
         svg = liquid.render_liquid(g.validate_cache(stats, "Pedrowtst"), "dark")
-        self.assertIn("UPDATED 02 JAN 2026", svg)
+        self.assertIn("Feb 2025 – 02 Jan 2026</text>", svg)
         self.assertEqual(stats, before)
 
 

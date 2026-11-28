@@ -1,11 +1,12 @@
 # Maintaining this profile
 
-The profile preserves the original Zirtuno liquid console: animated waves, floating droplets, four stat capsules, a contribution timeline, and three engineering pillars. Native Markdown carries the detailed project descriptions below it. No third-party stats service, web fonts, JavaScript, or raster image generation is required.
+The banner uses Zirtuno’s vector mark, animated water, a monthly contribution chart, and four GitHub statistics. The README links to selected projects and contact information.
 
 ## Edit and preview
 
-- `README.md`: engineering work, principles, technical matrix, and contact links.
-- `generate.py`: original embedded Zirtuno vector mark, liquid animation, layouts, palettes, and SVG labels.
+- `README.md` contains the bio, selected work, and contact links.
+- `generate.py` generates the water motion, layouts, and statistics.
+- `artwork/` contains the original Zirtuno vector outline, gradients, and surface lighting.
 - `profile_data.py`: GitHub GraphQL retrieval, monthly aggregation, and snapshot validation.
 - `cache/data.json`: verified, dated contribution snapshot. Never insert example values here.
 - `assets/`: dark/light desktop/mobile liquid-console variants. The existing `console-*.svg` filenames remain compatible aliases.
@@ -37,7 +38,7 @@ The workflow runs daily at 05:15 UTC, manually, and when generator-related files
 
 ## Visual checks
 
-Check the rendered README in light and dark themes at desktop and phone widths. `picture` selects a stacked version of the same console at 640px and below. The original wave, droplet, and beacon animations remain; reduced-motion users receive a static version. Native text remains readable if images fail, and every graphic has alternative text. Monthly data is also available as JSON. The decorative "systems active" motif is not a monitored uptime claim; droplet motion is not live telemetry.
+Check the rendered profile in light and dark themes. At viewport widths of 900px and below, the chart moves under the figures. The waves and droplets share a 13-second loop. Reduced motion displays the first frame. The dated monthly counts are available in `cache/data.json` and in each SVG’s description.
 
 The Zirtuno and parking descriptions were checked against their public repository documentation. The parking system is an academic local-network prototype using MJPEG camera streaming and laptop-side inference. The backend and protocol experience is retained from the existing profile, without independently verified performance claims. Do not restore unmeasured latency, throughput, zero-data-loss, GPU-inference, or production-deployment claims without supporting evidence.
 

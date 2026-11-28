@@ -1,0 +1,55 @@
+<defs xmlns="http://www.w3.org/2000/svg">
+  <linearGradient id="water" x2=".18" y2="1">
+    <stop stop-color="var(--water-high)"/>
+    <stop offset=".25" stop-color="var(--water-mid)"/>
+    <stop offset=".72" stop-color="var(--water-deep)"/>
+    <stop offset="1" stop-color="var(--water-low)"/>
+  </linearGradient>
+  <linearGradient id="back" x2="1" y2=".26">
+    <stop stop-color="var(--back-left)"/>
+    <stop offset=".45" stop-color="var(--back-mid)"/>
+    <stop offset=".78" stop-color="var(--back-light)"/>
+    <stop offset="1" stop-color="var(--back-right)"/>
+  </linearGradient>
+  <linearGradient id="front" x2=".82" y2="1">
+    <stop stop-color="var(--front-left)"/>
+    <stop offset=".49" stop-color="var(--front-mid)"/>
+    <stop offset="1" stop-color="var(--front-right)"/>
+  </linearGradient>
+  <linearGradient id="refraction" x2="1" y2=".12">
+    <stop stop-color="#d0fffa" stop-opacity=".08"/>
+    <stop offset=".28" stop-color="#b7fff8" stop-opacity=".64"/>
+    <stop offset=".48" stop-color="#d8fffa" stop-opacity=".06"/>
+    <stop offset=".77" stop-color="#ebffff" stop-opacity=".75"/>
+    <stop offset="1" stop-color="#8df4ee" stop-opacity=".22"/>
+  </linearGradient>
+  <radialGradient id="bead" cx=".31" cy=".19" r=".88">
+    <stop stop-color="#f5fffd"/>
+    <stop offset=".12" stop-color="#d8fff9"/>
+    <stop offset=".31" stop-color="#80e9e3"/>
+    <stop offset=".55" stop-color="#24adaf"/>
+    <stop offset=".76" stop-color="#077187"/>
+    <stop offset=".91" stop-color="#58d5d6"/>
+    <stop offset="1" stop-color="#1c99a1"/>
+  </radialGradient>
+  <filter id="cohesion" x="0%" y="-22%" width="100%" height="145%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="density"/>
+    <feComponentTransfer in="density" result="surface">
+      <feFuncA type="linear" slope="18" intercept="-7.8"/>
+    </feComponentTransfer>
+    <feFlood flood-color="var(--water-mid)"/>
+    <feComposite in2="surface" operator="in" result="neck"/>
+    <feComposite in="SourceGraphic" in2="neck" operator="over" result="water"/>
+    <feGaussianBlur in="surface" stdDeviation="3.8" result="rounding"/>
+    <feSpecularLighting in="rounding" surfaceScale="9" specularConstant=".88" specularExponent="16" lighting-color="#d5fffb" result="light">
+      <feDistantLight azimuth="225" elevation="51"/>
+    </feSpecularLighting>
+    <feComponentTransfer in="light" result="highlight">
+      <feFuncR type="linear" slope="1.65" intercept="-.51"/>
+      <feFuncG type="linear" slope="1.65" intercept="-.51"/>
+      <feFuncB type="linear" slope="1.65" intercept="-.51"/>
+    </feComponentTransfer>
+    <feComposite in="highlight" in2="surface" operator="in" result="rim"/>
+    <feBlend in="water" in2="rim" mode="screen"/>
+  </filter>
+</defs>
