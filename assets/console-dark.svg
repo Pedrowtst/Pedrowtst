@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 384" width="940" height="384" class="desktop" role="img" aria-labelledby="title desc">
 <title id="title">Pedro Mautone · Zirtuno</title>
-<desc id="desc">Co-founder and systems architect. Monthly GitHub contributions through 2026-11-28: 2025-12 (0), 2026-01 (0), 2026-02 (0), 2026-03 (0), 2026-04 (0), 2026-05 (44), 2026-06 (41), 2026-07 (26), 2026-08 (32), 2026-09 (379), 2026-10 (244), 2026-11 (154).</desc>
+<desc id="desc">Co-founder and systems architect. Monthly GitHub contributions through 2026-11-28: 2025-12 (0), 2026-01 (0), 2026-02 (0), 2026-03 (0), 2026-04 (0), 2026-05 (44), 2026-06 (41), 2026-07 (26), 2026-08 (32), 2026-09 (379), 2026-10 (244), 2026-11 (155).</desc>
 <style>:root{--sky:#091519;--base:#0c191d;--text:#f1f4f0;--sub:#afbfbd;--accent:#73dad1;--line:#293a3c;--water-high:#78eee1;--water-mid:#13c6c7;--water-deep:#078396;--water-low:#154b61;--back-left:#17474d;--back-mid:#267e84;--back-light:#70c8c0;--back-right:#285d68;--front-left:#158d96;--front-mid:#106074;--front-right:#11394d}
 text {font-family:Inter,'Segoe UI',Arial,sans-serif;fill:var(--text)}
 .brand {font-size:13px;font-weight:650;letter-spacing:2px}
@@ -79,9 +79,9 @@ text {font-family:Inter,'Segoe UI',Arial,sans-serif;fill:var(--text)}
 <text x="66" y="43" class="brand" text-anchor="start">ZIRTUNO</text>
 <text x="35" y="133" class="name" text-anchor="start">Pedro Mautone</text>
 <text x="37" y="169" class="role" text-anchor="start">Co-founder &amp; Systems Architect</text>
-<text x="37" y="346" class="metric" text-anchor="start">920</text>
+<text x="37" y="346" class="metric" text-anchor="start">921</text>
 <text x="37" y="365" class="caption" text-anchor="start">Contributions</text>
-<text x="224" y="346" class="metric" text-anchor="start">262</text>
+<text x="224" y="346" class="metric" text-anchor="start">263</text>
 <text x="224" y="365" class="caption" text-anchor="start">Commits</text>
 <text x="411" y="346" class="metric" text-anchor="start">3</text>
 <text x="411" y="365" class="caption" text-anchor="start">Public projects</text>
@@ -97,7 +97,7 @@ text {font-family:Inter,'Segoe UI',Arial,sans-serif;fill:var(--text)}
 <rect x="847" y="345.1" width="8" height="1.9" rx="1" fill="var(--accent)"><title>2026-08: 32</title></rect>
 <rect x="863" y="324.0" width="8" height="23.0" rx="1" fill="var(--accent)"><title>2026-09: 379</title></rect>
 <rect x="879" y="332.2" width="8" height="14.8" rx="1" fill="var(--accent)"><title>2026-10: 244</title></rect>
-<rect x="895" y="337.7" width="8" height="9.3" rx="1" fill="var(--accent)"><title>2026-11: 154</title></rect>
+<rect x="895" y="337.6" width="8" height="9.4" rx="1" fill="var(--accent)"><title>2026-11: 155</title></rect>
 </g>
 <text x="903" y="365" class="dates" text-anchor="end">Dec 2025 – 28 Nov 2026</text>
 <rect x=".5" y=".5" width="939" height="383" rx="12" fill="none" stroke="var(--line)" stroke-width=".8"/>
