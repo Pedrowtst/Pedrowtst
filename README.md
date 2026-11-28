@@ -1,8 +1,8 @@
 <picture>
-  <source media="(max-width: 900px) and (prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark-mobile.svg?v=2">
-  <source media="(max-width: 900px)" srcset="./assets/zirtuno-liquid-light-mobile.svg?v=2">
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/zirtuno-liquid-dark.svg?v=2">
-  <img src="./assets/zirtuno-liquid-light.svg?v=2" width="100%" alt="Pedro Mautone, co-founder and systems architect at Zirtuno. An animated turquoise wave sits above a summary of GitHub activity.">
+  <source media="(max-width: 900px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/refs/heads/main/assets/zirtuno-liquid-dark-mobile.svg">
+  <source media="(max-width: 900px)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/refs/heads/main/assets/zirtuno-liquid-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/refs/heads/main/assets/zirtuno-liquid-dark.svg">
+  <img src="https://raw.githubusercontent.com/Pedrowtst/Pedrowtst/refs/heads/main/assets/zirtuno-liquid-light.svg" width="100%" alt="Pedro Mautone, co-founder and systems architect at Zirtuno. An animated turquoise wave sits above a summary of GitHub activity.">
 </picture>
 
 I co-founded Zirtuno. I build WebGL graphics for our site, connect ERP systems to CRMs, and write C and C++ tools for industrial hardware.
